@@ -3,3 +3,6 @@ node_modules/
 
 # O si quieres ignorar solo la de Main-Files (ruta relativa desde la raíz del repositorio)
 /Main-Files/node_modules/
+
+# Ignorar .next
+/Main-Files/.next/
