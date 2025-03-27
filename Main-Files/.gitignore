@@ -1,0 +1,5 @@
+# Ignorar TODAS las carpetas node_modules en cualquier ubicación
+node_modules/
+
+# O si quieres ignorar solo la de Main-Files (ruta relativa desde la raíz del repositorio)
+/Main-Files/node_modules/
