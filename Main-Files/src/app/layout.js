@@ -13,13 +13,13 @@ const figtree = Figtree({
 export const metadata = {
   title: {
     absolute: '',
-    default: 'TechXen - Technology & It Solution NextJS Template',
-    template: '%s | TechXen - Technology & It Solution NextJS Template',
+    default: '50 solutions - Innovamos con propósito, transformamos con tecnología',
+    template: '%s | 50 solutions  - Innovamos con propósito, transformamos con tecnología',
   },
-  description: 'TechXen - Technology & It Solution NextJS Template',
+  description: '50 solutions  - TInnovamos con propósito, transformamos con tecnología',
   openGraph: {
-    title: 'TechXen - Technology & It Solution NextJS Template',
-    description: 'TechXen - Technology & It Solution NextJS Template',
+    title: '50 solutions  - Innovamos con propósito, transformamos con tecnología',
+    description: '50 solutions  - Innovamos con propósito, transformamos con tecnología',
   },
 };
 

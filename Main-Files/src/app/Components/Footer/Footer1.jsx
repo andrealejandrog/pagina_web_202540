@@ -10,12 +10,12 @@ const Footer1 = () => {
                        <div className="single-footer-items footer-logo-area">
                             <div className="footer-logo">
                               <a href="">
-                              <Image src="/assets/img/logo/footer-logo1.png" alt="img" width={209} height={46}   />
+                              <Image src="/assets/img/logo/logo1.png" alt="img" width={209} height={46}   />
                                 </a>
                             </div>
                             <div className="space20"></div>
                             <div className="heading1">
-                              <p>At TechXen IT Solutions, we are dedicated to delivering innovative technology solutions tailored to meet the unique needs of businesses like yours. </p>
+                              <p>-Innovamos con propósito, transformamos con tecnología. </p>
                             </div>
                             <ul className="social-icon">
                                  <li><a href="#"><i className="bi bi-linkedin"></i></a></li>
@@ -28,14 +28,14 @@ const Footer1 = () => {
 
                   <div className="col-lg col-md-6 col-12">
                        <div className="single-footer-items">
-                            <h3>Service We Offer</h3>
+                            {/* <h3>Servicios</h3>
 
                             <ul className="menu-list">
                                  <li><Link href="/service/service-details">Cloud Computing Solution</Link></li>
                                  <li><Link href="/service/service-details">Cybersecurity & Compliance</Link></li>
                                  <li><Link href="/service/service-details">Software Development</Link></li>
                                  <li><Link href="/service/service-details">It Consulting & Support</Link></li>
-                            </ul>
+                            </ul> */}
                        </div>
                   </div>
 
@@ -56,14 +56,18 @@ const Footer1 = () => {
 
                   <div className="col-lg-3 col-md-6 col-12">
                        <div className="single-footer-items">
-                            <h3>Contact Us</h3>
+                            <h3>Contactanos</h3>
 
                             <div className="contact-box">
                               <div className="icon">
-                                <Image src="/assets/img/icons/footer1-icon1.png" alt="img" width={24} height={24}   />
+                                <Image src="/assets/img/icons/footer1-icon4.png" alt="img" width={84} height={84}   />
                               </div>
                               <div className="pera">
-                                <a href="tel:0500222333">0500 222 333</a>
+                                <a href="tel:0500222333">Guatemala: Condado El Naranjo 23 Calle 14-58 zona 4 Mixco Guatemala
+
+
+                              US: 306 East 17th St, Lumberton, NC 28358
+                               </a>
                               </div>
                             </div>
 
@@ -72,7 +76,7 @@ const Footer1 = () => {
                               <Image src="/assets/img/icons/footer1-icon2.png" alt="img" width={24} height={24}   />
                               </div>
                               <div className="pera">
-                                <a href="tel:0356588547">03 5658 8547</a>
+                                <a href="tel:0356588547">+502 4151 71207</a>
                               </div>
                             </div>
 
@@ -81,7 +85,7 @@ const Footer1 = () => {
                               <Image src="/assets/img/icons/footer1-icon3.png" alt="img" width={24} height={24}   />
                               </div>
                               <div className="pera">
-                                <a href="mailto:admin@techxen.org">admin@techxen.org</a>
+                                <a href="mailto:admin@techxen.org">info@5-0technology.com</a>
                               </div>
                             </div>
 
@@ -90,7 +94,7 @@ const Footer1 = () => {
                               <Image src="/assets/img/icons/footer1-icon4.png" alt="img" width={24} height={24}/>                                
                               </div>
                               <div className="pera">
-                                <a href="mailto:admin@techxen.org">www.techxen.org</a>
+                                <a href="mailto:admin@techxen.org">5-0technology.com</a>
                               </div>
                             </div>
 
@@ -107,7 +111,7 @@ const Footer1 = () => {
             <div className="row align-items-center">
               <div className="col-md-5">
                    <div className="coppyright">
-                     <p>Copyright @2024 TechXen.All Rights Reserved</p>
+                     <p>Copyright @2024 50 Tecnology.All Rights Reserved</p>
                    </div>
               </div>
               <div className="col-md-7">
