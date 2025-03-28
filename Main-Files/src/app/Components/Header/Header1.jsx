@@ -44,7 +44,7 @@ export default function Header1({ variant }) {
               <div className="pera">
                 <p>
                 <Image src="/assets/img/icons/header-top-span.png" alt="img" width={18} height={16}   />
-                   A Professional Technology & It Solution Company Based On World</p>
+                   Innovamos con propósito, transformamos con tecnología.</p>
               </div>
             </div>
           </div>
@@ -83,14 +83,14 @@ export default function Header1({ variant }) {
                       <Image src="/assets/img/icons/header1-icon.png" alt="img" width={22} height={22}   />
                       </div>
                       <div className="headding">
-                        <p>Make a Call</p>
-                        <a href="tel:124(555)6565">124 (555) 6565</a>
+                        <p>Envíanos un mensaje</p>
+                        <a href="tel:+502 4151 7120">+502 4151 7120</a>
                       </div>
                     </div>
-                    <div className="button">
+                    {/* <div className="button">
                     <Link href="/contact" className="theme-btn1" >Get A Quote <span><i className="bi bi-arrow-right"></i>
                     </span></Link>
-                    </div>
+                    </div> */}
                </div>
 
             </div>
