@@ -7,8 +7,15 @@ export default function Nav({ setMobileToggle }) {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setMobileToggle(false); // Cierra el menú móvil si está abierto
+      const yOffset = -100; // Ajusta este valor según la altura de tu navbar
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth'
+      });
+      
+      setMobileToggle(false);
     }
   };
 
