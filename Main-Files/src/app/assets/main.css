@@ -1628,10 +1628,12 @@ body.body {
   --ztc-text-text-2: #fff;
   --ztc-text-pera-text-1: #676879;
   --ztc-text-pera-text-2: #D2D1D5;
-  --ztc-bg-main-bg-1: #0E38B1;
+  /*Paleta de colores*/
+  --ztc-bg-main-bg-1: #0065c2;
   --ztc-bg-main-bg-2: #6E18EF;
   --ztc-bg-main-bg-3: #113ADC;
   --ztc-bg-main-bg-4: #A1E934;
+  /*Paleta de colores*/
   --ztc-bg-bg-1: #F8F9FA;
   --ztc-bg-color-w: #fff;
   --ztc-bg-bg-2: #E7EBF7;
@@ -6415,6 +6417,17 @@ a.header__search.header-search-btn p {
 .service {
   background-color: var(--ztc-bg-bg-1);
 }
+
+.service .category-desc {
+  color: black;
+  margin-bottom: 15px;
+}
+
+.service li {
+  color: var(--ztc-text-pera-text-1);
+  margin-bottom: 15px;
+}
+
 .service .single-box {
   background-color: var(--ztc-bg-color-w);
   border-radius: 7px;
@@ -6458,12 +6471,19 @@ a.header__search.header-search-btn p {
   background-color: var(--ztc-bg-color-w);
   transition: all 0.4s;
 }
-.service .single-box:hover .heading1 h4 a {
+.service .single-box:hover .heading1 h4 {
   display: inline-block;
-  color: var(--ztc-bg-color-w);
+  /* color: var(--ztc-bg-color-w); */
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
   transition: all 0.4s;
 }
 .service .single-box:hover .heading1 p {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  transition: all 0.4s;
+}
+.service .single-box:hover .heading1 li {
   color: rgba(255, 255, 255, 0.8);
   transition: all 0.4s;
 }

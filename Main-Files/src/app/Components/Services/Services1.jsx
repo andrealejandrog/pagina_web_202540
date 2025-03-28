@@ -27,8 +27,7 @@ const Services1 = () => {
                     </div>
                     <div className="heading1">
                       <h4>{category.title}</h4>
-                      <p className="category-desc">{category.desc}</p>
-                      
+                      <p className="category-desc">{category.desc}</p>                      
                       <ul className="service-items-list">
                         {category.items.map((item, itemIndex) => (
                           <li key={itemIndex}>
