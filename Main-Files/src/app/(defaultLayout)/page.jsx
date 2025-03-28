@@ -26,6 +26,7 @@ const Home = () => {
                 shapeiamge2="/assets/img/hero/hero1-image4.png"
             ></HeroBanner1>
             <Award1></Award1>
+            {/* Seccion de Soluciones  */}
             <About1
                 image1="/assets/img/about/about1-img1.png"
                 image2="/assets/img/about/about1-img2.png"
@@ -43,12 +44,16 @@ const Home = () => {
                 btnName="Discover More"
                 btnUrl="/about"
             ></About1>
-            <Services1></Services1> 
-            <Choose1></Choose1>  
+            {/* Seccion de impacto */}
+            <Services1></Services1>
+             {/* Seccion de Proceso  */}
+            <Choose1></Choose1>
+            {/* Seccion de Diferenciador */}
             <Project1></Project1>
-            <Pricing1></Pricing1>
-            <Testimonial1></Testimonial1>   
-            <Blog1></Blog1>
+            {/* <Pricing1></Pricing1> */}
+            {/* <Testimonial1></Testimonial1>    */}
+            {/* <Blog1></Blog1> */}
+            {/* Seccion de Contacto */}
             <Cta1></Cta1>                  
         </div>
     );

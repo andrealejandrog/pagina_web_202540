@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const About1 = ({image1,image2,supIcon,supTitle,supCon,subTitle,Title,content,featurelist,btnName,btnUrl}) => {
     return (
-        <div className="about1 sp">
+        <div className="about1 sp" id="soluciones">
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-6">

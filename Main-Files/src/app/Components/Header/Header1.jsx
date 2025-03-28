@@ -5,28 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 export default function Header1({ variant }) {
   const [mobileToggle, setMobileToggle] = useState(false);
-  const [isSticky, setIsSticky] = useState();
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      if (currentScrollPos > prevScrollPos) {
-        setIsSticky('cs-gescout_sticky'); // Scrolling down
-      } else if (currentScrollPos !== 0) {
-        setIsSticky('cs-gescout_show cs-gescout_sticky'); // Scrolling up
-      } else {
-        setIsSticky();
-      }
-      setPrevScrollPos(currentScrollPos); // Update previous scroll position
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll); // Cleanup the event listener
-    };
-  }, [prevScrollPos]);
 
   return (
     <div className='header-area2 header_nav_03'>
@@ -35,7 +13,7 @@ export default function Header1({ variant }) {
         variant ? variant : ''
       } cs_sticky_header cs_site_header_full_width ${
         mobileToggle ? 'cs_mobile_toggle_active' : ''
-      } ${isSticky ? isSticky : ''}`}
+      }`}
     >
       <div className="cs_top_header">
         <div className="container">

@@ -1,3 +1,4 @@
+// Usado para seccion de impactos
 import SectionTitle from "../Common/SectionTitle";
 import data from '../../Data/Home1/services1.json';
 import Link from "next/link";
@@ -5,7 +6,7 @@ import Image from "next/image";
 
 const Services1 = () => {
     return (
-        <div className="service sp">
+        <div className="service sp" id = 'impacto'>
           <div className="container">
             <div className="row">
               <div className="col-lg-8 m-auto text-center">

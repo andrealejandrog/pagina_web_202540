@@ -16,7 +16,7 @@ const Choose1 = () => {
       }
 
     return (
-        <div className="work sp">
+        <div className="work sp" id ='proceso'>
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-6">

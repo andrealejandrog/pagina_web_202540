@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Cta1 = () => {
     return (
-        <div className="cta">
+        <div className="cta" id = 'contacto'>
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-7">
