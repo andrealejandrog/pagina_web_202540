@@ -12,7 +12,7 @@ const Services1 = () => {
               <div className="col-lg-8 m-auto text-center">
                 <div className="heading1">
                     <SectionTitle
-                        SubTitle="Our Services"
+                        SubTitle="Nuestros servicios"
                         Title="Empower Your Business With Our Comprehensive Technology & IT Solutions"
                     ></SectionTitle>
                 </div>
