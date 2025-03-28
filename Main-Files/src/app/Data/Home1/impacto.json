@@ -1,0 +1,25 @@
+[
+  {
+    "icon": "/assets/img/icons/service-icon1.png",
+    "title": "Seguridad electrónica y automatización",
+    "desc": "Protección y control inteligente",
+    "items": [
+      "Reducción de costos por pérdidas",
+      "Mejor control del personal",
+      "Protección de activos",
+      "Reducción de costos de servicios básicos"
+    ],
+    "addClass": "col-lg-6"
+  },
+  {
+    "icon": "/assets/img/icons/service-icon2.png",
+    "title": "Soluciones tecnológicas",
+    "desc": "Innovación digital para tu negocio", 
+    "items": [
+      "Mejora en productividad",
+      "Acceso a KPIs en tiempo real",
+      "Reducción de costos asociados a automatización de procesos."
+    ],
+    "addClass": "col-lg-6"
+  }
+]
