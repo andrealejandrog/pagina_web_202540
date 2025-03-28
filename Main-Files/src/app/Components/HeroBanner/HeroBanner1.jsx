@@ -66,13 +66,13 @@ const HeroBanner1 = ({bgImg,subTitle,title,content,btnName,btnUrl,image1,image2,
                   <Image src={shapeiamge2} alt="img" width={332} height={162}   />
                   </div> */}
                   {/* Flecha superior */}
-                  <div className="shape1">
+                  {/* <div className="shape1">
                   <Image src="/assets/img/shapes/header1-shape1.png" alt="img" width={131} height={130}   />
-                  </div>
+                  </div> */}
                   {/* Flecha inferior */}
-                  <div className="shape2">
+                  {/* <div className="shape2">
                   <Image src="/assets/img/shapes/header1-shape2.png" alt="img" width={110} height={69}   />
-                  </div>
+                  </div> */}
                 </div>
               </div>
 

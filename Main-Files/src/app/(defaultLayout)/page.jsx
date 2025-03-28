@@ -17,7 +17,7 @@ const Home = () => {
                 bgImg="/assets/img/bg/hero1-bg.png"
                 subTitle="5-0technology"
                 title="Innovamos con propósito, transformamos con tecnología."
-                content="Innovamos con propósito, transformamos con tecnología."
+                content="Transforma la seguridad y productividad de tu empresa con nuestras soluciones tecnológicas innovadoras."
                 btnName="Contáctanos"
                 btnUrl="#contacto"
                 image1="/assets/img/hero/hero1-image1.png"
@@ -25,7 +25,7 @@ const Home = () => {
                 shapeImage1="/assets/img/hero/hero1-image3.png"
                 shapeiamge2="/assets/img/hero/hero1-image4.png"
             ></HeroBanner1>
-            <Award1></Award1>
+            {/* <Award1></Award1> */}
             {/* Seccion de Soluciones  */}
             <About1
                 image1="/assets/img/about/about1-img1.png"
