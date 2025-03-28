@@ -45,8 +45,8 @@ const Project1 = () => {
               <div className="col-lg-8 m-auto text-center">
                 <div className="heading1">
                     <SectionTitle
-                        SubTitle="Our Project"
-                        Title="Driving Success Through Innovative IT Solution Project"
+                        SubTitle="5-0technology"
+                        Title="Una Palabra: Diferentes"
                     ></SectionTitle>
                 </div>
               </div>
@@ -54,7 +54,8 @@ const Project1 = () => {
 
             <div className="space30"></div>
             <div className="row">
-              <div className="project-slider cs_slider_gap_30">
+              <p>Somos más que un proveedor, somos tu aliado estratégico. Contamos con un equipo de expertos apasionados por la excelencia, comprometidos en ofrecer soluciones innovadoras y una experiencia única. Nos involucramos en cada proyecto con la misión de superar expectativas, garantizando resultados óptimos que realmente impulsen tu negocio.</p>
+              {/* <div className="project-slider cs_slider_gap_30">
                 <Slider {...settings}>
                 {data.map((item, i) => (
                 <div key={i} className="single-slider">
@@ -73,7 +74,7 @@ const Project1 = () => {
                 ))}
                 </Slider>
 
-              </div>
+              </div> */}
 
 
               </div>

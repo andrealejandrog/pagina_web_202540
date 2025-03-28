@@ -13825,7 +13825,9 @@ a.header__search.header-search-btn p {
 */
 .project {
   background-color: var(--ztc-bg-bg-3);
+  color: var(--ztc-text-pera-text-1);
 }
+
 .project .project-slider {
   margin-top: 30px;
 }
