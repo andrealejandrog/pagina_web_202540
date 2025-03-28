@@ -8178,6 +8178,60 @@ a.header__search.header-search-btn p {
   CHOOSE AREA CSS
  ::::::::::::::::::::::::::
  */
+
+/* Estilos para los procesos */
+.process-category {
+  margin-bottom: 25px;
+}
+
+.process-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.process-header h4 {
+  margin-left: 15px;
+  color: var(--ztc-text-text-1);
+  font-size: var(--f-fs-font-fs18);
+}
+
+.process-items {
+  list-style: none;
+  padding-left: 40px;
+  margin-top: 10px;
+}
+
+.process-items li {
+  position: relative;
+  margin-bottom: 8px;
+  line-height: 1.6;
+  color: black;
+}
+
+.process-icon {
+  position: absolute;
+  left: -20px;
+  color: var(--ztc-bg-main-bg-1);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .process-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .process-header h4 {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  
+  .process-items {
+    padding-left: 25px;
+  }
+}
+
 /*
 ::::::::::::::::::::::::::
  CTA AREA CSS
