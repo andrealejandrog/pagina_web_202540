@@ -42,8 +42,8 @@ const HeroBanner1 = ({bgImg,subTitle,title,content,btnName,btnUrl,image1,image2,
                   <div className="buttons">
                     <Link className="theme-btn1" href={btnUrl}>{btnName} <span><i className="bi bi-arrow-right"></i>
                     </span></Link>
-                    <span onClick={handelClick} className="play-btn"><span><i className="bi bi-play"></i>
-                    </span> Watch Demo Video</span>
+                    {/* <span onClick={handelClick} className="play-btn"><span><i className="bi bi-play"></i>
+                    </span> Watch Demo Video</span> */}
                   </div>
                 </div>
               </div>
@@ -56,16 +56,20 @@ const HeroBanner1 = ({bgImg,subTitle,title,content,btnName,btnUrl,image1,image2,
                   <div className="image2">
                   <Image src={image2} alt="img" width={595} height={585}   />
                   </div>
-                  <div className="image3 shape-animaiton3">
+                  {/* Animacion */}
+                  {/* <div className="image3 shape-animaiton3">
                   <Image src={shapeImage1} alt="img" width={252} height={72}   />
   
-                  </div>
-                  <div className="image4 shape-animaiton3">
+                  </div> */}
+                  {/* Imagen inferior */}
+                  {/* <div className="image4 shape-animaiton3">
                   <Image src={shapeiamge2} alt="img" width={332} height={162}   />
-                  </div>
+                  </div> */}
+                  {/* Flecha superior */}
                   <div className="shape1">
                   <Image src="/assets/img/shapes/header1-shape1.png" alt="img" width={131} height={130}   />
                   </div>
+                  {/* Flecha inferior */}
                   <div className="shape2">
                   <Image src="/assets/img/shapes/header1-shape2.png" alt="img" width={110} height={69}   />
                   </div>
