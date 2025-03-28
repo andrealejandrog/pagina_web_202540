@@ -33,14 +33,29 @@ const Home = () => {
                 supIcon="/assets/img/icons/about1-shape-icon.png"
                 supTitle="24/7 Support"
                 supCon="5-0technology"
-                subTitle="About Our Company"
-                Title="Discover Our Story Empowering Business Through Innovation"
-                content="TechXen pioneering force in the realm of technology and IT solutions, dedicated to revolutionising the way businesses thrive in the digital age. Our approach is rooted in collaboration, transparency, and a relentless pursuit of excellence. We believe that by staying ahead of the curve and embracing change, we can help our clients stay ahead of  competition."
+                subTitle="Sobre nosotros"
+                Title="Tecnología y Seguridad a la Medida de tu Negocio"
+                // content="TechXen pioneering force in the realm of technology and IT solutions, dedicated to revolutionising the way businesses thrive in the digital age. Our approach is rooted in collaboration, transparency, and a relentless pursuit of excellence. We believe that by staying ahead of the curve and embracing change, we can help our clients stay ahead of  competition."
                 featurelist={[
-                    "Dramatically re-engineer value added IT system.",
-                    "Highlight any unique selling points or differentiators.",
-                    "Incorporate visuals such as team photos shots.",
-                ]}
+                    {
+                      title: "Seguridad Electrónica y automatización",
+                      items: [
+                        "Instalación de cableado estructurado",
+                        "Sistemas de CCTV, alarmas y control de acceso",
+                        "Centros de monitoreo 24/7",
+                        "Automatización de casas y oficinas"
+                      ]
+                    },
+                    {
+                      title: "Soluciones tecnológicas",
+                      items: [
+                        "Desarrollo de software para gestión operativa",
+                        "Automatización de procesos para eficiencia operativa",
+                        "Almacenamiento en la nube seguro y escalable",
+                        "Transformación digital y digitalización de documentos"
+                      ]
+                    }
+                  ]}
                 btnName="Discover More"
                 btnUrl="/about"
             ></About1>
