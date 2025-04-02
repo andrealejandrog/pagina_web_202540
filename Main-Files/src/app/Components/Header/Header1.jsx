@@ -21,7 +21,13 @@ export default function Header1({ variant }) {
             <div className="col-lg-12">
               <div className="pera">
                 <p>
-                <Image src="/assets/img/icons/header-top-span.png" alt="img" width={18} height={16}   />
+                {/* <Image
+                      src="/assets/img/icons/Logo_symbol.svg"
+                      alt="5-0 Technology - Soluciones Tecnológicas"
+                      width={50}  // Más ancho para mejor legibilidad
+                      height={10}
+                      priority     // Opcional: carga prioritario si está en el header
+                  /> */}
                    Innovamos con propósito, transformamos con tecnología.</p>
               </div>
             </div>
@@ -33,9 +39,15 @@ export default function Header1({ variant }) {
           <div className="cs_main_header_in">
 
             <div className="cs_main_header_left">
-              {/* <Link className="cs_site_branding" href="/">
-              <Image src="/assets/img/logo/header-logo1.png" alt="img" width={131} height={28}   />
-              </Link> */}
+              <Link className="cs_site_branding" href="/">
+                <Image
+                    src="/assets/img/logo/Transparent_logo.svg"
+                    alt="5-0 Technology - Soluciones Tecnológicas"
+                    width={115}  // Más ancho para mejor legibilidad
+                    height={23}
+                    priority     // Opcional: carga prioritario si está en el header
+                />
+              </Link>
               </div>
 
               <div className="cs_main_header_center1">
