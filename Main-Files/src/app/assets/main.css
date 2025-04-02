@@ -10979,21 +10979,45 @@ a.header__search.header-search-btn p {
  HERO AREA CSS
 ::::::::::::::::::::::::::
 */
+/* Versión móvil FIRST (base) */
 .hero1 {
-  min-height: 800px;
+  min-height: 600px;  /* Altura más adecuada para móviles */
   display: flex;
-  padding-top: 130px;
+  padding-top: 80px;  /* Padding más compacto para móviles */
+  flex-direction: column; /* Stack vertical en móviles */
 }
-@media (max-width: 767px) {
+
+/* Tablet pequeña (480px - 767px) */
+@media (min-width: 480px) {
   .hero1 {
+    min-height: 650px;
     padding-top: 100px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+/* Tablet landscape (768px - 991px) */
+@media (min-width: 768px) {
   .hero1 {
+    min-height: 700px;
     padding-top: 100px;
+    flex-direction: row; /* Elementos en fila */
   }
 }
+
+/* Desktop pequeño (992px - 1199px) */
+@media (min-width: 992px) {
+  .hero1 {
+    padding-top: 120px;
+  }
+}
+
+/* Desktop grande (1200px+) */
+@media (min-width: 1200px) {
+  .hero1 {
+    padding-top: 130px; /* Valor original para pantallas grandes */
+  }
+}
+
 .hero1 .main-headding {
   padding-top: 50px;
 }
