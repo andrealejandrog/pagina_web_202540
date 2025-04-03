@@ -31,31 +31,54 @@ const Home = () => {
                 image1="/assets/img/about/about1-img1.png"
                 image2="/assets/img/about/about1-img2.png"
                 supIcon="/assets/img/icons/about1-shape-icon.png"
-                supTitle="24/7 Support"
                 supCon="5-0technology"
                 subTitle="Sobre nosotros"
                 Title="Tecnología y Seguridad a la Medida de tu Negocio"
                 // content="TechXen pioneering force in the realm of technology and IT solutions, dedicated to revolutionising the way businesses thrive in the digital age. Our approach is rooted in collaboration, transparency, and a relentless pursuit of excellence. We believe that by staying ahead of the curve and embracing change, we can help our clients stay ahead of  competition."
                 featurelist={[
-                    {
-                      title: "Seguridad Electrónica y automatización",
-                      items: [
-                        "Instalación de cableado estructurado",
-                        "Sistemas de CCTV, alarmas y control de acceso",
-                        "Centros de monitoreo 24/7",
-                        "Automatización de casas y oficinas"
-                      ]
-                    },
-                    {
-                      title: "Soluciones tecnológicas",
-                      items: [
-                        "Desarrollo de software para gestión operativa",
-                        "Automatización de procesos para eficiencia operativa",
-                        "Almacenamiento en la nube seguro y escalable",
-                        "Transformación digital y digitalización de documentos"
-                      ]
-                    }
-                  ]}
+                  {
+                    title: "Seguridad Electrónica y automatización",
+                    items: [
+                      {
+                        text: "Instalación de cableado estructurado",
+                        image: "/assets/img/icons/Cableado_estructurado_op1.svg"
+                      },
+                      {
+                        text: "Sistemas de CCTV, alarmas y control de acceso",
+                        image: "/assets/img/icons/Cctv.svg"
+                      },
+                      {
+                        text: "Centros de monitoreo 24/7",
+                        image: "/assets/img/icons/Monitoreo_24_7.svg"
+                      },
+                      {
+                        text: "Automatización de casas y oficinas",
+                        image: "/assets/img/icons/Automatizacion.svg"
+                      }
+                    ]
+                  },
+                  {
+                    title: "Soluciones tecnológicas",
+                    items: [
+                      {
+                        text: "Desarrollo de software para gestión operativa",
+                        image: "/assets/img/icons/Desarrollo_software.svg"
+                      },
+                      {
+                        text: "Automatización de procesos para eficiencia operativa",
+                        image: "/assets/img/icons/Automatizacion_procesos.svg"
+                      },
+                      {
+                        text: "Almacenamiento en la nube seguro y escalable",
+                        image: "/assets/img/icons/Almacenamiento_nube.svg"
+                      },
+                      {
+                        text: "Transformación digital y digitalización de documentos",
+                        image: "/assets/img/icons/Transformacion_digital.svg"
+                      }
+                    ]
+                  }
+              ]}
                 btnName="Discover More"
                 btnUrl="/about"
             ></About1>
