@@ -10,12 +10,12 @@ const Footer1 = () => {
                        <div className="single-footer-items footer-logo-area">
                             <div className="footer-logo">
                               <a href="">
-                              <Image src="/assets/img/logo/logo1.png" alt="img" width={209} height={46}   />
+                              <Image src="/assets/img/logo/Original_logo.svg" alt="img" width={209} height={46}   />
                                 </a>
                             </div>
                             <div className="space20"></div>
                             <div className="heading1">
-                              <p>-Innovamos con propósito, transformamos con tecnología. </p>
+                              <p>Innovamos con propósito, transformamos con tecnología. </p>
                             </div>
                             <ul className="social-icon">
                                  <li><a href="#"><i className="bi bi-linkedin"></i></a></li>
