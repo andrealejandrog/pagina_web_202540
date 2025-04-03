@@ -10,10 +10,10 @@ const About1 = ({ image1, image2, supIcon, supTitle, supCon, subTitle, Title, co
                         <div className="heading1">
                           <span className="span" data-aos="zoom-in">
                             <Image 
-                              src="/assets/img/icons/span1.png" 
+                              src="/assets/img/icons/Logo_symbol.svg" 
                               alt="icon" 
-                              width={18} 
-                              height={16}
+                              width={50} 
+                              height={10}
                               className="span-icon" // Clase adicional para control específico
                             />
                             {subTitle}
@@ -43,21 +43,27 @@ const About1 = ({ image1, image2, supIcon, supTitle, supCon, subTitle, Title, co
                                         data-aos-duration="800"
                                     >
                                         <div className="solution-card">
-                                            <div className="solution-content">
-                                                <h4 className="solution-title">{item.text}</h4>
-                                                {item.image && (
-                                                    <div className="solution-image-wrapper">
-                                                        <Image 
-                                                            src={item.image}
-                                                            alt={item.text}
-                                                            width={100}
-                                                            height={50}
-                                                            className="solution-image"
-                                                            layout="responsive"
-                                                        />
-                                                    </div>
-                                                )}
-                                            </div>
+                                          <div className="solution-content">
+                                            {/* Imagen con contenedor tipo "icon" */}
+                                            {item.image && (
+                                              <div className="solution-image-wrapper">
+                                                <Image 
+                                                  src={item.image}
+                                                  alt={item.text}
+                                                  width={80}
+                                                  height={80}
+                                                  className="solution-image"
+                                                  style={{
+                                                    objectFit: 'contain',
+                                                    width: '100%',
+                                                    height: 'auto'
+                                                  }}
+                                                />
+                                              </div>
+                                            )}
+                                            
+                                            <h4 className="solution-title">{item.text}</h4>
+                                          </div>
                                         </div>
                                     </div>
                                 ))}

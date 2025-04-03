@@ -15,10 +15,6 @@ const HeroBanner1 = ({bgImg,subTitle,title,content,btnName,btnUrl,image1,image2,
   const [iframeSrc, setIframeSrc] = useState('about:blank');
   const [toggle, setToggle] = useState(false);
 
-  const handelClick = () => {
-  setIframeSrc("https://www.youtube.com/embed/rRid6GCJtgc");
-  setToggle(!toggle);
-  };
   const handelClose = () => {
   setIframeSrc('about:blank');
   setToggle(!toggle);
@@ -31,19 +27,6 @@ const HeroBanner1 = ({bgImg,subTitle,title,content,btnName,btnUrl,image1,image2,
             <div className="row">
               <div className="col-lg-5">
                 <div className="main-headding">
-                  {/* <span className="span" data-aos="zoom-in-left" data-aos-duration="700"> */}
-                  {/* <Image src="/assets/img/icons/span1.png" alt="img" width={18} height={16}   />
-                     {subTitle} */}
-                  {/* <Image src="/assets/img/icons/span1.png" alt="img" width={18} height={16}   /> */}
-                  {/* <Image
-                      src="/assets/img/icons/Logo_symbol.svg"
-                      alt="5-0 Technology - Soluciones Tecnológicas"
-                      width={50}  // Más ancho para mejor legibilidad
-                      height={10}
-                      priority     // Opcional: carga prioritario si está en el header
-                  /> */}
-                     {/* {subTitle}
-                  </span> */}
                   <h1 className="title tg-element-title">{parse(title)}</h1>
                   <div className="space16"></div>
                   <p>{content}</p>
@@ -52,8 +35,6 @@ const HeroBanner1 = ({bgImg,subTitle,title,content,btnName,btnUrl,image1,image2,
                   <div className="buttons">
                     <Link className="theme-btn1" href={btnUrl}>{btnName} <span><i className="bi bi-arrow-right"></i>
                     </span></Link>
-                    {/* <span onClick={handelClick} className="play-btn"><span><i className="bi bi-play"></i>
-                    </span> Watch Demo Video</span> */}
                   </div>
                 </div>
               </div>
