@@ -1,4 +1,5 @@
 import Image from "next/image";
+import SectionTitle from "../Common/SectionTitle";
 
 const About1 = ({ image1, image2, supIcon, supTitle, supCon, subTitle, Title, content, featurelist, btnName, btnUrl }) => {
     return (
@@ -9,19 +10,11 @@ const About1 = ({ image1, image2, supIcon, supTitle, supCon, subTitle, Title, co
                     <div className="col-lg-12">
                         <div className="heading1">
                           <span className="span" data-aos="zoom-in">
-                            <Image 
-                              src="/assets/img/icons/Logo_symbol.svg" 
-                              alt="icon" 
-                              width={50} 
-                              height={10}
-                              className="span-icon" // Clase adicional para control específico
+                            <SectionTitle
+                                SubTitle={subTitle}
+                                Title={Title}
                             />
-                            {subTitle}
                           </span>
-                          <h2 className="title tg-element-title" style={{ position: 'relative' }}>
-                            {Title}
-                            <span className="title-underline"></span> {/* Línea decorativa */}
-                          </h2>
                         </div>
                     </div>
                 </div>
