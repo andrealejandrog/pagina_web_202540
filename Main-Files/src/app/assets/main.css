@@ -6567,36 +6567,16 @@ a.header__search.header-search-btn p {
   transition: all 0.4s;
 }
 .service .icon {
-  /* background-color: #000; */
-  /* height: 300px;
-  width: 300px; */
   text-align: center;
-  /* line-height: 80px; */
-  /* border-radius: 50%; */
-  margin-top: 24px;
+  /* margin-top: 24px; */
   transition: all 0.4s;
 }
-.service .single-box .learn {
-  transition: all 0.4s;
-  color: var(--ztc-text-text-1);
-  font-size: var(--f-fs-font-fs18);
-  line-height: var(--f-fs-font-fs18);
-  font-weight: var(--f-fw-blod);
-  display: inline-block;
-}
-.service .single-box .learn span {
-  display: inline-block;
-  transform: rotate(-45deg);
-}
-.service .single-box .learn:hover {
-  color: var(--ztc-bg-main-bg-1);
-  transition: all 0.4s;
-}
+
 .service .single-box:hover {
   transition: all 0.4s;
   transform: translateY(-10px);
   box-shadow: rgba(0, 0, 0, 0.068) 0px 20px 30px;
-  background-color: var(--ztc-bg-main-bg-1);
+  background-color: var(--ztc-bg-main-bg-3);
 }
 .service .single-box:hover .icon {
   background-color: var(--ztc-bg-color-w);
@@ -6618,10 +6598,6 @@ a.header__search.header-search-btn p {
   color: rgba(255, 255, 255, 0.8);
   transition: all 0.4s;
 }
-.service .single-box:hover .learn {
-  transition: all 0.4s;
-  color: var(--ztc-bg-color-w);
-}
 
 /* Estilos para el layout alternado */
 .service .icon-container {
@@ -6642,12 +6618,12 @@ a.header__search.header-search-btn p {
   transform: scale(1.50);
 }
 
-/* Efecto hover para el contenedor completo */
+/* Efecto hover para el contenedor completo
 .service .single-box:hover {
   transform: translateY(-10px);
   box-shadow: rgba(0, 0, 0, 0.068) 0px 20px 30px;
   background-color: var(--ztc-bg-main-bg-1);
-}
+} */
 
 /* Ajustes responsive */
 @media (max-width: 767px) {
