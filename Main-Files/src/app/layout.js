@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import "slick-carousel/slick/slick.css";
 import "./assets/main.css";
+import { LanguageProvider } from '@/app/context/LanguageContext'; // Añade esta importación
 
 const figtree = Figtree({
   subsets: ['latin'],
@@ -13,13 +14,13 @@ const figtree = Figtree({
 export const metadata = {
   title: {
     absolute: '',
-    default: '50 solutions - Innovamos con propósito, transformamos con tecnología',
-    template: '%s | 50 solutions  - Innovamos con propósito, transformamos con tecnología',
+    default: '5.0 solutions - Innovamos con propósito, transformamos con tecnología',
+    template: '%s | 5.0 solutions  - Innovamos con propósito, transformamos con tecnología',
   },
-  description: '50 solutions  - TInnovamos con propósito, transformamos con tecnología',
+  description: '5.0 solutions  - TInnovamos con propósito, transformamos con tecnología',
   openGraph: {
-    title: '50 solutions  - Innovamos con propósito, transformamos con tecnología',
-    description: '50 solutions  - Innovamos con propósito, transformamos con tecnología',
+    title: '5.0 solutions  - Innovamos con propósito, transformamos con tecnología',
+    description: '5.0 solutions  - Innovamos con propósito, transformamos con tecnología',
   },
 };
 
@@ -31,7 +32,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${figtree.variable}`}>
-        {children}
+        <LanguageProvider> {/* Envuelve con el provider */}
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
