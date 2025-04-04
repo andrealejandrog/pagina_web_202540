@@ -2819,10 +2819,10 @@ body.body {
  COMMON AREA CSS
 ::::::::::::::::::::::::::
 */
-.comon-body {
-  /*Pagination*/
-  /* video button  */
-}
+/* .comon-body {
+  Pagination
+  video button 
+} */
 .comon-body .theme-pagination ul {
   margin: 0;
   padding: 0;
@@ -2919,9 +2919,9 @@ body.body {
   border-bottom: 10px solid transparent;
 }
 
-.video-buttton9 {
-  /* video button  */
-}
+/* .video-buttton9 {
+  video button 
+} */
 .video-buttton9 .video-play-button {
   position: relative;
   z-index: 10;
@@ -2996,9 +2996,9 @@ body.body {
   }
 }
 
-.video-paly10 {
+/* .video-paly10 { */
   /* video button  */
-}
+/* } */
 .video-paly10 .video-play-button {
   position: relative;
   z-index: 10;
@@ -5310,9 +5310,31 @@ a.header__search.header-search-btn p {
 }
 
 /* === Media Queries Unificados === */
+
+@media (hover: none) and (pointer: coarse) {
+  .about1 .solution-card {
+    transition: all 1s ease-out;
+  }
+  
+  .about1 .solution-card:active {
+    transform: translateY(-10px);
+    box-shadow: var(--ztc-bg-main-bg-2) 0px 20px 30px;
+  }
+}
+
 @media (max-width: 991px) {
   .about1 .heading1 {
     padding-top: var(--f-spacer-30);
+  }
+
+  .about1 .solution-card {
+    -webkit-tap-highlight-color: transparent; /* Elimina el highlight azul en iOS */
+    touch-action: manipulation; /* Mejora la respuesta táctil */
+  }
+  
+  .about1 .solution-card:active {
+    transform: translateY(-5px) scale(0.98); /* Efecto más sutil para móvil */
+    transition: transform 0.1s ease;
   }
 }
 
@@ -23231,6 +23253,7 @@ li.has-dropdown1 span {
   bottom: -4px;
   background-color: #fff;
 }
+
 .header-search-form-wrapper {
   opacity: 0;
   visibility: hidden;
@@ -23274,9 +23297,17 @@ li.has-dropdown1 span {
     display: flex;
  }
 }
+
+/* BARRA DE NAVEGACION */
+
 .cs_nav {
   color: #fff;
 }
+
+.cs_nav .cs_nav_list li:hover {
+  color: var(--ztc-bg-main-bg-1);
+}
+
 .cs_nav ul {
   margin: 0;
   padding: 0;
@@ -23494,9 +23525,9 @@ li.has-dropdown1 span {
    } 
 }
 @media screen and (max-width: 1550px) {
-  .cs_site_header_full_width .container {
+  /* .cs_site_header_full_width .container {
   
- }
+ } */
   .cs_site_branding + .cs_nav {
     margin-left: 35px;
  }
@@ -23547,7 +23578,7 @@ li.has-dropdown1 span {
     position: absolute;
     width: 100vw;
     left: -15px;
-    background-color: #181818;
+    background-color: var(--ztc-bg-main-bg-1);
     padding: 10px 0;
     display: none;
     top: 100%;
@@ -23764,9 +23795,7 @@ li.has-dropdown1 span {
 .cs_site_header.cs_style_1 .cs_main_header_in {
   height: 90px;
 }
-.cs_nav .cs_nav_list > li > a:hover{
-  
-}
+
 .cs_header_social_links_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
