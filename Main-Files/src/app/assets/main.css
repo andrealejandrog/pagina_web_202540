@@ -131,6 +131,28 @@ Location:
   animation-timing-function: cubic-bezier(0.59, 0.59, 1, 1);
 }
 
+.language-selector {
+  margin-left: auto;
+  padding: 0 15px;
+}
+
+.language-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #000000;
+  padding: 8px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.language-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 .shape-animaiton2 {
   position: relative;
   animation-name: shape-animaiton2;
