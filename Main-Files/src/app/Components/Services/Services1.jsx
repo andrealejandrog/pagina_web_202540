@@ -10,7 +10,7 @@ const Services1 = () => {
               <div className="col-lg-8 m-auto text-center">
                 <div className="heading1">
                     <SectionTitle
-                        SubTitle="5-0techonology"
+                        SubTitle="5.0 Technology"
                         Title="Protege, Optimiza y Crece"
                     />
                 </div>
@@ -18,13 +18,12 @@ const Services1 = () => {
             </div>
 
             <div className="space30"></div>
-            <div className="row">
-              {data.map((category, i) => (
-                <div key={i} className={category.addClass} data-aos="zoom-in-up" data-aos-duration="700">
+            
+            {data.map((category, i) => (
+              <div key={i} className="row align-items-center mb-5" data-aos="zoom-in-up" data-aos-duration="700">
+                {/* Alternar orden basado en índice par/impar */}
+                <div className={`col-md-6 ${i % 2 === 0 ? 'order-md-2' : ''}`}>
                   <div className="single-box">
-                    <div className="icon">
-                      <Image src={category.icon} alt={category.title} width={39} height={40} />
-                    </div>
                     <div className="heading1">
                       <h4>{category.title}</h4>
                       <p className="category-desc">{category.desc}</p>                      
@@ -39,8 +38,20 @@ const Services1 = () => {
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+                
+                <div className={`col-md-6 ${i % 2 === 0 ? 'order-md-1' : ''}`}>
+                  <div className="icon-container text-center">
+                    <Image
+                      src={category.icon}
+                      alt={category.title}
+                      width={200}
+                      height={40}
+                      className="img-fluid"
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
     );

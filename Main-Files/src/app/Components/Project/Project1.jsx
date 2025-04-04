@@ -45,7 +45,7 @@ const Project1 = () => {
               <div className="col-lg-8 m-auto text-center">
                 <div className="heading1">
                     <SectionTitle
-                        SubTitle="5-0technology"
+                        SubTitle="5.0 Technology"
                         Title="Una Palabra: Diferentes"
                     ></SectionTitle>
                 </div>

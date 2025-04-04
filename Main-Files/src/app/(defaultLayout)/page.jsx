@@ -15,7 +15,7 @@ const Home = () => {
         <div>
             <HeroBanner1
                 bgImg="/assets/img/bg/hero1-bg.png"
-                subTitle="5-0technology"
+                subTitle="5.0 Technology"
                 title="Innovamos con propósito, transformamos con tecnología."
                 content="Transforma la seguridad y productividad de tu empresa con nuestras soluciones tecnológicas innovadoras."
                 btnName="Contáctanos"
@@ -31,7 +31,7 @@ const Home = () => {
                 image1="/assets/img/about/about1-img1.png"
                 image2="/assets/img/about/about1-img2.png"
                 supIcon="/assets/img/icons/about1-shape-icon.png"
-                supCon="5-0technology"
+                supCon="5.0 Technology"
                 subTitle="Sobre nosotros"
                 Title="Tecnología y Seguridad a la Medida de tu Negocio"
                 // content="TechXen pioneering force in the realm of technology and IT solutions, dedicated to revolutionising the way businesses thrive in the digital age. Our approach is rooted in collaboration, transparency, and a relentless pursuit of excellence. We believe that by staying ahead of the curve and embracing change, we can help our clients stay ahead of  competition."

@@ -1,6 +1,6 @@
 [
   {
-    "icon": "/assets/img/icons/service-icon1.png",
+    "icon": "/assets/img/icons/Seguridad.png",
     "title": "Seguridad electrónica y automatización",
     "desc": "Protección y control inteligente",
     "items": [
@@ -12,7 +12,7 @@
     "addClass": "col-lg-6"
   },
   {
-    "icon": "/assets/img/icons/service-icon2.png",
+    "icon": "/assets/img/icons/Kpi.png",
     "title": "Soluciones tecnológicas",
     "desc": "Innovación digital para tu negocio", 
     "items": [
