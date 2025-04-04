@@ -5293,6 +5293,8 @@ a.header__search.header-search-btn p {
   color: var(--ztc-text-pera-text-1);
   font-size: var(--f-fs-font-fs18);
   padding-bottom: var(--f-spacer-10);
+  padding-top: 15px;
+  justify-self: center;
 }
 
 .solution-card {
@@ -5374,7 +5376,7 @@ a.header__search.header-search-btn p {
 }
 
 .category-icon {
-  color: var(--ztc-bg-main-bg-2);
+  color: black;
   font-size: var(--f-fs-font-fs24);
   margin-right: 10px;
 }
@@ -6601,7 +6603,7 @@ a.header__search.header-search-btn p {
 
 /* Estilos para el layout alternado */
 .service .icon-container {
-  padding: 30px;
+  padding: 45px;
 }
 
 .service .row.align-items-center {
