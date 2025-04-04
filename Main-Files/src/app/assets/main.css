@@ -18174,52 +18174,77 @@ a.header__search.header-search-btn p {
 }
 .footer1 .copyright-area {
   border-top: 1px solid #E8EAED;
+  padding: 20px 0;
 }
-.footer1 .copyright-area .coppyright p {
+
+.footer1 .copyright-area .row {
+  display: flex;
+  flex-wrap: nowrap; /* Evita que se apilen */
+  align-items: center;
+}
+
+.footer1 .copyright-area .coppyright p,
+.footer1 .copyright-area .freepik p {
   font-size: var(--f-fs-font-fs16);
   line-height: var(--f-fs-font-fs28);
   font-weight: var(--f-fw-regular);
   color: var(--ztc-text-pera-text-1);
+  margin: 0; /* Elimina márgenes por defecto */
+  white-space: nowrap; /* Evita saltos de línea */
 }
-@media (max-width: 767px) {
-  .footer1 .copyright-area .coppyright p {
-    padding-top: 16px;
-  }
-}
+
 .footer1 .copyright-area .coppyright a {
   font-size: var(--f-fs-font-fs16);
   line-height: var(--f-fs-font-fs28);
   font-weight: var(--f-fw-regular);
   color: var(--ztc-text-pera-text-1);
   display: inline-block;
+  white-space: nowrap;
 }
+
+.footer1 .copyright-area .freepik {
+  text-align: center;
+  padding: 0 10px; /* Espacio interno */
+}
+
 .footer1 .copyright-area .coppyright.right-area {
   text-align: end;
 }
-@media (max-width: 767px) {
-  .footer1 .copyright-area .coppyright.right-area {
-    text-align: start;
-  }
-}
+
 .footer1 .copyright-area .coppyright.right-area a {
-  padding: 20px 20px;
+  padding: 0 10px; /* Reduce el padding */
 }
-.footer1 .copyright-area .coppyright.right-area a:nth-child(1) {
-  position: relative;
-}
-@media (max-width: 767px) {
-  .footer1 .copyright-area .coppyright.right-area a:nth-child(1) {
-    padding: 20px 20px 20px 0px;
-  }
-}
+
 .footer1 .copyright-area .coppyright.right-area a:nth-child(1)::after {
   content: "";
   position: absolute;
-  top: 24px;
+  top: 50%;
   right: 0;
+  transform: translateY(-50%);
   width: 2px;
   height: 20px;
   background-color: #E8EAED;
+}
+
+/* Responsive para móviles */
+@media (max-width: 767px) {
+  .footer1 .copyright-area .row {
+    flex-wrap: wrap; /* Permite apilamiento en móvil */
+  }
+  
+  .footer1 .copyright-area .col-md-4 {
+    width: 100%;
+    text-align: center !important;
+    padding: 10px 0;
+  }
+  
+  .footer1 .copyright-area .coppyright.right-area {
+    text-align: center !important;
+  }
+  
+  .footer1 .copyright-area .coppyright.right-area a {
+    padding: 0 10px !important;
+  }
 }
 
 .footer-logo-area {
