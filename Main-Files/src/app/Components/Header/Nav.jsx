@@ -2,12 +2,11 @@ import { useEffect } from 'react';
 import Link from 'next/link';
 
 export default function Nav({ setMobileToggle }) {
-  // Función para smooth scroll
   const handleSmoothScroll = (e, id) => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      const yOffset = -100; // Ajusta este valor según la altura de tu navbar
+      const yOffset = -100;
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       
       window.scrollTo({

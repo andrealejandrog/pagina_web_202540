@@ -131,6 +131,44 @@ Location:
   animation-timing-function: cubic-bezier(0.59, 0.59, 1, 1);
 }
 
+/* Selector de idiomas */
+.language-selector {
+  position: relative;
+  margin-right: 15px;
+}
+
+.cs_language_toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #010101;
+  padding: 8px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  min-width: 80px;
+}
+
+.cs_language_toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Versión móvil */
+@media (max-width: 991px) {
+  .language-selector {
+    order: -1;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .cs_language_toggle {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
 .shape-animaiton2 {
   position: relative;
   animation-name: shape-animaiton2;
@@ -11111,9 +11149,17 @@ a.header__search.header-search-btn p {
     padding-top: 50px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 960px) {
   .hero1 .main-headding {
-    padding-top: 0;
+    padding-top: 0; 
+  }
+  .contact-btn {
+    display: none !important;
+  }
+  
+  /* Ajuste opcional para el botón de idioma */
+  .language-selector {
+    margin-right: 0;
   }
 }
 .hero1 .main-headding span.span {
@@ -11140,6 +11186,9 @@ a.header__search.header-search-btn p {
     font-weight: var(--f-fw-blod);
     line-height: var(--f-fs-font-fs48);
   }
+  .contact-btn {
+    display: none !important;
+  }
 }
 @media (max-width: 767px) {
   .hero1 .main-headding h1 {
@@ -11160,6 +11209,7 @@ a.header__search.header-search-btn p {
 .hero1 .buttons {
   display: flex;
   align-items: center;
+  display: block;
 }
 @media (max-width: 767px) {
   .hero1 .buttons {
@@ -11214,6 +11264,9 @@ a.header__search.header-search-btn p {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .hero1 .hero1-all-images .image3 {
     right: 0;
+  }
+  .hero1 .hero1-all-images .shape2 {
+    display: none;
   }
 }
 @media (max-width: 767px) {
@@ -12272,6 +12325,9 @@ a.header__search.header-search-btn p {
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .hero5 .main-heading {
     padding-top: 160px;
+  }
+  .contact-btn {
+    display: none;
   }
 }
 @media (max-width: 767px) {
