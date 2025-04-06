@@ -6585,101 +6585,100 @@ a.header__search.header-search-btn p {
 ::::::::::::::::::::::::::
  SERVICE AREA CSS
 ::::::::::::::::::::::::::
-*/
-/* .service {
-  background-color: var(--ztc-bg-bg-1);
-} */
-
-
-.service-content .category-desc {
-  color: black;
-  margin-bottom: 15px;
+/* ============= SERVICE SECTION - VERSIÓN OPTIMIZADA ============= */
+.service {
+  position: relative;
+  width: 100%;
+  padding: 80px 0;
 }
 
+/* Textos */
 .service .category-desc {
-  color: black;
+  color: var(--ztc-text-dark);
   margin-bottom: 15px;
+  line-height: 1.6;
 }
 
 .service li {
   color: var(--ztc-text-pera-text-1);
   margin-bottom: 15px;
+  position: relative;
+  padding-left: 20px;
 }
 
+.service .service-bullet {
+  position: absolute;
+  left: 0;
+  color: var(--ztc-primary);
+}
+
+/* Cards */
 .service .single-box {
   background-color: var(--ztc-bg-color-w);
-  border-radius: 7px;
+  border-radius: 12px;
   padding: 32px 24px;
   margin-top: 30px;
-  transition: all 0.4s;
-}
-.service .icon {
-  text-align: center;
-  /* margin-top: 24px; */
-  transition: all 0.4s;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  height: 100%;
 }
 
 .service .single-box:hover {
-  transition: all 0.4s;
   transform: translateY(-10px);
-  box-shadow: rgba(0, 0, 0, 0.068) 0px 20px 30px;
+  box-shadow: 0 20px 30px rgba(0,0,0,0.1);
   background-color: var(--ztc-bg-main-bg-3);
 }
-.service .single-box:hover .icon {
-  background-color: var(--ztc-bg-color-w);
-  transition: all 0.4s;
-}
+
+/* Efectos hover */
 .service .single-box:hover .heading1 h4 {
-  display: inline-block;
   color: var(--ztc-bg-color-w);
-  /* color: rgba(255, 255, 255, 0.8); */
   font-weight: bold;
-  transition: all 0.4s;
-}
-.service .single-box:hover .heading1 p {
-  color: rgba(255, 255, 255, 0.8);
-  /* font-weight: bold; */
-  transition: all 0.4s;
-}
-.service .single-box:hover .heading1 li {
-  color: rgba(255, 255, 255, 0.8);
-  transition: all 0.4s;
 }
 
-/* Estilos para el layout alternado */
+.service .single-box:hover .heading1 p,
+.service .single-box:hover .heading1 li {
+  color: rgba(255,255,255,0.85);
+}
+
+/* Iconos */
 .service .icon-container {
   padding: 45px;
-}
-
-.service .row.align-items-center {
-  gap: 30px 0;
+  text-align: center;
 }
 
 .service .icon-container img {
+  transition: transform 0.4s ease;
   max-width: 80%;
   height: auto;
-  transition: transform 0.3s;
 }
 
 .service .icon-container:hover img {
-  transform: scale(1.50);
+  transform: scale(1.1);
 }
 
-/* Efecto hover para el contenedor completo
-.service .single-box:hover {
-  transform: translateY(-10px);
-  box-shadow: rgba(0, 0, 0, 0.068) 0px 20px 30px;
-  background-color: var(--ztc-bg-main-bg-1);
-} */
-
-/* Ajustes responsive */
-@media (max-width: 767px) {
-  .service [class*="order-md-"] {
-    order: 0 !important; /* Forzar orden vertical en móvil */
+/* Layout responsive */
+@media (min-width: 768px) {
+  .service .row.align-items-center {
+    gap: 30px 0;
   }
   
+  .service [class*="order-md-"] {
+    order: inherit;
+  }
+}
+
+@media (max-width: 767px) {
   .service .icon-container {
     margin-bottom: 30px;
+    padding: 20px;
+  }
+  
+  .service .single-box {
+    margin-top: 20px;
+  }
+  
+  .service [class*="order-md-"] {
+    order: 0 !important;
   }
 }
 
@@ -6817,7 +6816,7 @@ a.header__search.header-search-btn p {
   padding: 24px;
   border-radius: 7px;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   transition: all 0.4s;
 }
 .service3 .service3-box .icon {
@@ -7342,7 +7341,7 @@ a.header__search.header-search-btn p {
   padding: 24px;
   position: relative;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   overflow: hidden;
   border-radius: 4px;
 }
@@ -9218,7 +9217,7 @@ a.header__search.header-search-btn p {
 */
 .solution .item-box {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   margin-top: 30px;
 }
 .solution .item-box .icon {
@@ -10667,7 +10666,7 @@ a.header__search.header-search-btn p {
   border-radius: 4px;
   padding: 24px 16px;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   transition: all 0.4s;
 }
 .contact6 .contact6-box .icon {
@@ -10802,7 +10801,7 @@ a.header__search.header-search-btn p {
   border-radius: 4px;
   padding: 24px 16px;
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   transition: all 0.4s;
 }
 .contact8 .contact6-box .icon {
@@ -13593,7 +13592,7 @@ a.header__search.header-search-btn p {
 }
 .hero10 .hero-box2 {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   background-color: #24908D;
   padding: 23px 24px;
   position: absolute;
@@ -13603,7 +13602,7 @@ a.header__search.header-search-btn p {
 @media (max-width: 767px) {
   .hero10 .hero-box2 {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     background-color: #24908D;
     padding: 23px 24px;
     position: absolute;
@@ -13647,7 +13646,7 @@ a.header__search.header-search-btn p {
 }
 .hero10 .hero-box3 {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   background-color: #fff;
   padding: 23px 24px;
   position: absolute;
@@ -13658,7 +13657,7 @@ a.header__search.header-search-btn p {
 @media (max-width: 767px) {
   .hero10 .hero-box3 {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     background-color: #fff;
     padding: 23px 24px;
     position: absolute;
@@ -16301,7 +16300,7 @@ a.header__search.header-search-btn p {
 */
 .work .single-items {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   margin-top: 30px;
 }
 .work .single-items .icon {
@@ -16675,7 +16674,7 @@ a.header__search.header-search-btn p {
 }
 .work7 .heading7 .work-box {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   margin-top: 30px;
 }
 .work7 .heading7 .work-box .icon {

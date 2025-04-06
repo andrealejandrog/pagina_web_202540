@@ -1,14 +1,39 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const WatermarkBackground = ({
   children,
   opacity = 0.1,
-  size = { base: "100% auto", md: "50% auto", lg: "25% auto" }, // Objeto con tamaños por breakpoint
+  size = { base: "50% auto", md: "75% auto", lg: "100% auto" },
   bgColor = "var(--ztc-bg-bg-1)",
   id,
   className = "",
 }) => {
+  const [windowSize, setWindowSize] = useState({
+    width: typeof window !== 'undefined' ? window.innerWidth : 1200,
+    height: typeof window !== 'undefined' ? window.innerHeight : 800
+  });
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight
+        });
+      };
+
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+
+  const getBackgroundSize = () => {
+    if (windowSize.width >= 1024) return size.lg;
+    if (windowSize.width >= 768) return size.md;
+    return size.base;
+  };
+
   return (
     <div
       id={id}
@@ -18,32 +43,24 @@ const WatermarkBackground = ({
         backgroundColor: bgColor,
         overflow: "hidden",
         width: "100%",
+        minHeight: "100%",
       }}
     >
-      {/* Capa de imagen con opacidad */}
       <div
         style={{
           position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
+          inset: 0,
           backgroundImage: "url('/assets/img/bg/Grayscale_logo.svg')",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          backgroundSize: size.base, // Tamaño base (mobile-first)
+          backgroundSize: getBackgroundSize(),
           opacity: opacity,
           zIndex: 0,
-          // Media queries para responsive (alternativa con CSS-in-JS)
-          "@media (min-width: 768px)": {
-            backgroundSize: size.md, // Tamaño para tablets
-          },
-          "@media (min-width: 1024px)": {
-            backgroundSize: size.lg, // Tamaño para desktop
-          },
         }}
       />
-      <div style={{ position: "relative", zIndex: 1 }}>{children}</div>
+      <div style={{ position: "relative", zIndex: 1, height: "100%" }}>
+        {children}
+      </div>
     </div>
   );
 };
