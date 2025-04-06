@@ -14,6 +14,7 @@ const Home = () => {
     return (
         <div>
             <HeroBanner1
+                // bgImg="/assets/img/bg/Grayscale_logo.svg"
                 bgImg="/assets/img/bg/hero1-bg.png"
                 subTitle="5.0 Technology"
                 title="Innovamos con propósito, transformamos con tecnología."

@@ -1633,6 +1633,7 @@ body.body {
   --ztc-bg-main-bg-2: #cbe9fb;
   --ztc-bg-main-bg-3: #113ADC;
   --ztc-bg-main-bg-4: #A1E934;
+  --ztc-bg-main-bg-5: #e7eaf3; /*secciones grises*/
   /*Paleta de colores*/
   --ztc-bg-bg-1: #F8F9FA;
   --ztc-bg-color-w: #fff;
@@ -6547,8 +6548,14 @@ a.header__search.header-search-btn p {
  SERVICE AREA CSS
 ::::::::::::::::::::::::::
 */
-.service {
+/* .service {
   background-color: var(--ztc-bg-bg-1);
+} */
+
+
+.service-content .category-desc {
+  color: black;
+  margin-bottom: 15px;
 }
 
 .service .category-desc {
@@ -19914,7 +19921,7 @@ a.header__search.header-search-btn p {
 }
 
 .header-area.header-area2 {
-  background-color: #fff;
+  background-color: var(  --ztc-bg-main-bg-1);
 }
 .header-area.header-area2 .main-menu-ex ul li .mega-menu-all {
   visibility: hidden;
@@ -23913,8 +23920,10 @@ li.has-dropdown1 span {
 .hero1{
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
+  /* background-color: var(--ztc-bg-main-bg-5); */
 }
+
 .cs_main_header_center1{
   height: 100%;
 }
