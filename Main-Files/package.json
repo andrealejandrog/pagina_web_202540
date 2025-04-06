@@ -12,7 +12,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "html-react-parser": "^5.1.18",
-    "next": "14.2.15",
+    "next": "^15.2.4",
     "react": "^18",
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18",
