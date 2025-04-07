@@ -1,86 +1,36 @@
 "use client"
-import Slider from "react-slick";
-import data from '../../Data/Home1/project1.json';
 import SectionTitle from "../Common/SectionTitle";
-import Link from "next/link";
-import Image from "next/image";
+import WatermarkBackground from "../Watermark/WatermarkBackground";
 
 
 const Project1 = () => {
 
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 2000,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: false,
-        swipeToSlide: true,
-        autoplay: true,
-        responsive: [
-          {
-            breakpoint: 1399,
-            settings: {
-              slidesToShow: 3,
-            }
-          },
-          {
-            breakpoint: 1199,
-            settings: {
-              slidesToShow: 2,
-            }
-          },{
-            breakpoint: 575,
-            settings: {
-              slidesToShow: 1,
-            }
-          }
-        ]
-      }; 
-
-    return (
-        <div className="project sp" id = 'diferenciador'>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-8 m-auto text-center">
-                <div className="heading1">
-                    <SectionTitle
-                        SubTitle="5.0 Technology"
-                        Title="Una Palabra: Diferentes"
-                    ></SectionTitle>
-                </div>
-              </div>
-            </div>
-
-            <div className="space30"></div>
-            <div className="row">
-              <p>Somos más que un proveedor, somos tu aliado estratégico. Contamos con un equipo de expertos apasionados por la excelencia, comprometidos en ofrecer soluciones innovadoras y una experiencia única. Nos involucramos en cada proyecto con la misión de superar expectativas, garantizando resultados óptimos que realmente impulsen tu negocio.</p>
-              {/* <div className="project-slider cs_slider_gap_30">
-                <Slider {...settings}>
-                {data.map((item, i) => (
-                <div key={i} className="single-slider">
-                  <div className="slider-img">
-                  <Image src={item.img} alt="img" width={402} height={402}   />
-                  </div>
-                  <div className="heading">
-                    <h3><Link href="/project/project-details">{item.title}</Link></h3>
-                    <Link href="/project/project-details" className="learn">{item.btnName} <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" className="bi bi-arrow-right-short" viewBox="0 0 16 16">
-                        <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
-                      </svg>
-                        </span></Link>
-                  </div>
-                </div>
-                ))}
-                </Slider>
-
-              </div> */}
-
-
-              </div>
+  return (
+    <WatermarkBackground
+      opacity={0.05}
+      size={{ base: "80% auto", md: "65% auto", lg: "35% auto" }}
+      id="diferenciador"
+      className="project sp"
+    >
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-8 m-auto text-center">
+            <div className="heading1">
+              <SectionTitle
+                SubTitle="5.0 Technology"
+                Title="Una Palabra: Diferentes"
+              ></SectionTitle>
             </div>
           </div>
-    );
+        </div>
+
+        <div className="space30"></div>
+        <div className="row">
+          <p>Somos más que un proveedor, somos tu aliado estratégico. Contamos con un equipo de expertos apasionados por la excelencia, comprometidos en ofrecer soluciones innovadoras y una experiencia única. Nos involucramos en cada proyecto con la misión de superar expectativas, garantizando resultados óptimos que realmente impulsen tu negocio.</p>
+        </div>
+      </div>
+    </WatermarkBackground>
+  );
 };
 
 export default Project1;
