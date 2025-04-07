@@ -11084,7 +11084,7 @@ a.header__search.header-search-btn p {
 .hero1 {
   min-height: 600px;  /* Altura más adecuada para móviles */
   display: flex;
-  padding-top: 80px;  /* Padding más compacto para móviles */
+  padding-top: 100px;  /* Padding más compacto para móviles */
   flex-direction: column; /* Stack vertical en móviles */
 }
 
