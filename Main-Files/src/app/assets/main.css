@@ -3580,27 +3580,6 @@ a.header__search.header-search-btn p {
   transition: all 0.4s;
   border: none;
 }
-.theme-btn1::after {
-  content: "";
-  position: absolute;
-  background-image: url(/assets/img/icons/button-img.png);
-  height: 100%;
-  width: 0%;
-  top: 0;
-  left: auto;
-  right: 0;
-  z-index: 2;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  transform: scale(1.5);
-  transition: all 0.4s;
-  animation-name: shape-animaiton4;
-  animation-duration: 52s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-}
 .theme-btn1 span {
   display: inline-block;
   padding-left: 4px;
@@ -3609,7 +3588,7 @@ a.header__search.header-search-btn p {
   color: #fff;
   transform: translateY(-4px);
   transition: all 0.4s;
-  background-color: #3059CE;
+  background-color: var(--ztc-bg-main-bg-3);
 }
 .theme-btn1:hover::after {
   width: 100%;

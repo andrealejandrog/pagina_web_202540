@@ -16,13 +16,27 @@ btnUrl,
   useEffect(() => {
     loadBackgroudImages();
   }, []);
-
+  
+  const [mobileToggle, setMobileToggle] = useState(false);
   const [iframeSrc, setIframeSrc] = useState('about:blank');
   const [toggle, setToggle] = useState(false);
 
   const handelClose = () => {
     setIframeSrc('about:blank');
     setToggle(!toggle);
+  };
+  const handleSmoothScroll = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const yOffset = -100;
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth'
+      });
+      setMobileToggle(false);
+    }
   };
 
   return (
@@ -38,7 +52,11 @@ btnUrl,
 
                 <div className="space30"></div>
                 <div className="buttons">
-                  <Link className="theme-btn1" href={btnUrl}>{btnName} <span><i className="bi bi-arrow-right"></i>
+                  <Link className="theme-btn1" href={btnUrl}
+                  onClick={(e) => handleSmoothScroll(e, 'contacto')}>
+                    {btnName}
+                      <span>
+                        <i className="bi bi-arrow-right"></i>
                   </span></Link>
                 </div>
               </div>
