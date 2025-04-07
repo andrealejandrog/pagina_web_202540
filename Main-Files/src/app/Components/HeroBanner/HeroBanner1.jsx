@@ -17,14 +17,8 @@ btnUrl,
     loadBackgroudImages();
   }, []);
   
-  const [mobileToggle, setMobileToggle] = useState(false);
-  const [iframeSrc, setIframeSrc] = useState('about:blank');
-  const [toggle, setToggle] = useState(false);
-
-  const handelClose = () => {
-    setIframeSrc('about:blank');
-    setToggle(!toggle);
-  };
+  const [setMobileToggle] = useState(false);
+  
   const handleSmoothScroll = (e, id) => {
     e.preventDefault();
     const element = document.getElementById(id);
