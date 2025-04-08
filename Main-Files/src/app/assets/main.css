@@ -13865,6 +13865,7 @@ a.header__search.header-search-btn p {
 .project {
   background-color: var(--ztc-bg-bg-3);
   color: var(--ztc-text-pera-text-1);
+  font-size: var(--f-fs-font-fs20);
 }
 
 .project .project-slider {
@@ -23568,6 +23569,7 @@ li.has-dropdown1 span {
   .cs_nav .cs_nav_list a {
     display: block;
     padding: 8px 20px;
+    color: #fff;
  }
   .cs_nav .menu-item-has-children {
     position: relative;
@@ -23827,11 +23829,7 @@ li.has-dropdown1 span {
   height: 90px;
 }
 }
-@media (max-width: 1024px) {
-  .cs_nav .cs_nav_list {
-    display: none !important;
-  }
-
+@media (max-width: 1199) {
   .cs_site_header.header_style_2.cs_style_1 .cs_header_social_links {
     display: none;
 }
