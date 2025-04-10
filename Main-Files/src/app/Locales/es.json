@@ -1,0 +1,16 @@
+{
+    "header": {
+      "mission": "Innovamos con propósito, transformamos con tecnología",
+      "contact_us": "Envíanos un mensaje",
+      "language_toggle": "ENG"
+    },
+    
+    "nav": {
+        "solutions": "Soluciones",
+        "impact": "Impacto",
+        "process": "Proceso",
+        "differentiator": "Diferenciador",
+        "contact": "Contáctanos"
+    }
+
+  }

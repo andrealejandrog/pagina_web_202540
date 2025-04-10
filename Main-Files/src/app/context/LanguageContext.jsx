@@ -1,20 +1,28 @@
 'use client'
-import { createContext, useState, useContext } from 'react'
+import { createContext, useContext, useState, useEffect } from 'react'
 
-const LanguageContext = createContext()
+// Crea el contexto con un valor por defecto más seguro
+export const LanguageContext = createContext({
+  language: 'es',
+  toggleLanguage: () => {}
+})
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState(() => {
-    if(typeof window !== 'undefined') {
-      return localStorage.getItem('lang') || 'es'
+  const [language, setLanguage] = useState('es')
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const savedLang = localStorage.getItem('lang') || 'es'
+      setLanguage(savedLang)
+      document.documentElement.lang = savedLang
     }
-    return 'es'
-  })
-  
+  }, [])
+
   const toggleLanguage = () => {
     const newLang = language === 'es' ? 'en' : 'es'
     setLanguage(newLang)
     localStorage.setItem('lang', newLang)
+    document.documentElement.lang = newLang
   }
 
   return (
@@ -24,4 +32,11 @@ export const LanguageProvider = ({ children }) => {
   )
 }
 
-export const useLanguage = () => useContext(LanguageContext)
+// Hook con verificación de contexto
+export const useLanguage = () => {
+  const context = useContext(LanguageContext)
+  if (context === undefined) {
+    throw new Error('useLanguage must be used within a LanguageProvider')
+  }
+  return context
+}

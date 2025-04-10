@@ -1,0 +1,15 @@
+{
+    "header": {
+      "mission": "We innovate with purpose, we transform with technology",
+      "contact_us": "Send us a message",
+      "language_toggle": "ESP"
+    },
+
+    "nav": {
+        "solutions": "Solutions",
+        "impact": "Impact",
+        "process": "Process",
+        "differentiator": "Differentiator",
+        "contact": "Contact Us"
+      }
+  }

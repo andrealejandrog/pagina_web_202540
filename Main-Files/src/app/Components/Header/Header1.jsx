@@ -1,13 +1,15 @@
-"use client"
-import { useEffect, useState } from 'react';
-import Nav from './Nav';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useLanguage } from '../../context/LanguageContext'; // Asegúrate que la ruta sea correcta
+'use client'
+import { useEffect, useState } from 'react'
+import Nav from './Nav'
+import Link from 'next/link'
+import Image from 'next/image'
+import { useLanguage } from '../../context/LanguageContext'
+import { useTranslations } from '../../hooks/useTranslations' // Nuevo hook
 
 export default function Header1({ variant }) {
-  const [mobileToggle, setMobileToggle] = useState(false);
-  const { language, toggleLanguage } = useLanguage();
+  const [mobileToggle, setMobileToggle] = useState(false)
+  const { language, toggleLanguage } = useLanguage()
+  const { t } = useTranslations() // Usamos el hook de traducciones
 
   return (
     <div className='header-area2 header_nav_03'>
@@ -23,14 +25,13 @@ export default function Header1({ variant }) {
             <div className="row">
               <div className="col-lg-12">
                 <div className="pera">
-                  <p>
-                    Innovamos con propósito, transformamos con tecnología.
-                  </p>
+                  <p>{t('header.mission')}</p> {/* Texto traducido */}
                 </div>
               </div>
             </div>
           </div>
         </div>
+        
         <div className="cs_main_header cs_accent_bg">
           <div className="container">
             <div className="cs_main_header_in">
@@ -61,14 +62,14 @@ export default function Header1({ variant }) {
                   <Nav setMobileToggle={setMobileToggle} />
                 </div>
               </div>
+
               <div className="cs_main_header_right header_right_one">
-                {/* Selector de idiomas agregado aquí */}
                 <div className="language-selector me-3">
                   <button 
                     onClick={toggleLanguage}
                     className="cs_language_toggle"
                   >
-                    {language === 'es' ? 'ENG' : 'ESP'}
+                    {t('header.language_toggle')} {/* Texto traducido */}
                   </button>
                 </div>
 
@@ -83,7 +84,7 @@ export default function Header1({ variant }) {
                       />
                     </div>
                     <div className="headding">
-                      <p>Envíanos un mensaje</p>
+                      <p>{t('header.contact_us')}</p> {/* Texto traducido */}
                       <a href="tel:+502 4151 7120">+502 4151 7120</a>
                     </div>
                   </div>
@@ -94,5 +95,5 @@ export default function Header1({ variant }) {
         </div>
       </header>
     </div>
-  );
+  )
 }
