@@ -1,15 +1,117 @@
 {
-    "header": {
-      "mission": "We innovate with purpose, we transform with technology",
-      "contact_us": "Send us a message",
-      "language_toggle": "ESP"
+  "header": {
+    "mission": "We innovate with purpose, we transform with technology",
+    "contact_us": "Send us a message",
+    "language_toggle": "ESP"
+  },
+  "nav": {
+    "solutions": "Solutions",
+    "impact": "Impact",
+    "process": "Process",
+    "differentiator": "Differentiator",
+    "contact": "Contact us"
+  },
+  "footer": {
+    "slogan": "We innovate with purpose, we transform with technology",
+    "contact_title": "Contact us",
+    "copyright": "Copyright @2025 5.0 Technology. All rights reserved",
+    "social_links": "Find us on"
+  },
+  "home": {
+    "heroBanner": {
+      "subTitle": "5.0 Technology",
+      "title": "We innovate with purpose, transform with technology.",
+      "content": "Transform your company's security and productivity with our innovative technological solutions.",
+      "btnName": "Contact us",
+      "btnUrl": "#contact"
     },
-
-    "nav": {
-        "solutions": "Solutions",
-        "impact": "Impact",
-        "process": "Process",
-        "differentiator": "Differentiator",
-        "contact": "Contact Us"
+    "about": {
+      "subTitle": "About us",
+      "title": "Custom Technology and Security for Your Business",
+      "btnName": "Discover More",
+      "btnUrl": "/about",
+      "featureList": [
+        {
+          "title": "Electronic Security and Automation",
+          "items": [
+            {"text": "Structured cabling installation"},
+            {"text": "CCTV systems, alarms and access control"},
+            {"text": "24/7 monitoring centers"},
+            {"text": "Home and office automation"}
+          ]
+        },
+        {
+          "title": "Technological Solutions",
+          "items": [
+            {"text": "Operational management software development"},
+            {"text": "Process automation for operational efficiency"},
+            {"text": "Secure and scalable cloud storage"},
+            {"text": "Digital transformation and document digitization"}
+          ]
+        }
+      ]
+    }
+  },
+  "services": {
+    "subTitle": "5.0 Technology",
+    "title": "Protect, Optimize and Grow",
+    "items": [
+      {
+        "title": "Electronic Security and Automation",
+        "desc": "Smart protection and control",
+        "icon": "/assets/img/icons/security-icon.svg",
+        "items": [
+          "Professional CCTV camera installation",
+          "Smart alarm systems",
+          "Biometric access control",
+          "Residential and commercial automation"
+        ]
+      },
+      {
+        "title": "Technological Solutions",
+        "desc": "Innovation for your business",
+        "icon": "/assets/img/icons/tech-solutions-icon.svg",
+        "items": [
+          "Custom software development",
+          "Secure cloud migration",
+          "Process automation",
+          "Document digitization"
+        ]
       }
+    ]
+  },
+  "choose": {
+    "subTitle": "Step by step",
+    "title": "How We Create Efficient and Secure Solutions",
+    "mainImage": "/assets/img/work/Vertical_logo.svg",
+    "processes": [
+      {
+        "title": "Initial Diagnosis",
+        "img": "/assets/img/icons/diagnostico-icon.svg",
+        "items": [
+          "Needs analysis",
+          "Infrastructure assessment",
+          "Risk identification"
+        ]
+      },
+      {
+        "title": "Implementation",
+        "img": "/assets/img/icons/implementacion-icon.svg",
+        "items": [
+          "Professional installation",
+          "System configuration",
+          "Operation tests"
+        ]
+      },
+      {
+        "title": "Continuous Support",
+        "img": "/assets/img/icons/soporte-icon.svg",
+        "items": [
+          "24/7 monitoring",
+          "Regular updates",
+          "Preventive maintenance"
+        ]
+      }
+    ]
   }
+}

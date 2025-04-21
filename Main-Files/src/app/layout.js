@@ -5,11 +5,10 @@ import "slick-carousel/slick/slick.css";
 import "./assets/main.css";
 import { LanguageProvider } from './context/LanguageContext';
 
-// 1. Configuración de fuente mejorada (cambios clave)
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: '600',
-  variable: '--body-font', // Cambiado a nombre más estándar
+  variable: '--body-font',
 });
 
 export const metadata = {
@@ -19,7 +18,6 @@ export const metadata = {
     template: '%s | 5.0 solutions',
   },
   description: '5.0 solutions - Innovamos con propósito, transformamos con tecnología',
-  // 2. Metadata adicional para multi-idioma (opcional)
   alternates: {
     languages: {
       'es': '/es',
@@ -30,16 +28,26 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    // 3. HTML modificado para soporte de idioma dinámico
-    <html lang="es" className={montserrat.variable} suppressHydrationWarning>
+    <html lang="es" className={montserrat.variable}>
       <head>
-        <meta name="author" content="Themeservices" />
+        {/* Meta tags esenciales DEBEN ir primero */}
+        <meta charSet="utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {/* Precarga de fuentes */}
+        <link 
+          rel="preload" 
+          href="/_next/static/media/Montserrat-latin-600.woff2" 
+          as="font" 
+          type="font/woff2" 
+          crossOrigin="anonymous"
+        />
+        
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        {/* 4. Precarga de fuentes */}
-        <link rel="preload" href="/_next/static/media/Montserrat-latin-600.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body>
-        {/* 5. LanguageProvider envuelve todo */}
         <LanguageProvider>
           {children}
         </LanguageProvider>

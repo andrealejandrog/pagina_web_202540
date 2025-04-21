@@ -1,10 +1,12 @@
 "use client";
 import SectionTitle from "../Common/SectionTitle";
-import data from '../../Data/Home1/impacto.json';
 import Image from "next/image";
 import WatermarkBackground from "../Watermark/WatermarkBackground";
+import { useTranslations } from "../../hooks/useTranslations";
 
 const Services1 = () => {
+  const { t } = useTranslations();
+
   return (
     <WatermarkBackground
       opacity={0.05}
@@ -17,8 +19,8 @@ const Services1 = () => {
           <div className="col-lg-8 m-auto text-center">
             <div className="heading1">
               <SectionTitle
-                SubTitle="5.0 Technology"
-                Title="Protege, Optimiza y Crece"
+                SubTitle={t('services.subTitle')}
+                Title={t('services.title')}
               />
             </div>
           </div>
@@ -26,7 +28,7 @@ const Services1 = () => {
 
         <div className="space30"></div>
 
-        {data.map((category, i) => (
+        {t('services.items').map((category, i) => (
           <div 
             key={i} 
             className="row align-items-center mb-5" 
@@ -53,7 +55,7 @@ const Services1 = () => {
             <div className={`col-md-6 ${i % 2 === 0 ? 'order-md-1' : ''}`}>
               <div className="icon-container text-center">
                 <Image
-                  src={category.icon}
+                  src={category.icon} // Las imágenes permanecen igual
                   alt={category.title}
                   width={200}
                   height={200}

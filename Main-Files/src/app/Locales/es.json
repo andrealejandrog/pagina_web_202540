@@ -1,16 +1,117 @@
-{
-    "header": {
-      "mission": "Innovamos con propósito, transformamos con tecnología",
-      "contact_us": "Envíanos un mensaje",
-      "language_toggle": "ENG"
+﻿{
+  "header": {
+    "mission": "Innovamos con propósito, transformamos con tecnología",
+    "contact_us": "Envíanos un mensaje",
+    "language_toggle": "ENG"
+  },
+  "nav": {
+    "solutions": "Soluciones",
+    "impact": "Impacto",
+    "process": "Proceso",
+    "differentiator": "Diferenciador",
+    "contact": "Contáctanos"
+  },
+  "footer": {
+    "slogan": "Innovamos con propósito, transformamos con tecnología",
+    "contact_title": "Contáctanos",
+    "copyright": "Copyright @2025 5.0 Technology. Todos los derechos reservados",
+    "social_links": "Encuéntranos en"
+  },
+  "home": {
+    "heroBanner": {
+      "subTitle": "5.0 Technology",
+      "title": "Innovamos con propósito, transformamos con tecnología.",
+      "content": "Transforma la seguridad y productividad de tu empresa con nuestras soluciones tecnológicas innovadoras.",
+      "btnName": "Contáctanos",
+      "btnUrl": "#contacto"
     },
-    
-    "nav": {
-        "solutions": "Soluciones",
-        "impact": "Impacto",
-        "process": "Proceso",
-        "differentiator": "Diferenciador",
-        "contact": "Contáctanos"
+    "about": {
+      "subTitle": "Sobre nosotros",
+      "title": "Tecnología y Seguridad a la Medida de tu Negocio",
+      "btnName": "Descubre más",
+      "btnUrl": "/about",
+      "featureList": [
+        {
+          "title": "Seguridad Electrónica y automatización",
+          "items": [
+            {"text": "Instalación de cableado estructurado"},
+            {"text": "Sistemas de CCTV, alarmas y control de acceso"},
+            {"text": "Centros de monitoreo 24/7"},
+            {"text": "Automatización de casas y oficinas"}
+          ]
+        },
+        {
+          "title": "Soluciones tecnológicas",
+          "items": [
+            {"text": "Desarrollo de software para gestión operativa"},
+            {"text": "Automatización de procesos para eficiencia operativa"},
+            {"text": "Almacenamiento en la nube seguro y escalable"},
+            {"text": "Transformación digital y digitalización de documentos"}
+          ]
+        }
+      ]
     }
-
+  },
+  "services": {
+    "subTitle": "5.0 Technology",
+    "title": "Protege, Optimiza y Crece",
+    "items": [
+      {
+        "title": "Seguridad electrónica y automatización",
+        "desc": "Protección y control inteligente",
+        "icon": "/assets/img/icons/security-icon.svg",
+        "items": [
+          "Instalación profesional de cámaras CCTV",
+          "Sistemas de alarmas inteligentes",
+          "Control de acceso biométrico",
+          "Automatización residencial y comercial"
+        ]
+      },
+      {
+        "title": "Soluciones tecnológicas",
+        "desc": "Innovación para tu negocio",
+        "icon": "/assets/img/icons/tech-solutions-icon.svg",
+        "items": [
+          "Desarrollo de software a medida",
+          "Migración a la nube segura",
+          "Automatización de procesos",
+          "Digitalización documental"
+        ]
+      }
+    ]
+  },
+  "choose": {
+    "subTitle": "Paso a paso",
+    "title": "Así Creamos Soluciones Eficientes y Seguras",
+    "mainImage": "/assets/img/work/Vertical_logo.svg",
+    "processes": [
+      {
+        "title": "Diagnóstico inicial",
+        "img": "/assets/img/icons/diagnostico-icon.svg",
+        "items": [
+          "Análisis de necesidades",
+          "Evaluación de infraestructura",
+          "Identificación de riesgos"
+        ]
+      },
+      {
+        "title": "Implementación",
+        "img": "/assets/img/icons/implementacion-icon.svg",
+        "items": [
+          "Instalación profesional",
+          "Configuración de sistemas",
+          "Pruebas de funcionamiento"
+        ]
+      },
+      {
+        "title": "Soporte continuo",
+        "img": "/assets/img/icons/soporte-icon.svg",
+        "items": [
+          "Monitoreo 24/7",
+          "Actualizaciones periódicas",
+          "Mantenimiento preventivo"
+        ]
+      }
+    ]
   }
+}

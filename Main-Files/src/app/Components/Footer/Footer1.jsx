@@ -22,8 +22,7 @@ const Footer1 = () => {
                             </div>
                             <ul className="social-icon">
                                  <li><a href="#"><i className="bi bi-linkedin"></i></a></li>
-                                 <li><a href="#"><i className="bi bi-twitter"></i></a></li>
-                                 <li><a href="#"><i className="bi bi-youtube"></i></a></li>
+                                 <li><a href="#"><i className="bi bi-facebook"></i></a></li>
                                  <li><a href="#"><i className="bi bi-instagram"></i></a></li>
                             </ul>
                        </div>
