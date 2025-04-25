@@ -34,19 +34,16 @@
         {
           "title": "Electronic Security and Automation",
           "items": [
-            {"text": "Structured cabling installation"},
-            {"text": "CCTV systems, alarms and access control"},
-            {"text": "24/7 monitoring centers"},
-            {"text": "Home and office automation"}
+            {"text": "CCTV systems, alarms and access control."},
+            {"text": "24/7 monitoring centers."},
+            {"text": "Home and office automation."}
           ]
         },
         {
           "title": "Technological Solutions",
           "items": [
-            {"text": "Operational management software development"},
-            {"text": "Process automation for operational efficiency"},
-            {"text": "Secure and scalable cloud storage"},
-            {"text": "Digital transformation and document digitization"}
+            {"text": "Operational management software development."},
+            {"text": "Digital transformation and document digitization."}
           ]
         }
       ]

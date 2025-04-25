@@ -38,8 +38,16 @@ const Home = () => {
           items: section.items.map((item, itemIndex) => ({
             text: item.text,
             image: `/assets/img/icons/${index === 0 ? 
-              ['Cableado_estructurado_op1.svg', 'Cctv.svg', 'Monitoreo_24_7.svg', 'Automatizacion.svg'][itemIndex] : 
-              ['Desarrollo_software.svg', 'Automatizacion_procesos.svg', 'Almacenamiento_nube.svg', 'Transformacion_digital.svg'][itemIndex]}`
+              [
+                // 'Cableado_estructurado_op1.svg',
+                'Control_de_acceso.jpg',
+                'Centro_de_monitoreo.jpg',
+                'Automation.jpg'][itemIndex] : 
+              [
+                'Desarrollo_de_software.jpg',
+                // 'Automatizacion_procesos.svg',
+                // 'Almacenamiento_nube.svg',
+                'Digital_transformation.jpg'][itemIndex]}`
           }))
         }))}
         btnName={t('home.about.btnName')}

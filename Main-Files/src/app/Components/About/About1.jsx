@@ -1,7 +1,7 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
 
-const About1 = ({ image1, image2, supIcon, supTitle, supCon, subTitle, Title, content, featurelist, btnName, btnUrl }) => {
+const About1 = ({subTitle, Title, featurelist }) => {
     return (
         <div className="about1 sp" id="soluciones">
             <div className="container">
@@ -43,8 +43,9 @@ const About1 = ({ image1, image2, supIcon, supTitle, supCon, subTitle, Title, co
                                                 <Image 
                                                   src={item.image}
                                                   alt={item.text}
-                                                  width={80}
-                                                  height={80}
+                                                  width={400}
+                                                  height={267}
+                                                  quality={100}
                                                   className="solution-image"
                                                   style={{
                                                     objectFit: 'contain',

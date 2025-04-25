@@ -34,19 +34,16 @@
         {
           "title": "Seguridad Electrónica y automatización",
           "items": [
-            {"text": "Instalación de cableado estructurado"},
-            {"text": "Sistemas de CCTV, alarmas y control de acceso"},
-            {"text": "Centros de monitoreo 24/7"},
-            {"text": "Automatización de casas y oficinas"}
+            {"text": "Sistemas de CCTV, alarmas y control de acceso."},
+            {"text": "Centros de monitoreo 24/7."},
+            {"text": "Automatización de casas y oficinas."}
           ]
         },
         {
           "title": "Soluciones tecnológicas",
           "items": [
-            {"text": "Desarrollo de software para gestión operativa"},
-            {"text": "Automatización de procesos para eficiencia operativa"},
-            {"text": "Almacenamiento en la nube seguro y escalable"},
-            {"text": "Transformación digital y digitalización de documentos"}
+            {"text": "Desarrollo de software para gestión operativa."},
+            {"text": "Transformación digital y digitalización de documentos."}
           ]
         }
       ]
