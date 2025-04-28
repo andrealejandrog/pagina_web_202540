@@ -5273,11 +5273,21 @@ a.header__search.header-search-btn p {
 .about1 .solution-card {
   background-color: var(--ztc-bg-color-w);
   border-radius: 7px;
-  padding: 32px 24px;
+  padding: 24px 16px;
   height: 100%;
-  transition: all 0.4s;
+  transition: all 0.3s;
   /* border: 1px solid rgba(0, 0, 0, 0.05); */
 }
+
+.solution-card {
+  padding: 1rem 1.5rem; /* 32px vertical, 24px horizontal */
+  min-height: 280px; /* Ajustar según necesidad */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* padding-bottom: var(--f-spacer-15); */
+}
+
 
 .about1 .solution-card:hover {
   transform: translateY(-10px);
@@ -5290,17 +5300,8 @@ a.header__search.header-search-btn p {
   color: var(--ztc-text-pera-text-1);
   font-size: var(--f-fs-font-fs18);
   padding-bottom: var(--f-spacer-10);
-  padding-top: 15px;
+  padding-top: 5px;
   justify-self: center;
-}
-
-.solution-card {
-  padding: 1rem 1.5rem; /* 32px vertical, 24px horizontal */
-  min-height: 280px; /* Ajustar según necesidad */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* padding-bottom: var(--f-spacer-15); */
 }
 
 .solution-image {
