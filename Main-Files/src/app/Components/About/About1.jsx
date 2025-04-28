@@ -28,21 +28,21 @@ const About1 = ({ subTitle, Title, featurelist }) => {
                 {category.items.map((item, itemIndex) => (
                   <div 
                     key={itemIndex} 
-                    className="col-lg-12 mb-5"
+                    className="col-lg-6 mb-2"
                     data-aos="fade-up"
                     data-aos-duration="800"
                   >
                     <div className="solution-card h-100">
                       <div className="row align-items-center h-100">
                         {/* Texto - Columna izquierda */}
-                        <div className="col-lg-3 order-lg-2 order-2">
+                        <div className="col-lg-12 order-lg-2 order-2">
                           <div className="solution-content p-4">
                             <h4 className="solution-title mb-4">{item.text}</h4>
                           </div>
                         </div>
                         
                         {/* Imagen - Columna derecha */}
-                        <div className="col-lg-9 order-lg-1 order-1">
+                        <div className="col-lg-12 order-lg-1 order-1">
                           {item.image && (
                             <div className="solution-image-wrapper">
                               <Image
