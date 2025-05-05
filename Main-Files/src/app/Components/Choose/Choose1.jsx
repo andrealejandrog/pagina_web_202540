@@ -10,7 +10,7 @@ const Choose1 = () => {
     <div className="work sp" id='proceso'>
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-lg-6">
+          <div className="col-lg-4">
             <div className="heading1">
               <span className="span" data-aos="zoom-in-left" data-aos-duration="700">
                 <SectionTitle
@@ -47,13 +47,26 @@ const Choose1 = () => {
             <div className="space30"></div>
           </div>
 
-          <div className="col-lg-6">
+          <div className="col-lg-8">
             <div className="work-images">
-              <Image
+              {/* <Image
                 src={t('choose.mainImage')}
                 alt="Proceso 5.0 Technology"
                 width={900}
                 height={900}
+              /> */}
+              <Image
+                src={t('choose.mainImage')}
+                alt="Proceso 5.0 Technology"
+                width={800}
+                height={533}
+                quality={100}
+                // className="solution-image img-fluid rounded"
+                style={{
+                  objectFit: 'cover',
+                  width: '100%',
+                  height: '100%',
+                }}
               />
             </div>
           </div>
