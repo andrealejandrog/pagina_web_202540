@@ -38,7 +38,7 @@ export default function Header1({ variant }) {
               <div className="cs_main_header_left">
                 <Link className="cs_site_branding" href="/">
                   <Image
-                    src="/assets/img/logo/Transparent_logo.svg"
+                    src="/assets/img/logo/Original_logo.svg"
                     alt="5-0 Technology - Soluciones Tecnológicas"
                     width={115}
                     height={23}

@@ -53,7 +53,9 @@ const Home = () => {
         btnName={t('home.about.btnName')}
         btnUrl={t('home.about.btnUrl')}
       />
-      <Services1 />
+      <Services1
+      image1='/assets/img/icons/Impacto.jpg'
+      />
       <Choose1 />
       <Project1 />
       <Cta1 />
