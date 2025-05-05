@@ -5,6 +5,8 @@ import parse from 'html-react-parser';
 import Link from "next/link";
 import Image from "next/image";
 
+import Logo from '@public/assets/img/logo/Transparent_logo.svg' //nuevo path de logo
+
 const HeroBanner1 = ({
 bgImg,
 title,
@@ -59,7 +61,7 @@ btnUrl,
             <div className="col-lg-7">
               <div className="hero1-all-images">
                 <Image
-                  src="/assets/img/logo/Transparent_logo.svg"
+                  src={Logo}
                   alt="5-0 Technology - Soluciones Tecnológicas"
                   width={600}  // Más ancho para mejor legibilidad
                   height={120}

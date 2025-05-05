@@ -4,12 +4,13 @@ import Nav from './Nav'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useLanguage } from '../../context/LanguageContext'
-import { useTranslations } from '../../hooks/useTranslations' // Nuevo hook
+import { useTranslations } from '../../hooks/useTranslations'
+import Logo from '@public/assets/img/logo/Transparent_logo.svg'
 
 export default function Header1({ variant }) {
   const [mobileToggle, setMobileToggle] = useState(false)
   const { language, toggleLanguage } = useLanguage()
-  const { t } = useTranslations() // Usamos el hook de traducciones
+  const { t } = useTranslations()
 
   return (
     <div className='header-area2 header_nav_03'>
@@ -25,7 +26,7 @@ export default function Header1({ variant }) {
             <div className="row">
               <div className="col-lg-12">
                 <div className="pera">
-                  <p>{t('header.mission')}</p> {/* Texto traducido */}
+                  <p>{t('header.mission')}</p>
                 </div>
               </div>
             </div>
@@ -38,7 +39,7 @@ export default function Header1({ variant }) {
               <div className="cs_main_header_left">
                 <Link className="cs_site_branding" href="/">
                   <Image
-                    src="/assets/img/logo/Original_logo.svg"
+                    src={Logo}
                     alt="5-0 Technology - Soluciones Tecnológicas"
                     width={115}
                     height={23}
@@ -69,7 +70,7 @@ export default function Header1({ variant }) {
                     onClick={toggleLanguage}
                     className="cs_language_toggle"
                   >
-                    {t('header.language_toggle')} {/* Texto traducido */}
+                    {t('header.language_toggle')}
                   </button>
                 </div>
 
@@ -84,7 +85,7 @@ export default function Header1({ variant }) {
                       />
                     </div>
                     <div className="headding">
-                      <p>{t('header.contact_us')}</p> {/* Texto traducido */}
+                      <p>{t('header.contact_us')}</p>
                       <a href="tel:+502 4151 7120">+502 4151 7120</a>
                     </div>
                   </div>

@@ -66,8 +66,13 @@
       },
       {
         "title": "Soluciones tecnológicas",
+<<<<<<< HEAD
         "desc": "Innovación para tu negocio.",
         "icon": "/assets/img/icons/tech-solutions-icon.svg",
+=======
+        "desc": "Innovación para tu negocio",
+        "icon": "/public/assets/img/icons/tech-solutions-icon.svg",
+>>>>>>> 93a01d3 (Changes)
         "items": [
           "Desarrollo de software a medida.",
           "Migración a la nube segura.",

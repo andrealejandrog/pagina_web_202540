@@ -5,21 +5,22 @@ const nextConfig = {
     locales: ['es', 'en'],
     defaultLocale: 'es',
   },
+  charset: 'utf-8',  // Mantenemos el charset de tu versión
   trailingSlash: true,
-  
-  // Solo añade estas 2 líneas para SVG:
+  // Configuración de imágenes mejorada
   images: {
-    dangerouslyAllowSVG: true, // Permite SVG con next/image
+    dangerouslyAllowSVG: true,  // Mantenemos la seguridad para SVG
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-
   async headers() {
     return [
       {
-        source: '/:path*',
+        // Versión mejorada de la regla de headers
+        source: '/:path((?!.*\\..*).*)',  // Excluye archivos con extensiones
         headers: [
-          {
-            key: 'Content-Type',
-            value: 'text/html; charset=utf-8'
+          { 
+            key: 'Content-Type', 
+            value: 'text/html; charset=utf-8'  // Mantenemos el charset
           }
         ]
       }
