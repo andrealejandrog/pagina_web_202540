@@ -27,7 +27,7 @@
     },
     "about": {
       "subTitle": "About us",
-      "title": "Custom Technology and Security for Your Business",
+      "title": "Security and technological innovation.",
       "btnName": "Discover More",
       "btnUrl": "/about",
       "featureList": [
@@ -51,62 +51,62 @@
   },
   "services": {
     "subTitle": "5.0 Technology",
-    "title": "Protect, Optimize and Grow",
+    "title": "Protect, optimize and grow.",
     "items": [
       {
         "title": "Electronic Security and Automation",
-        "desc": "Smart protection and control",
+        "desc": "Smart protection and control.",
         "icon": "/assets/img/icons/security-icon.svg",
         "items": [
-          "Professional CCTV camera installation",
-          "Smart alarm systems",
-          "Biometric access control",
-          "Residential and commercial automation"
+          "Professional CCTV camera installation.",
+          "Smart alarm systems.",
+          "Biometric access control.",
+          "Residential and commercial automation."
         ]
       },
       {
         "title": "Technological Solutions",
-        "desc": "Innovation for your business",
+        "desc": "Innovation for your business.",
         "icon": "/assets/img/icons/tech-solutions-icon.svg",
         "items": [
-          "Custom software development",
-          "Secure cloud migration",
-          "Process automation",
-          "Document digitization"
+          "Custom software development.",
+          "Secure cloud migration.",
+          "Process automation.",
+          "Document digitization."
         ]
       }
     ]
   },
   "choose": {
     "subTitle": "Step by step",
-    "title": "How We Create Efficient and Secure Solutions",
+    "title": "How we create efficient and secure solutions.",
     "mainImage": "/assets/img/work/Vertical_logo.svg",
     "processes": [
       {
         "title": "Initial Diagnosis",
         "img": "/assets/img/icons/diagnostico-icon.svg",
         "items": [
-          "Needs analysis",
-          "Infrastructure assessment",
-          "Risk identification"
+          "Needs analysis.",
+          "Infrastructure assessment.",
+          "Risk identification."
         ]
       },
       {
         "title": "Implementation",
         "img": "/assets/img/icons/implementacion-icon.svg",
         "items": [
-          "Professional installation",
-          "System configuration",
-          "Operation tests"
+          "Professional installation.",
+          "System configuration.",
+          "Operation tests."
         ]
       },
       {
         "title": "Continuous Support",
         "img": "/assets/img/icons/soporte-icon.svg",
         "items": [
-          "24/7 monitoring",
-          "Regular updates",
-          "Preventive maintenance"
+          "24/7 monitoring.",
+          "Regular updates.",
+          "Preventive maintenance."
         ]
       }
     ]

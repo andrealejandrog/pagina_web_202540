@@ -27,7 +27,7 @@
     },
     "about": {
       "subTitle": "Sobre nosotros",
-      "title": "Tecnología y Seguridad a la Medida de tu Negocio",
+      "title": "Seguridad e innovación tecnológica.",
       "btnName": "Descubre más",
       "btnUrl": "/about",
       "featureList": [
@@ -51,62 +51,62 @@
   },
   "services": {
     "subTitle": "5.0 Technology",
-    "title": "Protege, Optimiza y Crece",
+    "title": "Protege, optimiza y crece.",
     "items": [
       {
         "title": "Seguridad electrónica y automatización",
-        "desc": "Protección y control inteligente",
+        "desc": "Protección y control inteligente.",
         "icon": "/assets/img/icons/security-icon.svg",
         "items": [
-          "Instalación profesional de cámaras CCTV",
-          "Sistemas de alarmas inteligentes",
-          "Control de acceso biométrico",
-          "Automatización residencial y comercial"
+          "Instalación profesional de cámaras CCTV.",
+          "Sistemas de alarmas inteligentes.",
+          "Control de acceso biométrico.",
+          "Automatización residencial y comercial."
         ]
       },
       {
         "title": "Soluciones tecnológicas",
-        "desc": "Innovación para tu negocio",
+        "desc": "Innovación para tu negocio.",
         "icon": "/assets/img/icons/tech-solutions-icon.svg",
         "items": [
-          "Desarrollo de software a medida",
-          "Migración a la nube segura",
-          "Automatización de procesos",
-          "Digitalización documental"
+          "Desarrollo de software a medida.",
+          "Migración a la nube segura.",
+          "Automatización de procesos.",
+          "Digitalización documental."
         ]
       }
     ]
   },
   "choose": {
     "subTitle": "Paso a paso",
-    "title": "Así Creamos Soluciones Eficientes y Seguras",
+    "title": "Así creamos soluciones eficientes y seguras.",
     "mainImage": "/assets/img/work/Vertical_logo.svg",
     "processes": [
       {
         "title": "Diagnóstico inicial",
         "img": "/assets/img/icons/diagnostico-icon.svg",
         "items": [
-          "Análisis de necesidades",
-          "Evaluación de infraestructura",
-          "Identificación de riesgos"
+          "Análisis de necesidades.",
+          "Evaluación de infraestructura.",
+          "Identificación de riesgos."
         ]
       },
       {
         "title": "Implementación",
         "img": "/assets/img/icons/implementacion-icon.svg",
         "items": [
-          "Instalación profesional",
-          "Configuración de sistemas",
-          "Pruebas de funcionamiento"
+          "Instalación profesional.",
+          "Configuración de sistemas.",
+          "Pruebas de funcionamiento."
         ]
       },
       {
         "title": "Soporte continuo",
         "img": "/assets/img/icons/soporte-icon.svg",
         "items": [
-          "Monitoreo 24/7",
-          "Actualizaciones periódicas",
-          "Mantenimiento preventivo"
+          "Monitoreo 24/7.",
+          "Actualizaciones periódicas.",
+          "Mantenimiento preventivo."
         ]
       }
     ]
