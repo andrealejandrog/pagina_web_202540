@@ -110,5 +110,11 @@
         ]
       }
     ]
+  },
+  "project": {
+    "subTitle": "Nadie es como 5.0 Technology",
+    "title": "Una palabra: diferentes.",
+    "propuesta" :"Somos más que un proveedor, somos tu aliado estratégico. Contamos con un equipo de expertos apasionados por la excelencia, comprometidos en ofrecer soluciones innovadoras y una experiencia única. Nos involucramos en cada proyecto con la misión de superar expectativas, garantizando resultados óptimos que realmente impulsen tu negocio.",
+    "mainImage":"/assets/img/icons/Diferenciador.jpeg"
   }
 }

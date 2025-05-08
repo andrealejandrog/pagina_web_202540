@@ -1,9 +1,12 @@
 "use client"
+import { useTranslations } from "@/app/hooks/useTranslations";
+import Image from 'next/image';
 import SectionTitle from "../Common/SectionTitle";
 import WatermarkBackground from "../Watermark/WatermarkBackground";
 
 
 const Project1 = () => {
+  const { t } = useTranslations();
 
   return (
     <WatermarkBackground
@@ -17,8 +20,8 @@ const Project1 = () => {
           <div className="col-lg-8 m-auto text-center">
             <div className="heading1">
               <SectionTitle
-                SubTitle="5.0 Technology"
-                Title="Una Palabra: Diferentes"
+                SubTitle={t('project.subTitle')}
+                Title={t('project.title')}
               ></SectionTitle>
             </div>
           </div>
@@ -26,8 +29,22 @@ const Project1 = () => {
 
         <div className="space30"></div>
         <div className="row">
-          <p>Somos más que un proveedor, somos tu aliado estratégico. Contamos con un equipo de expertos apasionados por la excelencia, comprometidos en ofrecer soluciones innovadoras y una experiencia única. Nos involucramos en cada proyecto con la misión de superar expectativas, garantizando resultados óptimos que realmente impulsen tu negocio.</p>
+          <p>{t('project.propuesta')}</p>
         </div>
+        <div className="space30"></div>
+        <Image
+          src={t('project.mainImage')}
+          alt="Proceso 5.0 Technology"
+          width={800}
+          height={533}
+          quality={100}
+          // className="solution-image img-fluid rounded"
+          style={{
+            objectFit: 'cover',
+            width: '100%',
+            height: '100%',
+          }}
+        />
       </div>
     </WatermarkBackground>
   );
