@@ -66,13 +66,8 @@
       },
       {
         "title": "Soluciones tecnológicas",
-<<<<<<< HEAD
-        "desc": "Innovación para tu negocio.",
-        "icon": "/assets/img/icons/tech-solutions-icon.svg",
-=======
         "desc": "Innovación para tu negocio",
         "icon": "/public/assets/img/icons/tech-solutions-icon.svg",
->>>>>>> 93a01d3 (Changes)
         "items": [
           "Desarrollo de software a medida.",
           "Migración a la nube segura.",
@@ -89,7 +84,7 @@
     "processes": [
       {
         "title": "Diagnóstico inicial",
-        "img": "/assets/img/icons/diagnostico-icon.svg",
+        "img": "/assets/img/icons/case8-icon6.svg",
         "items": [
           "Análisis de necesidades.",
           "Evaluación de infraestructura.",

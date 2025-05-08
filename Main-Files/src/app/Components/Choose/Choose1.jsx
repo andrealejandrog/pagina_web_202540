@@ -9,27 +9,21 @@ const Choose1 = () => {
   return (
     <div className="work sp" id='proceso'>
       <div className="container">
-        <div className="row align-items-center">
-          <div className="col-lg-4">
+        <div className='col-lg-8 m-auto text-center'>
+          <div className="heading1">
+            <SectionTitle
+              SubTitle={t('choose.subTitle')}
+              Title={t('choose.title')}
+            />
+          </div>
+        </div>
+        <div className="row align-items-center flex-column-reverse flex-lg-row">
+          <div className="col-lg-4 order-lg-1 d-flex flex-column justify-content-center">
             <div className="heading1">
-              <span className="span" data-aos="zoom-in-left" data-aos-duration="700">
-                <SectionTitle
-                  SubTitle={t('choose.subTitle')}
-                  Title={t('choose.title')}
-                />
-              </span>
               <div className="space16"></div>
               {t('choose.processes').map((process, i) => (
                 <div key={i} className="process-category" data-aos="fade-right" data-aos-duration="700">
                   <div className="process-header">
-                    <div className="icon">
-                      <Image 
-                        src={process.img} 
-                        alt={process.title} 
-                        width={24} 
-                        height={20} 
-                      />
-                    </div>
                     <h4>{process.title}</h4>
                   </div>
                   <ul className="process-items">
@@ -44,17 +38,10 @@ const Choose1 = () => {
                 </div>
               ))}
             </div>
-            <div className="space30"></div>
           </div>
 
-          <div className="col-lg-8">
+          <div className="col-lg-8 order-lg-2 mb-4 mb-lg-0">
             <div className="work-images">
-              {/* <Image
-                src={t('choose.mainImage')}
-                alt="Proceso 5.0 Technology"
-                width={900}
-                height={900}
-              /> */}
               <Image
                 src={t('choose.mainImage')}
                 alt="Proceso 5.0 Technology"
