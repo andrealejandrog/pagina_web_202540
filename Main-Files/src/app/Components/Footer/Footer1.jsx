@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 const Footer1 = () => {
     return (
@@ -16,12 +15,12 @@ const Footer1 = () => {
                               height={10}
                               />
                             </div>
-                            {/* <div className="space20"></div> */}
                             <div className="heading1">
                               <p>Innovamos con propósito, transformamos con tecnología. </p>
                             </div>
                             <ul className="social-icon">
                                  <li><a href="#"><i className="bi bi-linkedin"></i></a></li>
+                                 <li><a href="#"><i className="bi bi-twitter-x"></i></a></li>
                                  <li><a href="#"><i className="bi bi-facebook"></i></a></li>
                                  <li><a href="#"><i className="bi bi-instagram"></i></a></li>
                             </ul>
@@ -33,30 +32,35 @@ const Footer1 = () => {
 
                             <div className="contact-box">
                               <div className="icon">
-                                <Image src="/assets/img/icons/footer1-icon4.png" alt="img" width={30} height={30}   />
+                                <i class="bi bi-geo-alt-fill"></i>
                               </div>
                               <div className="pera">
-                                <a href="tel:+50241517120">
-                                   Guatemala: Condado El Naranjo 23 Calle 14-58 zona 4 Mixco Guatemala.
-                                   <br />
-                                   <br />
-                                   US: 306 East 17th St, Lumberton, NC 28358
-                               </a>
+                                   <p>Guatemala: Condado El Naranjo 23 Calle 14-58 zona 4 Mixco Guatemala.</p>
+                              </div>
+                            </div>
+                            <div className="contact-box">
+                              <div className="icon">
+                                <i class="bi bi-geo-alt-fill"></i>
+                              </div>
+                              <div className="pera">
+                                   <p>US: 306 East 17th St, Lumberton, NC 28358.</p>
                               </div>
                             </div>
 
                             <div className="contact-box">
                               <div className="icon">
-                              <Image src="/assets/img/icons/footer1-icon2.png" alt="img" width={24} height={24}   />
+                              {/* <Image src="/assets/img/icons/footer1-icon2.png" alt="img" width={24} height={24}   /> */}
+                              <i class="bi bi-telephone-outbound-fill"></i>
                               </div>
                               <div className="pera">
-                                <a href="tel:+50241517120">+502 4151-7120</a>
+                                <a href="tel:+50237580290">+502 3758-0290</a>
                               </div>
                             </div>
 
                             <div className="contact-box">
                               <div className="icon">
-                              <Image src="/assets/img/icons/footer1-icon3.png" alt="img" width={24} height={24}   />
+                              {/* <Image src="/assets/img/icons/footer1-icon3.png" alt="img" width={24} height={24}   /> */}
+                              <i class="bi bi-envelope-paper-fill"></i>
                               </div>
                               <div className="pera">
                                 <a href="mailto:info@50-technology.com">info@50-technology.com</a>
@@ -65,7 +69,8 @@ const Footer1 = () => {
 
                             <div className="contact-box">
                               <div className="icon">
-                              <Image src="/assets/img/icons/footer1-icon4.png" alt="img" width={24} height={24}/>                                
+                              {/* <Image src="/assets/img/icons/footer1-icon4.png" alt="img" width={24} height={24}/>                                 */}
+                              <i class="bi bi-laptop-fill"></i>
                               </div>
                               <div className="pera">
                                 <a href="mailto:50-technology.com">50-technology.com</a>

@@ -20,7 +20,7 @@ const ContactInfo1 = () => {
                                 </div>
                                 <div className="heading">
                                     <h5>Contact Us</h5>
-                                    <a href="tel:(124)555-6565" className="text">(124) 555-6565</a>
+                                    <a href="tel:+502 3758-0290" className="text">+502 3758-0290</a>
                                 </div>
                             </div>
 
@@ -30,7 +30,7 @@ const ContactInfo1 = () => {
                                 </div>
                                 <div className="heading">
                                     <h5>Send Us a Mail</h5>
-                                    <a href="mailto:admin@techxen.org " className="text">admin@techxen.org </a>
+                                    <a href="info@50-technology.com" className="text">info@50-technology.com</a>
                                 </div>
                             </div>
 

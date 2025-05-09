@@ -5,7 +5,7 @@ import parse from 'html-react-parser';
 import Link from "next/link";
 import Image from "next/image";
 
-import Logo from '@public/assets/img/logo/Transparent_logo.svg' //nuevo path de logo
+import Logo from '@public/assets/img/icons/Transparent_logo.svg' //nuevo path de logo
 
 const HeroBanner1 = ({
 bgImg,
@@ -47,14 +47,14 @@ btnUrl,
                 <p>{content}</p>
 
                 <div className="space30"></div>
-                <div className="buttons">
+                {/* <div className="buttons">
                   <Link className="theme-btn1" href={btnUrl}
                   onClick={(e) => handleSmoothScroll(e, 'contacto')}>
                     {btnName}
                       <span>
                         <i className="bi bi-arrow-right"></i>
                   </span></Link>
-                </div>
+                </div> */}
               </div>
             </div>
 

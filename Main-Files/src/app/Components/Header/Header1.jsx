@@ -86,7 +86,7 @@ export default function Header1({ variant }) {
                     </div>
                     <div className="headding">
                       <p>{t('header.contact_us')}</p>
-                      <a href="tel:+502 4151 7120">+502 4151 7120</a>
+                      <a href="tel:+502 3758 0290">+502 3758 0290</a>
                     </div>
                   </div>
                 </div>
