@@ -1,6 +1,10 @@
+'use client'
 import Image from "next/image";
+import { useTranslations } from '../../hooks/useTranslations'
+// import { useTranslations } from '../../hooks/useTranslations';
 
 const Footer1 = () => {
+  const { t } = useTranslations()
     return (
         <div className="footer1 _relative" id ='footer'>
         <div className="container">
@@ -16,7 +20,7 @@ const Footer1 = () => {
                               />
                             </div>
                             <div className="heading1">
-                              <p>Innovamos con propósito, transformamos con tecnología. </p>
+                              <p>{t('footer.slogan')}</p>
                             </div>
                             <ul className="social-icon">
                                  <li><a href="#"><i className="bi bi-linkedin"></i></a></li>
@@ -28,7 +32,7 @@ const Footer1 = () => {
                   </div>
                   <div className="col-lg-6">
                        <div className="single-footer-items">
-                            <h3>Contactanos</h3>
+                            <h3>{t('footer.contact_title')}</h3>
 
                             <div className="contact-box">
                               <div className="icon">
