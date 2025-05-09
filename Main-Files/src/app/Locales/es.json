@@ -116,5 +116,21 @@
     "title": "Una palabra: diferentes.",
     "propuesta" :"Somos más que un proveedor, somos tu aliado estratégico. Contamos con un equipo de expertos apasionados por la excelencia, comprometidos en ofrecer soluciones innovadoras y una experiencia única. Nos involucramos en cada proyecto con la misión de superar expectativas, garantizando resultados óptimos que realmente impulsen tu negocio.",
     "mainImage":"/assets/img/icons/Diferenciador.jpeg"
+  },
+  "contactinfo": {
+    "subTitle": "Estamos listos para ofrecerte una asesoría personalizada. Contáctanos.",
+    "title": "¡Hablemos!",
+    "contact_text": "Llámanos",
+    "email_text": "Envíanos un mail",
+    "ubication": "Nuestras oficinas",
+    "button": "Enviar mensaje",
+    "placeholders": {
+      "first_name": "Nombre",
+      "last_name": "Apellido",
+      "email": "Email",
+      "phone": "Teléfono",
+      "subject": "Asunto",
+      "message": "Mensaje"
+    }
   }
 }

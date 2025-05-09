@@ -116,5 +116,21 @@
     "title": "One word: different.",
     "propuesta" :"We are more than just a provider; we are your strategic ally. Our team of experts is passionate about excellence and committed to delivering innovative solutions and a unique experience. We get involved in every project with the mission of exceeding expectations, guaranteeing optimal results that truly drive your business.",
     "mainImage":"/assets/img/icons/Diferenciador.jpeg"
+  },
+  "contactinfo": {
+    "subTitle": "We're eager to hear from you to provide personalized guidance.",
+    "title": "Get in Touch!",
+    "contact_text": "Call us",
+    "email_text": "Email us",
+    "ubication": "Our offices",
+    "button": "Send message",
+    "placeholders": {
+      "first_name": "First name",
+      "last_name": "Last name",
+      "email": "Email",
+      "phone": "Phone number",
+      "subject": "Subject",
+      "message": "Message"
+    }
   }
 }
