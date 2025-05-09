@@ -23307,6 +23307,69 @@ li.has-dropdown1 span {
 
 /* BARRA DE NAVEGACION */
 
+/* Posicionamiento en móvil */
+.mobile-language-toggle {
+  margin-left: auto;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+  .cs_main_header_left {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .mobile-language-toggle {
+    order: 2;
+  }
+  
+  .cs-munu_toggle {
+    order: 3;
+    margin-left: 15px;
+  }
+  
+  .cs_site_branding {
+    order: 1;
+  }
+  .cs_main_header_left {
+    padding: 0 15px !important; /* Añadido */
+  }
+  .cs-munu_toggle {
+    margin-left: 10px !important; /* Modificado */
+  }
+}
+
+/* Para header sticky */
+.cs-gescout_sticky .cs_language_text {
+  color: #fff;
+  padding-left: 25px;
+}
+
+/* === NUEVOS ESTILOS (AÑADIR AL FINAL) === */
+.cs_language_text {
+  color: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: transparent;
+  border: none;
+  padding: 0 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 40px;
+  text-align: center;
+}
+
+.cs_language_text:hover {
+  color: var(--ztc-bg-main-bg-1) !important;
+  transform: scale(1.05);
+}
+
 .cs_nav {
   color: #fff;
 }
