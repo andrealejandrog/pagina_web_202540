@@ -36,7 +36,7 @@ const Footer1 = () => {
 
                             <div className="contact-box">
                               <div className="icon">
-                                <i class="bi bi-geo-alt-fill"></i>
+                                <i className="bi bi-geo-alt-fill"></i>
                               </div>
                               <div className="pera">
                                    <p>Guatemala: Condado El Naranjo 23 Calle 14-58 zona 4 Mixco Guatemala.</p>
