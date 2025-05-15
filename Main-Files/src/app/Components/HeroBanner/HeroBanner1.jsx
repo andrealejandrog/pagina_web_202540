@@ -1,75 +1,56 @@
 "use client"
-import { useEffect, useState } from "react";
+import { useEffect } from "react"; // useState fue removido ya que setMobileToggle no se usaba activamente
 import loadBackgroudImages from "../Common/loadBackgroudImages";
-// import parse from 'html-react-parser';
 import { useTranslations } from "@/app/hooks/useTranslations";
-import Link from "next/link";
-import Image from "next/image";
 
-import Logo from '@public/assets/img/icons/Transparent_logo.svg' //nuevo path de logo
-// import videoBackground from '@public/assets/videos/herobanner/opcion_2.mp4';
-
-const HeroBanner1 = ({
-bgImg,
-}) => {
+const HeroBanner1 = () => {
 
   useEffect(() => {
     loadBackgroudImages();
   }, []);
   
-  const [setMobileToggle] = useState(false);
-  
-  const handleSmoothScroll = (e, id) => {
-    e.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      const yOffset = -100;
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({
-        top: y,
-        behavior: 'smooth'
-      });
-      setMobileToggle(false);
-    }
-  }
-
   const { t } = useTranslations();
-
-  ;
 
   return (
     <div className="hero_main_area1">
-      <div className="hero1" /*data-background={bgImg}*/>
-        <div className="container">
-          <div className="row gx-lg-5 align-items-center">
-            <div className="col-lg-5 order-2 order-lg-1">
-              <div className="main-headding pe-lg-4">
-                <h1 className="title tg-element-title">{t('home.heroBanner.title')}</h1>
-                {/* <div className="space16"></div> */}
-                <p>{t('home.heroBanner.content')}</p>
+      {/* El div .hero1 ahora actuará como el contenedor principal con fondo de video */}
+      <div className="hero1 hero-video-bg">
+        
+        {/* 1. Video como Fondo */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="hero-background-video"
+          // poster="/assets/img/fallback-poster.jpg" // Opcional: Un poster mientras carga el video
+        >
+          <source
+            src="/assets/videos/herobanner/opcion_2.mp4"
+            type="video/mp4"
+          />
+          Tu navegador no soporta la etiqueta de video.
+        </video>
+
+        {/* 2. Opcional: Capa semi-transparente (Scrim) para mejorar legibilidad del texto */}
+        <div className="hero-scrim"></div>
+
+        {/* 3. Contenedor para el contenido superpuesto */}
+        <div className="hero-content-container">
+          <div className="container">
+            {/* Fila para posicionar el texto a la derecha en pantallas grandes */}
+            <div className="row justify-content-lg-end align-items-center">
+              <div className="col-xl-5 col-lg-6 col-md-10 col-12"> {/* Ajusta el ancho de la columna de texto */}
+                <div className="main-headding hero-text-content">
+                  <h1 className="title tg-element-title">{t('home.heroBanner.title')}</h1>
+                  <p>{t('home.heroBanner.content')}</p>
+                  {/* Aquí podrías añadir botones u otros elementos si es necesario */}
+                </div>
               </div>
             </div>
-
-            <div className="col-lg-7 order-1 order-lg-2 mb-4 mb-lg-0">
-              <section className="video-container ratio ratio-16x9">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="object-fit-cover"
-                >
-                  <source
-                    src="/assets/videos/herobanner/opcion_2.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-                {/* Contenido sobre el video */}
-              </section>
-            </div>
-
           </div>
         </div>
+
       </div>
     </div>
   );

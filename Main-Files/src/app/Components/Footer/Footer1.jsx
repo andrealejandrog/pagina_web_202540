@@ -44,7 +44,7 @@ const Footer1 = () => {
                             </div>
                             <div className="contact-box">
                               <div className="icon">
-                                <i class="bi bi-geo-alt-fill"></i>
+                                <i className="bi bi-geo-alt-fill"></i>
                               </div>
                               <div className="pera">
                                    <p>US: 306 East 17th St, Lumberton, NC 28358.</p>
@@ -54,7 +54,7 @@ const Footer1 = () => {
                             <div className="contact-box">
                               <div className="icon">
                               {/* <Image src="/assets/img/icons/footer1-icon2.png" alt="img" width={24} height={24}   /> */}
-                              <i class="bi bi-telephone-outbound-fill"></i>
+                              <i className="bi bi-telephone-outbound-fill"></i>
                               </div>
                               <div className="pera">
                                 <a href="tel:+50237580290">+502 3758-0290</a>
@@ -64,7 +64,7 @@ const Footer1 = () => {
                             <div className="contact-box">
                               <div className="icon">
                               {/* <Image src="/assets/img/icons/footer1-icon3.png" alt="img" width={24} height={24}   /> */}
-                              <i class="bi bi-envelope-paper-fill"></i>
+                              <i className="bi bi-envelope-paper-fill"></i>
                               </div>
                               <div className="pera">
                                 <a href="mailto:info@50-technology.com">info@50-technology.com</a>
@@ -74,7 +74,7 @@ const Footer1 = () => {
                             <div className="contact-box">
                               <div className="icon">
                               {/* <Image src="/assets/img/icons/footer1-icon4.png" alt="img" width={24} height={24}/>                                 */}
-                              <i class="bi bi-laptop-fill"></i>
+                              <i className="bi bi-laptop-fill"></i>
                               </div>
                               <div className="pera">
                                 <a href="mailto:50-technology.com">50-technology.com</a>

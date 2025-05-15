@@ -11070,148 +11070,158 @@ a.header__search.header-search-btn p {
 }
 
 /* ::::::::::::::::::::::::::
-  HERO AREA CSS
+  HERO AREA CSS - VERSIÓN CON FONDO DE VIDEO
 :::::::::::::::::::::::::: */
 
-/* Estilos base (Mobile First) */
-.hero1 {
-  min-height: 600px; /* Altura base para móviles, ajustar según diseño */
-  display: flex;
-  align-items: center; /* Centra el contenido verticalmente si .hero1 es más alto */
-  padding-top: 100px;  /* Padding superior base */
-  padding-bottom: 50px; /* Añadir padding inferior para espaciado */
-  /* position: static !important; /* Descomentar si es estrictamente necesario para anular otras posiciones. Usar con precaución. */
+.hero1.hero-video-bg {
+  position: relative;
+  overflow: hidden;
+  /* Ajustamos min-height para diferentes tamaños de pantalla usando vh */
+  min-height: 65vh; /* Altura base para móviles */
+  display: flex; /* Hacemos que .hero1 sea un contenedor flex también */
+  align-items: center; /* Para centrar .hero-content-container si no tuviera height: 100% */
+  padding: 0;
 }
 
-.hero1 .container {
-  width: 100%; /* Asegura que el contenedor use todo el ancho disponible */
+.hero-background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cubre todo el área, puede recortar partes del video */
+  z-index: 0;        /* Capa más al fondo */
+  /* Opcional: un ligero filtro si no usas scrim
+  filter: brightness(0.7);
+  */
 }
 
-/* SOLUCIÓN CLAVE: Aplicar min-width: 0 a las columnas Bootstrap (o cualquier item flex)
-   para permitir que se encojan correctamente cuando el contenido es muy ancho. */
-.hero1 .row > div[class*="col-"] {
-  min-width: 0;
+.hero-scrim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45); /* Ejemplo: negro con 45% opacidad. AJUSTA ESTO */
+  z-index: 1; /* Encima del video, debajo del contenido */
 }
 
-.hero1 .main-headding {
-  padding-top: 50px; /* Espacio sobre el texto en móviles y tablets (ver media queries) */
+.hero-content-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  /* height: 100%; /* Ya no es necesario si .hero1 es flex y usa align-items: center */
+  /* min-height: inherit; /* Ya no es necesario */
+  display: flex;      /* Sigue siendo flex para centrar .container */
+  align-items: center;  /* Centrado vertical del .container */
+  /* Ajustamos paddings base, se anularán para pantallas grandes */
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.hero1 .main-headding h1 {
-  font-size: var(--f-fs-font-fs40); /* Tamaño de fuente base para móviles */
+/* El .container de Bootstrap se encargará del ancho centrado del contenido */
+/* El .row y .col-* se encargarán de la disposición interna del texto */
+
+.hero-text-content {
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  /* Mantenemos text-align: left por defecto, se ajustará en media queries si es necesario */
+  text-align: left;
+}
+
+.hero-text-content h1 {
+  font-size: var(--f-fs-font-fs40);
   font-weight: var(--f-fw-blod);
   line-height: var(--f-fs-font-fs48);
-  color: var(--ztc-text-text-1);
 }
 
-.hero1 .main-headding p {
+.hero-text-content p {
   font-size: var(--f-fs-font-fs16);
   line-height: var(--f-fs-font-fs28);
   font-weight: var(--f-fw-regular);
-  color: var(--ztc-text-pera-text-1);
-  margin-top: 16px; /* Espacio entre el título y el párrafo */
+  margin-top: 16px;
 }
 
-.video-container {
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden; /* Previene que el video se desborde de este contenedor */
-  border-radius: 5px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 100%; /* El contenedor del video debe ocupar el 100% de su columna padre */
-  /* Las clases 'ratio' y 'ratio-16x9' de Bootstrap se encargan del aspect ratio */
+.hero-text-content h1 {
+  font-size: var(--f-fs-font-fs40); /* Tamaño base para móviles */
+  font-weight: var(--f-fw-blod);
+  line-height: var(--f-fs-font-fs48);
+  /* Considera si necesitas un color específico aquí si el 'inherit' no funciona con variables CSS */
 }
 
-.video-container video {
-  /* Bootstrap .ratio > * (hijo directo de .ratio) ya aplica:
-     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-     La clase 'object-fit-cover' en el tag <video> se encarga de cómo se ajusta el video.
-  */
-  display: block; /* Asegura un comportamiento de bloque */
-  object-position: center; /* Centra el video si 'object-fit' no lo llena completamente */
+.hero-text-content p {
+  font-size: var(--f-fs-font-fs16);
+  line-height: var(--f-fs-font-fs28);
+  font-weight: var(--f-fw-regular);
+  margin-top: 16px;
 }
 
-/* Media Query para tablets y pantallas medianas (hasta 991.98px) */
-/* Aquí es donde las columnas se apilan una sobre otra. */
-@media (max-width: 991.98px) { /* Usar .98px para compatibilidad con breakpoints de Bootstrap 5+ */
-  .hero_main_area1 .row {
-    flex-direction: column-reverse; /* Video aparece debajo del texto */
+/* ---- AJUSTES RESPONSIVOS ---- */
+
+/* Pantallas pequeñas y tablets (hasta el breakpoint 'lg') */
+@media (max-width: 991.98px) {
+  .hero1.hero-video-bg {
+    min-height: 60vh; /* Ajustar si es necesario */
+    align-items: stretch; /* Permitir que el contenido ocupe espacio si es necesario */
   }
-  
-  .hero_main_area1 .row > .col-lg-7 { /* Columna del video */
-    margin-bottom: 30px; /* Espacio cuando el video está apilado debajo del texto */
+  .hero-content-container {
+    align-items: center; /* Mantener centrado si es posible, o ajustar */
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
-
-
-  /* Opcional: centrar el texto cuando las columnas están apiladas */
-  .hero1 .main-headding {
+  .hero1 .row.justify-content-lg-end {
+    justify-content: center !important;
+  }
+  .hero-text-content {
     text-align: center;
-    padding-left: 15px; /* Algo de padding horizontal para el texto en móvil */
+    padding-left: 15px;
     padding-right: 15px;
   }
+  .hero-text-content h1 {
+    font-size: var(--f-fs-font-fs36);
+    line-height: var(--f-fs-font-fs44);
+  }
 }
 
-/* Estilos para tablets en landscape y desktops pequeños (a partir de 768px) */
+/* Tablets medianas (md) */
 @media (min-width: 768px) {
-  .hero1 {
-    min-height: 650px; /* Altura para tablets */
+  .hero1.hero-video-bg {
+    min-height: 70vh;
   }
-  /* Los padding-top para .main-headding ya están cubiertos por la regla base o la de max-width: 960px */
 }
 
-
-/* Estilos para Desktop (a partir de 992px) donde las columnas van lado a lado */
-@media (max-width: 991.98px) { /* Antes era 991.98px */
-  .hero_main_area1 .row {
-    flex-direction: column-reverse;
-  }
-  .hero1 {
-    min-height: 700px; /* Altura para desktop */
-    padding-top: 120px;
-    padding-bottom: 60px; /* Padding inferior balanceado */
+/* Desktop (lg y superior) - Aquí aplicamos el centrado vertical y ajuste de padding */
+@media (min-width: 992px) {
+  .hero1.hero-video-bg {
+    min-height: 75vh; /* O la altura deseada para desktop, ej: 80vh, 700px */
+    /* display: flex; y align-items: center; ya están definidos en la base */
   }
 
-  .hero1 .main-headding {
-    padding-top: 0; /* Resetear padding-top si no es necesario en desktop */
-    text-align: left; /* Alinear texto a la izquierda en desktop */
-    /* pe-lg-4 (padding-right) se aplica desde la clase en el JSX */
+  .hero-content-container {
+    /* Eliminamos padding vertical para que align-items: center haga el trabajo */
+    padding-top: 0;
+    padding-bottom: 0;
+    /* height: 100%; /* Aseguramos que tome la altura de .hero1 para que align-items funcione bien */
+    /* display: flex; y align-items: center; ya están definidos */
   }
 
-  .hero1 .main-headding h1 {
-    font-size: var(--f-fs-font-fs64); /* Fuente más grande para desktop */
+  .hero-text-content {
+    text-align: left; /* O 'right' si prefieres que el texto se alinee a la derecha dentro de su columna */
+  }
+
+  .hero-text-content h1 {
+    font-size: var(--f-fs-font-fs64);
     line-height: var(--f-fs-font-fs70);
-    /* word-wrap: break-word; */
   }
 }
 
-/* Estilos para Desktop grande (a partir de 1200px) */
+/* Desktop extra grande (xl) */
 @media (min-width: 1200px) {
-  .hero1 {
-    padding-top: 130px; /* Padding original para pantallas grandes */
+  .hero1.hero-video-bg {
+    min-height: 80vh; /* Más altura para pantallas muy grandes */
   }
+  /* Los estilos de padding:0 para .hero-content-container ya se aplican desde el breakpoint de 992px */
 }
-
-
-/* Estilos que probablemente no se usan en ESTE componente (basado en el JSX proporcionado)
-   Puedes eliminarlos si estás seguro o comentarlos:
-
-.hero1 .main-headding span.span { ... }
-.hero1 .main-headding span.span img { ... }
-.hero1 .main-headding h1 span.after { ... }
-.hero1 .buttons { ... }
-@media (max-width: 767px) { .hero1 .buttons { ... } }
-.contact-btn { ... }
-.language-selector { ... }
-@media (max-width: 960px) { .contact-btn { ... } .language-selector { ... } }
-@media only screen and (min-width: 768px) and (max-width: 991px) { .contact-btn { ... } }
-.hero-bottom-area { ... } (y todos sus estilos hijos/descendientes como .single-box, .icon, .headding)
-.brand-single-box { ... }
-
-La regla original "@media (max-width: 960px) { .hero1 .main-headding { padding-top: 50px; } }"
-se ha integrado en el padding-top base de .hero1 .main-headding, ya que se aplicaría a la mayoría
-de los tamaños de pantalla más pequeños de todos modos. Si necesitas un control más granular, puedes reintroducirla.
-*/
-
 /*===================
  PRRELOADER AREA CSS 
  ========================
