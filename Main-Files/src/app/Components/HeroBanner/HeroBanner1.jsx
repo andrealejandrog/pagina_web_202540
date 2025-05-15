@@ -26,7 +26,7 @@ const HeroBanner1 = () => {
           // poster="/assets/img/fallback-poster.jpg" // Opcional: Un poster mientras carga el video
         >
           <source
-            src="/assets/videos/herobanner/opcion_2.mp4"
+            src="/assets/videos/herobanner/Video_invertido.mp4"
             type="video/mp4"
           />
           Tu navegador no soporta la etiqueta de video.
@@ -39,7 +39,7 @@ const HeroBanner1 = () => {
         <div className="hero-content-container">
           <div className="container">
             {/* Fila para posicionar el texto a la derecha en pantallas grandes */}
-            <div className="row justify-content-lg-end align-items-center">
+            <div className="row justify-content-lg-start align-items-center">
               <div className="col-xl-5 col-lg-6 col-md-10 col-12"> {/* Ajusta el ancho de la columna de texto */}
                 <div className="main-headding hero-text-content">
                   <h1 className="title tg-element-title">{t('home.heroBanner.title')}</h1>
