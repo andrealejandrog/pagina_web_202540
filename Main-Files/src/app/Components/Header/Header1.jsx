@@ -1,33 +1,36 @@
 'use client'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import Nav from './Nav'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useLanguage } from '../../context/LanguageContext'
 import { useTranslations } from '../../hooks/useTranslations'
-import Logo from '@public/assets/img/logo/Transparent_logo.svg'
+import Logo from '@public/assets/img/logo/Logo_symbol.svg'
 
 export default function Header1({ variant }) {
+  const [isSticky, setIsSticky] = useState(false);
   const [mobileToggle, setMobileToggle] = useState(false)
   const { language, toggleLanguage } = useLanguage()
-  const { t } = useTranslations()
+  const { t } = useTranslations();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) { // Cambia 100 a la altura que desees para activar el sticky
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div className='header-area2 header_nav_03'>
-      <header className={`cs_site_header cs_style_1 ${variant || ''} cs_sticky_header cs_site_header_full_width ${mobileToggle ? 'cs_mobile_toggle_active' : ''}`}>
-        {/* Top Header (Misión) */}
-        <div className="cs_top_header">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <div className="pera">
-                  <p>{t('header.mission')}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      <header className={`cs_site_header cs_style_1 ${variant || ''} cs_sticky_header cs_site_header_full_width ${mobileToggle ? 'cs_mobile_toggle_active' : ''} ${isSticky ? 'is-sticky' : ''}`}>
         {/* Main Header */}
         <div className="cs_main_header cs_accent_bg">
           <div className="container">
@@ -36,6 +39,7 @@ export default function Header1({ variant }) {
               <div className="cs_main_header_left">
                 <Link className="cs_site_branding" href="/">
                   <Image src={Logo} alt="5-0 Technology" width={115} height={23} priority />
+                  <span className="site-brand-text">5.0 Technology</span>
                 </Link>
 
                 {/* Botón de idioma móvil con mejor espaciado */}
