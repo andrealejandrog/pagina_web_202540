@@ -38,7 +38,12 @@ export default function Header1({ variant }) {
               {/* Logo + Idioma móvil */}
               <div className="cs_main_header_left">
                 <Link className="cs_site_branding" href="/">
-                  <Image src={Logo} alt="5-0 Technology" width={115} height={23} priority />
+                  <Image
+                  src={Logo}
+                  alt="5-0 Technology"
+                  width={50}
+                  height={10}
+                  priority />
                   <span className="site-brand-text">5.0 Technology</span>
                 </Link>
 
