@@ -54,7 +54,7 @@
     "title": "Protect, optimize and grow.",
     "items": [
       {
-        "title": "Electronic Security and Automation",
+        "title": "Electronic security and automation.",
         "desc": "Smart protection and control.",
         "icon": "/assets/img/icons/security-icon.svg",
         "items": [
@@ -65,7 +65,7 @@
           ]
       },
       {
-        "title": "Technological Solutions",
+        "title": "Technological solutions.",
         "desc": "Innovation for your business.",
         "icon": "/assets/img/icons/tech-solutions-icon.svg",
         "items": [

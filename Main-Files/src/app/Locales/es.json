@@ -32,7 +32,7 @@
       "btnUrl": "/about",
       "featureList": [
         {
-          "title": "Seguridad Electrónica y automatización.",
+          "title": "Seguridad electrónica y automatización.",
           "items": [
             {"text": "Sistemas de CCTV, alarmas y control de acceso."},
             {"text": "Centros de monitoreo 24/7."},
@@ -54,7 +54,7 @@
     "title": "Protege, optimiza y crece.",
     "items": [
       {
-        "title": "Seguridad electrónica y automatización",
+        "title": "Seguridad electrónica y automatización.",
         "desc": "Protección y control inteligente.",
         "icon": "/assets/img/icons/security-icon.svg",
         "items": [
@@ -65,7 +65,7 @@
         ]
       },
       {
-        "title": "Soluciones tecnológicas",
+        "title": "Soluciones tecnológicas.",
         "desc": "Innovación para tu negocio",
         "icon": "/public/assets/img/icons/tech-solutions-icon.svg",
         "items": [
