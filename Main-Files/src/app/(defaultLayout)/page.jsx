@@ -42,7 +42,7 @@ const Home = () => {
                 // 'Cableado_estructurado_op1.svg',
                 'Control_de_acceso.jpg',
                 'Centro_de_monitoreo.jpg',
-                'Automation.jpg'][itemIndex] : 
+                'Automation_2.jpg'][itemIndex] : 
               [
                 'Desarrollo_de_software.jpg',
                 // 'Automatizacion_procesos.svg',

@@ -58,22 +58,21 @@
         "desc": "Smart protection and control.",
         "icon": "/assets/img/icons/security-icon.svg",
         "items": [
-          "Professional CCTV camera installation.",
-          "Smart alarm systems.",
-          "Biometric access control.",
-          "Residential and commercial automation."
-        ]
+            "Cost reduction due to losses.",
+            "Improved staff control.",
+            "Asset protection.",
+            "Reduction in basic utility costs."
+          ]
       },
       {
         "title": "Technological Solutions",
         "desc": "Innovation for your business.",
         "icon": "/assets/img/icons/tech-solutions-icon.svg",
         "items": [
-          "Custom software development.",
-          "Secure cloud migration.",
-          "Process automation.",
-          "Document digitization."
-        ]
+            "Improved productivity.",
+            "Access to real-time KPIs.",
+            "Cost reduction associated with process automation."
+          ]
       }
     ]
   },
@@ -83,37 +82,35 @@
     "mainImage": "/assets/img/icons/Proceso.jpg",
     "processes": [
       {
-        "title": "Initial Diagnosis",
+        "title": "Electronic security & automation project.",
         "img": "/assets/img/icons/diagnostico-icon.svg",
         "items": [
-          "Needs analysis.",
-          "Infrastructure assessment.",
-          "Risk identification."
+          "Requirement prospecting and assessment.",
+          "Proposal preparation and presentation.",
+          "Project planning.",
+          "Execution and installation.",
+          "Training and handover.",
+          "Support and maintenance."
         ]
       },
       {
-        "title": "Implementation",
+        "title": "Technology solutions area.",
         "img": "/assets/img/icons/implementacion-icon.svg",
         "items": [
-          "Professional installation.",
-          "System configuration.",
-          "Operation tests."
-        ]
-      },
-      {
-        "title": "Continuous Support",
-        "img": "/assets/img/icons/soporte-icon.svg",
-        "items": [
-          "24/7 monitoring.",
-          "Regular updates.",
-          "Preventive maintenance."
+          "Discovery and planning.",
+          "Design and prototyping.",
+          "Development.",
+          "Testing and validation.",
+          "Implementation and delivery.",
+          "Training and support.",
+          "Monitoring and optimization."
         ]
       }
     ]
   },
   "project": {
     "subTitle": "No one is like 5.0 Technology",
-    "title": "One word: different.",
+    "title": "One word: Different.",
     "propuesta" :"We are more than just a provider, we are your strategic ally. Our team of experts is passionate about excellence and committed to delivering innovative solutions and a unique experience. We get involved in every project with the mission of exceeding expectations, guaranteeing optimal results that truly drive your business.",
     "mainImage":"/assets/img/icons/Diferenciador.jpeg"
   },

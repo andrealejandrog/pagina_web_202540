@@ -29,7 +29,7 @@ const Choose1 = () => {
                   <ul className="process-items">
                     {process.items.map((item, itemIndex) => (
                       <li key={itemIndex}>
-                        <span className="process-icon">o</span> 
+                        <span className="process-icon">●</span> 
                         {item}
                       </li>
                     ))}

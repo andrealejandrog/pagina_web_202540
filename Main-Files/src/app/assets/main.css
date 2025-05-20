@@ -8300,13 +8300,14 @@ a.header__search.header-search-btn p {
   list-style: none;
   padding-left: 40px;
   margin-top: 10px;
+  /* color: var(--ztc-text-dark); */
 }
 
 .process-items li {
   position: relative;
   margin-bottom: 8px;
   line-height: 1.6;
-  color: black;
+  color: var(--ztc-text-pera-text-1);
 }
 
 .process-icon {

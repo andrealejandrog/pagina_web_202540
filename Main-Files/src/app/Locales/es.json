@@ -58,10 +58,10 @@
         "desc": "Protección y control inteligente.",
         "icon": "/assets/img/icons/security-icon.svg",
         "items": [
-          "Instalación profesional de cámaras CCTV.",
-          "Sistemas de alarmas inteligentes.",
-          "Control de acceso biométrico.",
-          "Automatización residencial y comercial."
+          "Reducción de costos por pérdidas.",
+          "Mejor control del personal.",
+          "Protección de activos.",
+          "Reducción de costos de servicios básicos."
         ]
       },
       {
@@ -69,10 +69,9 @@
         "desc": "Innovación para tu negocio",
         "icon": "/public/assets/img/icons/tech-solutions-icon.svg",
         "items": [
-          "Desarrollo de software a medida.",
-          "Migración a la nube segura.",
-          "Automatización de procesos.",
-          "Digitalización documental."
+          "Mejora en productividad.",
+          "Acceso a KPIs en tiempo real.",
+          "Reducción de costos asociados a automatización de procesos."
         ]
       }
     ]
@@ -83,37 +82,35 @@
     "mainImage": "/assets/img/icons/Proceso.jpg",
     "processes": [
       {
-        "title": "Diagnóstico inicial",
+        "title": "Proyecto de seguridad electrónica y automatización.",
         "img": "/assets/img/icons/case8-icon6.svg",
         "items": [
-          "Análisis de necesidades.",
-          "Evaluación de infraestructura.",
-          "Identificación de riesgos."
+          "Prospección y evaluación de requerimientos.",
+          "Elaboración y presentación de propuesta.",
+          "Planificación del proyecto.",
+          "Ejecución e instalación.",
+          "Capacitación y entrega.",
+          "Soporte y mantenimiento."
         ]
       },
       {
-        "title": "Implementación",
+        "title": "Área de solución tecnológica.",
         "img": "/assets/img/icons/implementacion-icon.svg",
         "items": [
-          "Instalación profesional.",
-          "Configuración de sistemas.",
-          "Pruebas de funcionamiento."
-        ]
-      },
-      {
-        "title": "Soporte continuo",
-        "img": "/assets/img/icons/soporte-icon.svg",
-        "items": [
-          "Monitoreo 24/7.",
-          "Actualizaciones periódicas.",
-          "Mantenimiento preventivo."
+          "Descubrimiento y planificación.",
+          "Diseño y prototipado.",
+          "Desarrollo.",
+          "Pruebas y validación.",
+          "Implementación y entrega.",
+          "Capacitación y soporte.",
+          "Seguimiento y optimización."
         ]
       }
     ]
   },
   "project": {
     "subTitle": "Nadie es como 5.0 Technology",
-    "title": "Una palabra: diferentes.",
+    "title": "Una palabra: Diferentes.",
     "propuesta" :"Somos más que un proveedor, somos tu aliado estratégico. Contamos con un equipo de expertos apasionados por la excelencia, comprometidos en ofrecer soluciones innovadoras y una experiencia única. Nos involucramos en cada proyecto con la misión de superar expectativas, garantizando resultados óptimos que realmente impulsen tu negocio.",
     "mainImage":"/assets/img/icons/Diferenciador.jpeg"
   },
