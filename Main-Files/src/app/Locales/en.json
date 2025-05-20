@@ -32,7 +32,7 @@
       "btnUrl": "/about",
       "featureList": [
         {
-          "title": "Electronic Security and Automation",
+          "title": "Electronic Security and Automation.",
           "items": [
             {"text": "CCTV systems, alarms and access control."},
             {"text": "24/7 monitoring centers."},
@@ -40,7 +40,7 @@
           ]
         },
         {
-          "title": "Technological Solutions",
+          "title": "Technological Solutions.",
           "items": [
             {"text": "Operational management software development."},
             {"text": "Digital transformation and document digitization."}

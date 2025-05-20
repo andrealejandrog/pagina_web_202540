@@ -32,7 +32,7 @@
       "btnUrl": "/about",
       "featureList": [
         {
-          "title": "Seguridad Electrónica y automatización",
+          "title": "Seguridad Electrónica y automatización.",
           "items": [
             {"text": "Sistemas de CCTV, alarmas y control de acceso."},
             {"text": "Centros de monitoreo 24/7."},
@@ -40,7 +40,7 @@
           ]
         },
         {
-          "title": "Soluciones tecnológicas",
+          "title": "Soluciones tecnológicas.",
           "items": [
             {"text": "Desarrollo de software para gestión operativa."},
             {"text": "Transformación digital y digitalización de documentos."}

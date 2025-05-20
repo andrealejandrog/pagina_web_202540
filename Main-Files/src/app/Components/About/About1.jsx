@@ -1,14 +1,14 @@
 import Image from "next/image";
-import SectionTitle from "../Common/SectionTitle";
+import SectionTitle from "../Common/SectionTitle"; // Asumo que este es tu componente para el título principal de la sección
 
 const About1 = ({ subTitle, Title, featurelist }) => {
   return (
     <div className="about1 sp" id="soluciones">
       <div className="container">
-        {/* Título */}
+        {/* Título Principal de la Sección "About1" */}
         <div className="row justify-content-center">
           <div className="col-lg-12">
-            <div className="heading1">
+            <div className="heading1"> {/* Usa tus estilos existentes para el título principal */}
               <span className="span" data-aos="zoom-in">
                 <SectionTitle SubTitle={subTitle} Title={Title} />
               </span>
@@ -16,56 +16,60 @@ const About1 = ({ subTitle, Title, featurelist }) => {
           </div>
         </div>
 
-        {/* Items - Nueva estructura */}
-        <div className="solutions-grid">
+        {/* Contenedor para las nuevas tarjetas de categoría */}
+        <div className="category-cards-wrapper">
           {featurelist?.map((category, index) => (
-            <div key={index} className="category-section">
-              <h3 className="category-title text-center mb-5">
-                <span className="category-icon">●</span> {category.title}
+            <div 
+              key={index} 
+              className="unified-category-card" // Nueva clase para la tarjeta de categoría
+              data-aos="fade-up"
+              data-aos-duration="800"
+            >
+              {/* Título de la Categoría */}
+              <h3 className="category-card-title text-center">
+                {/* Puedes agregar un ícono si lo deseas, similar a tu clase .category-icon */}
+                {/* <span className="category-icon-main">●</span> */}
+                {category.title}
               </h3>
               
-              <div className="row">
-                {category.items.map((item, itemIndex) => (
-                  <div 
-                    key={itemIndex} 
-                    className="col-lg-6 mb-2"
-                    data-aos="fade-up"
-                    data-aos-duration="800"
-                  >
-                    <div className="solution-card h-100">
-                      <div className="row align-items-center h-100">
-                        {/* Texto - Columna izquierda */}
-                        <div className="col-lg-12 order-lg-2 order-2">
-                          <div className="solution-content p-4">
-                            <h4 className="solution-title mb-4">{item.text}</h4>
-                          </div>
+              {/* Contenido de la tarjeta: textos a la izquierda, imágenes a la derecha (en desktop) */}
+              <div className="category-card-content-area">
+                {/* Columna de Textos */}
+                <div className="items-text-column">
+                  <ul className="items-text-list">
+                    {category.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="item-text-entry">
+                        <span className="category-icon-main">●</span>
+                        {item.text}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                {/* Columna de Imágenes */}
+                {/* Solo renderizar la galería si hay al menos una imagen en la categoría */}
+                {category.items.some(item => item.image) && (
+                  <div className="images-gallery-column">
+                    {category.items.map((item, itemIndex) => (
+                      item.image && (
+                        <div key={itemIndex} className="gallery-image-wrapper">
+                          <Image
+                            src={item.image}
+                            alt={item.text || `Imagen de ${category.title} ${itemIndex + 1}`}
+                            // Ajusta width/height para el tamaño base deseado en la galería.
+                            // Next/Image usa esto para la relación de aspecto y optimización.
+                            // El CSS controlará el tamaño final.
+                            width={800} 
+                            height={533}
+                            quality={100} // Buena calidad para galería
+                            className="gallery-image" // Clase para estilizar la imagen
+                            // style={{ objectFit: 'cover' }} // objectFit se puede aplicar vía CSS
+                          />
                         </div>
-                        
-                        {/* Imagen - Columna derecha */}
-                        <div className="col-lg-12 order-lg-1 order-1">
-                          {item.image && (
-                            <div className="solution-image-wrapper">
-                              <Image
-                                src={item.image}
-                                alt={item.text}
-                                width={800}
-                                height={533}
-                                quality={100}
-                                className="solution-image img-fluid rounded"
-                                style={{
-                                  objectFit: 'cover',
-                                  width: '100%',
-                                  height: '100%',
-                                  minHeight: '300px'
-                                }}
-                              />
-                            </div>
-                          )}
-                        </div>
-                      </div>
-                    </div>
+                      )
+                    ))}
                   </div>
-                ))}
+                )}
               </div>
             </div>
           ))}
