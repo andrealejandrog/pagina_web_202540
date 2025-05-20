@@ -129,5 +129,9 @@
       "subject": "Asunto",
       "message": "Mensaje"
     }
+  },
+  "cta1": {
+    "title": "5.0 Technology - Innovamos con propósito, transformamos con tecnología.",
+    "propuesta" :"Transforma la seguridad y productividad de tu empresa con nuestras soluciones tecnológicas innovadoras."
   }
 }
