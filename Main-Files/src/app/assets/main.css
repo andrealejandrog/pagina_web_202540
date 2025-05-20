@@ -131,43 +131,6 @@ Location:
   animation-timing-function: cubic-bezier(0.59, 0.59, 1, 1);
 }
 
-/* Selector de idiomas */
-.language-selector {
-  position: relative;
-  margin-right: 15px;
-}
-
-.cs_language_toggle {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  color: #010101;
-  padding: 8px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 600;
-  min-width: 80px;
-}
-
-.cs_language_toggle:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-1px);
-}
-
-/* Versión móvil */
-@media (max-width: 991px) {
-  .language-selector {
-    order: -1;
-    margin: 10px 0;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .cs_language_toggle {
-    width: 100%;
-    padding: 12px;
-  }
-}
 
 .shape-animaiton2 {
   position: relative;
@@ -15906,7 +15869,7 @@ a.header__search.header-search-btn p {
   text-align: center;
   line-height: 38px;
   border-radius: 50%;
-  background-color: var(--ztc-bg-bg-2);
+  /* background-color: var(--ztc-bg-bg-2); */
   margin-right: 10px;
 }
 .header_right_one .header1-buttons .contact-btn .headding p {
@@ -16356,6 +16319,45 @@ header.cs_site_header.cs_sticky_header.is-sticky .cs_main_header {
      Los ajustes de font-size y padding que ya tienes para diferentes breakpoints deberían mantenerse. */
 }
 
+
+/* Selector de idiomas */
+.language-selector {
+  position: relative;
+  margin-right: 15px;
+}
+
+.cs_language_toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #010101;
+  padding: 8px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  min-width: 80px;
+}
+
+.cs_language_toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Versión móvil */
+@media (max-width: 991px) {
+  .language-selector {
+    order: -1;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .cs_language_toggle {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
 /* Aquí queremos que se parezca al desktop grande, pero con elementos más pequeños */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   header.cs_site_header .cs_main_header_in {
@@ -16415,123 +16417,121 @@ header.cs_site_header.cs_sticky_header.is-sticky .cs_main_header {
 
 /* Breakpoint para el Menú Móvil (ej. pantallas de tableta para abajo) */
 @media screen and (max-width: 991.98px) {
-  /* 1. Ocultar la navegación de lista horizontal de desktop */
-  .cs_nav ul.cs_nav_list { /* Selecciona directamente la lista ul */
-    display: none !important; /* Ocultar por defecto en móvil */
+  /* 1. Ocultar la navegación de lista horizontal de desktop (Esto está bien) */
+  .cs_nav ul.cs_nav_list {
+    display: none !important;
   }
 
-  /* 2. Mostrar el menú desplegable cuando el header tiene .cs_mobile_toggle_active */
+  /* 2. Mostrar el menú desplegable cuando el header tiene .cs_mobile_toggle_active (Esto debe funcionar) */
   header.cs_site_header.cs_mobile_toggle_active .cs_nav ul.cs_nav_list {
-    display: block !important; /* Mostrar como lista vertical */
+    display: block !important; 
     position: absolute;
-    width: calc(100% - 30px); /* Ancho completo menos los márgenes del .cs_main_header */
-    top: calc(100% + 5px);  /* Debajo de la barra de navegación */
-    left: 15px; /* Alineado con el padding/margin del .cs_main_header */
+    width: calc(100% - 30px); 
+    top: calc(100% + 5px);  
+    left: 15px; 
     background-color: #ffffff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 12px; /* Consistente con el header principal */
+    border-radius: 12px; 
     padding: 10px 0;
-    z-index: 998; /* Encima del scrim/video pero debajo del header si es necesario */
-    /* --- AJUSTES PARA ALTURA Y SCROLL --- */
-    max-height: calc(100vh - 100px - 40px); /* Altura del viewport MENOS altura aproximada del header MENOS un margen inferior */
-                                          /* '100px' es un estimado de la altura del header + el espacio 'top'. AJUSTA ESTO. */
-                                          /* '40px' es un margen inferior para que no pegue abajo */
-    overflow-y: auto;   /* Permite scroll vertical SI el contenido excede max-height */
-    height: auto;       /* La altura se ajustará al contenido hasta alcanzar max-height */
+    z-index: 998; /* Asegúrate que este z-index sea suficiente para estar sobre el contenido de la página */
+                  /* pero debajo del header si es necesario (aunque aquí se posiciona debajo del header bar) */
+    max-height: calc(100vh - 100px - 40px); 
+    overflow-y: auto;  
+    height: auto;   
   }
-
-  /* Estilos para los items del menú desplegado */
+  /* Estilos para los items del menú desplegado (asumiendo que ya los tienes y están bien) */
   header.cs_site_header.cs_mobile_toggle_active .cs_nav ul.cs_nav_list > li {
     margin-right: 0;
     width: 100%;
-    display: block; /* Items como bloques completos */
+    display: block;
   }
   header.cs_site_header.cs_mobile_toggle_active .cs_nav ul.cs_nav_list > li > a {
     padding: 12px 20px;
-    display: block; /* Links como bloques completos */
+    display: block;
     color: #333333 !important;
   }
   header.cs_site_header.cs_mobile_toggle_active .cs_nav ul.cs_nav_list > li > a:hover {
     background-color: #f0f0f0 !important;
   }
 
-  /* 3. Mostrar el icono de hamburguesa */
+  /* 3. Mostrar el icono de hamburguesa y asegurar su clicabilidad */
   .cs-munu_toggle {
-    display: inline-block !important; /* Mostrar el icono */
+    display: inline-block !important;
+    width: 30px; 
+    height: 27px; 
+    cursor: pointer; /* Ya lo tiene */
+    position: relative; /* Para que z-index funcione correctamente */
+    z-index: 1002;      /* Más alto que el botón de idioma y el menú desplegable */
   }
 
-  /* 4. Ocultar los elementos de la derecha del header (idioma desktop, contacto desktop) */
+  /* 4. Ocultar los elementos de la derecha del header (desktop) (Esto está bien) */
   .cs_main_header_right.header_right_one {
     display: none !important;
   }
 
   /* 5. Ajustar el layout del .cs_main_header_in para móvil */
   header.cs_site_header .cs_main_header_in {
-    /* El padding ya está definido en la regla base, se puede ajustar aquí si es necesario */
-    /* padding: 8px 15px; */
-  }
-  .cs_main_header_left { /* Logo y toggle de idioma móvil */
-    /* flex-grow: 1; */ /* Podría ser útil para empujar el resto a la derecha */
-  }
-  .mobile-language-toggle { /* Ya tiene d-lg-none, se muestra en <lg */
-    margin-left: auto; /* Empuja a la derecha del logo */
-    order: 2;
-  }
-  .cs_main_header_center1 { /* Contenedor del .cs_nav (que a su vez contiene el toggle y la lista) */
-    order: 3; /* Asegura que el toggle de menú esté al final o donde lo necesites */
-    margin-left: 15px; /* Espacio antes del icono hamburguesa */
-  }
-  .cs_nav { /* En móvil, el .cs_nav solo debería contener el toggle visible inicialmente */
-    /* No necesita ser display:flex si solo muestra el toggle */
+    padding: 8px 15px; /* Padding móvil (padding-right: 15px) */
+    /* Si .mobile-language-toggle se posiciona absoluto respecto a este, necesitaría position: relative.
+       Pero como se posiciona respecto al header.cs_site_header (fixed), no es estrictamente necesario aquí. */
   }
 
-  .cs_main_header_left { /* Contiene logo y, originalmente, el botón de idioma móvil */
+  .cs_main_header_left { /* Contenedor del logo */
     display: flex;
     align-items: center;
-    /* Hacemos que el botón de idioma ya no esté aquí visualmente o lo movemos con order */
-    /* Si el botón de idioma está DENTRO de .cs_main_header_left en el HTML, esta opción es más compleja
-       para moverlo al lado del menú hamburguesa que está en .cs_main_header_center1 */
+    /* Ocupa el espacio restante a la izquierda */
+    flex-grow: 1; 
   }
   
-  .cs_main_header_left .cs_site_branding {
-    /* Asegurar que el branding ocupe su espacio */
-    margin-right: auto; /* Empuja todo lo demás en .cs_main_header_left a la derecha si hubiera algo más */
-  }
-
-  .cs_main_header_left .mobile-language-toggle {
-    order: 2; /* Lo movemos al final dentro de .cs_main_header_left si se queda ahí */
-    /* Pero el objetivo es moverlo al lado del .cs-munu_toggle */
-  }
-
-  .cs_main_header_center1 { /* Contiene el .cs_nav que a su vez tiene el .cs-munu_toggle */
-    order: 3; /* Originalmente ya estaba, para ponerlo a la derecha del logo */
-    margin-left: 10px; /* Espacio entre el último elemento de la izquierda y este bloque */
-    display: flex; /* Para alinear el botón de idioma (si lo movemos aquí) y el toggle */
+  .cs_main_header_center1 { /* Contenedor del .cs_nav que tiene el .cs-munu_toggle */
+    margin-left: 10px; /* Un pequeño margen para separarlo del botón de idioma si el logo es corto */
+                       /* O podrías usar flex-grow en .cs_main_header_left para empujar esto */
+    display: flex;
     align-items: center;
+    flex-shrink: 0; /* Para que no se encoja el contenedor del hamburguesa */
   }
-  .cs_main_header_left {
-    flex-grow: 1; /* Que el logo ocupe el espacio disponible a la izquierda */
-    /* Quitamos el botón de idioma de aquí visualmente y lo reposicionamos */
-  }
-
+  
   .cs_main_header_left .mobile-language-toggle {
-    /* Lo sacamos del flujo normal de .cs_main_header_left y lo posicionamos
-       absolutamente cerca del menú hamburguesa. Esto es más frágil. */
     position: absolute;
-    right: 13%; /* Ajustar este valor. 50px asumiendo que el hamburguesa mide ~30px + margen */
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 0 !important; /* Anular el ms-3 */
-    /* z-index: 1; /* Por si acaso */
+    /* AJUSTE DEL GAP: Incrementamos el gap de 8px a 12px (o el valor que prefieras) */
+    /* CALCULO: (padding-right del .cs_main_header_in) + (ancho del .cs-munu_toggle) + (nuevo gap deseado) */
+    /* Asumiendo padding-right: 15px, .cs-munu_toggle width: 30px, gap: 12px */
+    right: 70px; /* Resultado: 60px */
+    margin-left: 0 !important; 
+    z-index: 1001; /* Por encima de elementos base, pero debajo del hamburguesa si es necesario */
   }
-  /* El .cs-munu_toggle está en .cs_main_header_center1 */
-  .cs_main_header_center1 {
-    order: 1; /* Para que esté a la derecha */
-    margin-left: auto; /* Empuja este bloque a la extrema derecha */
-    /* Este solo contendrá el .cs-munu_toggle */
+
+  .mobile-language-toggle .cs_language_toggle.cs_language_text {
+    font-size: 12px; 
+    padding: 5px 8px !important; 
+    margin-left: 0; 
   }
 }
 
+/* Ajustes para pantallas MUY pequeñas si aún hay problemas (<~360px) */
+@media screen and (max-width: 359.98px) {
+  header.cs_site_header .cs_main_header_in {
+    padding: 8px 10px; /* Reducir padding lateral si es necesario */
+  }
+  .cs_main_header_left .mobile-language-toggle {
+    /* Recalcular 'right' si el padding del header o el gap cambian para estas pantallas */
+    /* Ejemplo: padding-right 10px, hamburguesa 30px, gap 8px => 10+30+8 = 48px */
+    right: calc(10px + 30px + 8px); 
+  }
+  .mobile-language-toggle .cs_language_toggle.cs_language_text {
+    font-size: 11px;
+    padding: 4px 6px !important;
+  }
+  .cs_site_branding .site-brand-text {
+    font-size: calc(var(--f-fs-font-fs18) * 0.85); /* Hacer texto del logo más pequeño */
+  }
+  .cs_site_branding img {
+    margin-right: 6px; /* Reducir espacio entre icono y texto del logo */
+    /* max-height: 20px; /* Reducir tamaño del icono del logo */
+  }
+}
 
 /* --- 5. Menú Móvil (max-width: 1199px o 991px según tu tema) --- */
 /* La lógica de ocultar .cs_nav_list y mostrarlo con el toggle sigue siendo válida.
