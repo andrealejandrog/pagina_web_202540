@@ -11470,9 +11470,8 @@ a.header__search.header-search-btn p {
   font-weight: var(--f-fw-blod);
   line-height: var(--f-fs-font-fs16);
 }
-
 /* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-   ESTILOS PARA HEADER FLOTANTE SOBRE HERO BANNER
+    ESTILOS PARA HEADER FLOTANTE SOBRE HERO BANNER
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
 /* --- Contenedor General del Header --- */
@@ -11487,7 +11486,7 @@ header.cs_site_header.cs_style_1 {
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 40px);
-  max-width: 1280px; /* O el max-width que prefieras, ej. 1170px, 1320px */
+  max-width: 1280px; 
   z-index: 1000;
   background-color: transparent !important;
   border-bottom: none !important;
@@ -11497,15 +11496,14 @@ header.cs_site_header.cs_style_1 {
 
 /* --- 1. Ocultar la Cinta Azul Superior --- */
 header.cs_site_header .cs_top_header {
-  display: none !important; /* La ocultamos completamente según tu petición */
+  display: none !important; 
 }
 
 /* --- Barra de Navegación Principal con Fondo Blanco y Redondeado --- */
 header.cs_site_header .cs_main_header {
   background-color: #ffffff !important;
-  border-radius: 30px; /* **Bordes más redondeados como en la Imagen 2** */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra un poco más sutil */
-  /* La altura será determinada por el contenido y el padding de .cs_main_header_in */
+  border-radius: 30px; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
   width: 100%;
   margin: 0;
 }
@@ -11518,43 +11516,41 @@ header.cs_site_header .cs_main_header_in {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* **REDUCIR PADDING VERTICAL PARA HACERLA MÁS AJUSTADA** */
-  padding: 8px 25px; /* Ejemplo: 8px arriba/abajo, 25px izq/der. AJUSTA ESTO */
-  min-height: auto; /* Permitir que el padding y contenido definan la altura */
+  padding: 8px 25px; /* Padding para desktop > 1200px */
+  min-height: auto; 
 }
 
 /* --- Estilos para el Logo y el Texto Span --- */
-.cs_site_branding { /* El <Link> que envuelve el logo y el span */
+.cs_site_branding { 
   display: flex;
   align-items: center;
-  text-decoration: none; /* Quitar subrayado del link si lo tuviera */
+  text-decoration: none; 
 }
-/* --- 3. Contraste para Elementos del Header --- */
 
 .cs_site_branding img {
-  /* width={115} height={23} desde el JSX. Podrías ajustar aquí si es necesario con CSS */
-  /* max-height: 25px; /* Ejemplo para controlar altura del logo */
-  margin-right: 10px; /* Espacio entre el logo y el span */
+  /* El tamaño se controla por props en <Image> y puede ser ajustado por CSS si es necesario */
+  /* Ejemplo: height: 35px; width: 35px; */
+  margin-right: 10px; 
 }
 
-.cs_site_branding .site-brand-text { /* Clase añadida al span */
-  font-size: var(--f-fs-font-fs24); /* AJUSTA el tamaño de fuente */
-  font-weight: 600; /* AJUSTA el peso */
-  color: #002D56;   /* **Color azul oscuro como en la Imagen 2. AJUSTA EL HEX** */
-  line-height: 1;  /* Para mejor alineación vertical con el logo */
-  white-space: nowrap; /* Evitar que "5.0 Technology" se divida */
+.cs_site_branding .site-brand-text { 
+  font-size: var(--f-fs-font-fs24); /* Tamaño base para desktop */
+  font-weight: 600; 
+  color: #002D56;  
+  line-height: 1;  
+  white-space: nowrap; 
 }
 
 
 /* --- Estilos Base (Desktop First para la navegación horizontal) --- */
-.cs_nav { /* Contenedor del toggle y la lista ul */
+.cs_nav { 
   height: 100%;
-  display: flex; /* Mantiene el toggle y la lista ul en línea en desktop */
+  display: flex; 
   align-items: center;
 }
 
-ul.cs_nav_list { /* La lista de navegación en sí (Nav.jsx) */
-  display: flex !important; /* Menú horizontal en desktop */
+ul.cs_nav_list { 
+  display: flex !important; 
   align-items: center;
   list-style: none;
   padding: 0;
@@ -11563,7 +11559,7 @@ ul.cs_nav_list { /* La lista de navegación en sí (Nav.jsx) */
 }
 
 ul.cs_nav_list > li {
-  margin-right: 20px; /* Espacio entre ítems, puedes reducirlo si es necesario */
+  margin-right: 20px; 
   height: 100%;
   display: flex;
   align-items: center;
@@ -11573,114 +11569,95 @@ ul.cs_nav_list > li:last-child {
 }
 
 ul.cs_nav_list > li > a {
-  color: #4A5568 !important; /* Un gris oscuro para el texto del menú */
+  color: #4A5568 !important; 
   text-shadow: none;
   font-weight: 500;
-  /* **REDUCIR TAMAÑO DE FUENTE Y PADDING DE ENLACES DEL MENÚ** */
-  font-size: 14px;  /* Ejemplo, AJUSTA ESTO */
-  padding: 5px 0;   /* Menos padding vertical */
-  /* Otros estilos como transition que tenías */
+  font-size: 14px;  
+  padding: 5px 0;   
   transition: color 0.3s ease;
-  white-space: nowrap; /* Evitar que el texto del enlace se divida en dos líneas */
+  white-space: nowrap; 
 }
 ul.cs_nav_list > li > a:hover,
-ul.cs_nav_list > li.current-menu-item > a { /* Para el ítem activo */
-  color: #0056b3 !important; /* Color de hover/activo, un azul más brillante */
+ul.cs_nav_list > li.current-menu-item > a { 
+  color: #0056b3 !important; 
 }
 .cs_nav .cs_nav_list > li.menu-item-has-children > a::after {
-  color: #4A5568 !important; /* Color de la flechita del submenú */
+  color: #4A5568 !important; 
 }
 
-/* --- Botón de Idioma y Contacto (Ajustar tamaño y padding) --- */
-.cs_language_toggle.cs_language_text {
+/* --- Botón de Idioma y Contacto (Desktop) --- */
+.cs_main_header_right.header_right_one .cs_language_toggle.cs_language_text { /* Más específico para desktop */
   color: #4A5568 !important;
-  background-color: #F3F4F6 !important; /* Un gris muy claro de fondo */
-  border: none !important; /* Quitar borde si no se ve bien */
-  /* **REDUCIR PADDING Y TAMAÑO DE FUENTE** */
-  font-size: 13px; /* Ejemplo */
+  background-color: #F3F4F6 !important; 
+  border: none !important; 
+  font-size: 13px; 
   padding: 6px 10px !important;
-  border-radius: 20px; /* Más redondeado como en la Imagen 2 */
+  border-radius: 20px; 
   text-shadow: none;
-  margin-left: 15px; /* Espacio antes del botón de idioma */
+  margin-left: 15px; /* Espacio antes del botón de idioma en desktop */
 }
-.cs_language_toggle.cs_language_text:hover {
+.cs_main_header_right.header_right_one .cs_language_toggle.cs_language_text:hover {
   background-color: #E5E7EB !important;
   color: #1F2937 !important;
 }
 
-/* Contacto (El bloque de "Envíamos un mensaje" en la Imagen 2 se ve diferente) */
-/* Vamos a asumir que el bloque de contacto necesita ser un botón más compacto */
 .cs_main_header_right .contact-btn {
-  /* Si se va a ver como en la Imagen 2, es un solo bloque redondeado */
-  background-color: #D6E4FF; /* Un azul claro como en la Imagen 2, AJUSTA EL HEX */
-  padding: 8px 15px; /* AJUSTA ESTO */
-  border-radius: 50px; /* AJUSTA ESTO */
+  background-color: #D6E4FF; 
+  padding: 8px 15px; 
+  border-radius: 50px; 
   display: flex;
   align-items: center;
-  text-decoration: none; /* Si es un link */
+  text-decoration: none; 
 }
 .cs_main_header_right .contact-btn .icon {
   margin-right: 8px;
 }
 .cs_main_header_right .contact-btn .icon img {
-  filter: none; /* Asumiendo que el icono ya es del color correcto o es un SVG */
-  /* Para la Imagen 2, el icono es azul oscuro */
-  /* filter: brightness(0) saturate(100%) invert(22%) sepia(82%) saturate(2477%) hue-rotate(205deg) brightness(90%) contrast(97%); /* Intento de azul oscuro */
-  /* Sería mejor usar un SVG o un icono ya coloreado */
-  width: 18px; /* AJUSTA */
-  height: 18px;/* AJUSTA */
+  filter: none; 
+  width: 18px; 
+  height: 18px;
 }
 .cs_main_header_right .contact-btn .headding p,
 .cs_main_header_right .contact-btn .headding a {
-  color: #002D56 !important; /* Azul oscuro para el texto del botón de contacto */
+  color: #002D56 !important; 
   text-shadow: none;
   margin: 0;
   line-height: 1.2;
 }
 .cs_main_header_right .contact-btn .headding p {
-  font-size: 11px; /* Muy pequeño para "Envíamos un mensaje", AJUSTA */
-  display: none; /* En la Imagen 2 no se ve "Envíamos un mensaje" */
+  font-size: 11px; 
+  display: none; 
 }
 .cs_main_header_right .contact-btn .headding a {
-  font-size: 13px; /* Tamaño para el número de teléfono, AJUSTA */
+  font-size: 13px; 
   font-weight: 500;
 }
 
-/* --- 4. Header Sticky --- */
-/* Con position: fixed en header.cs_site_header.cs_style_1, ya es "sticky".
-   No se necesita una clase adicional 'is-sticky' para el posicionamiento,
-   pero se podría usar si quisieras cambiar sutilmente el estilo (ej. sombra más pronunciada)
-   después de cierto scroll, aunque con fondo blanco constante, no es tan común.
-*/
-/*
-header.cs_site_header.cs_sticky_header.is-sticky .cs_main_header {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); // Sombra más pronunciada si es sticky
-}
-*/
+/* --- Header Sticky (Comentarios mantenidos) --- */
+/* ... */
 
-/* Por defecto, el menú de navegación de lista es visible (para desktop) */
+/* Menú Hamburguesa y Navegación por Defecto */
 .cs_nav .cs_nav_list {
-  display: flex !important; /* Asegura que sea flex por defecto */
+  display: flex !important; 
 }
-.cs-munu_toggle { /* Icono hamburguesa */
+.cs-munu_toggle { 
   display: none !important; /* Oculto en desktop por defecto */
-  /* ... (tus estilos para el icono hamburguesa: width, height, color, etc.) ... */
   width: 30px;
   height: 27px;
   cursor: pointer;
-  position: relative;
+  position: relative; /* Necesario para z-index y posicionamiento de spans internos */
   color: #333333;
+  z-index: 1002; /* Asegurar que esté por encima del botón de idioma */
 }
 .cs-munu_toggle span,
 .cs-munu_toggle span:before,
-.cs-munu_toggle span:after { /* Líneas del hamburguesa */
+.cs-munu_toggle span:after { 
   width: 100%;
   height: 2px;
   background-color: currentColor;
   display: block;
   transition: all 0.3s ease;
 }
-/* ... (tus estilos para las líneas y el estado activo .cs_teggle_active) ... */
 .cs-munu_toggle span { margin: 0 auto; position: relative; top: 12px; }
 .cs-munu_toggle span:before { content: ''; position: absolute; margin-top: -9px; }
 .cs-munu_toggle span:after { content: ''; position: absolute; margin-top: 9px; }
@@ -11688,61 +11665,43 @@ header.cs_site_header.cs_sticky_header.is-sticky .cs_main_header {
 .cs-munu_toggle.cs_teggle_active span:before { margin-top: 0; transform: rotate(45deg); }
 .cs-munu_toggle.cs_teggle_active span:after { margin-top: 0; transform: rotate(-45deg); }
 
-
-/* Breakpoint para mostrar hamburguesa y ocultar menú normal */
-/* Usualmente es 991px o 1199px dependiendo del tema */
 /* ---- AJUSTES RESPONSIVOS ---- */
 
-/* Contenedor principal de los elementos de la derecha del header */
+/* Contenedor principal de los elementos de la derecha del header (Desktop) */
 .cs_main_header_right.header_right_one {
-  display: flex !important; /* d-lg-flex ya hace esto para >= lg, pero reforzamos */
-  align-items: center !important; /* ¡CLAVE! Esto centrará verticalmente sus hijos directos */
+  display: flex !important; 
+  align-items: center !important; 
 }
-
-/* Contenedor específico del selector de idioma, si existe y es necesario */
-.cs_main_header_right .language-selector {
-  display: flex; /* Hacemos que este también sea un contenedor flex */
-  align-items: center; /* Para centrar el botón de idioma dentro de él */
-  /* Eliminar márgenes verticales que puedan estar causando el desplazamiento */
+.cs_main_header_right .language-selector { /* Contenedor del botón de idioma DESKTOP */
+  display: flex; 
+  align-items: center; 
   margin-top: 0;
   margin-bottom: 0;
+  margin-right: 15px; /* Separación del botón de contacto en desktop */
 }
 
-/* El botón de idioma en sí */
-.cs_language_toggle.cs_language_text {
-  /* Usualmente no se necesita mucho aquí si los contenedores padres están bien alineados,
-     pero puedes verificar y resetear márgenes si el botón los tuviera por defecto. */
-  margin-top: 0;
-  margin-bottom: 0;
-  /* Asegúrate que el padding vertical sea simétrico si el texto parece descentrado dentro del propio botón.
-     Los ajustes de font-size y padding que ya tienes para diferentes breakpoints deberían mantenerse. */
-}
-
-
-/* Selector de idiomas */
-.language-selector {
-  position: relative;
-  margin-right: 15px;
-}
-
+/* Estilos para el botón de idioma globalmente y hover (pueden ser sobreescritos por media queries) */
+/* Estos son los estilos que tenías para .cs_language_toggle que parecían más genéricos */
 .cs_language_toggle {
   background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  /* border: 2px solid rgba(255, 255, 255, 0.3); */ /* Puede que este borde no sea el deseado con el fondo F3F4F6 */
   color: #010101;
-  padding: 8px 20px;
+  padding: 8px 20px; /* Será sobreescrito por .cs_language_toggle.cs_language_text */
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 600;
-  min-width: 80px;
+  min-width: 80px; /* Considera si este min-width es necesario en todos los casos */
 }
-
 .cs_language_toggle:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-1px);
 }
-
-/* Versión móvil */
+/* Esta media query para .language-selector parecía ser de un layout anterior o para el menú desplegable en sí.
+   Dado que el .mobile-language-toggle ahora se posiciona absoluto y el de desktop tiene su propio layout,
+   comento esto para evitar conflictos. Si lo necesitas para un menú de selección de idioma desplegable,
+   deberás revisarlo y ajustarlo. */
+/*
 @media (max-width: 991px) {
   .language-selector {
     order: -1;
@@ -11750,78 +11709,65 @@ header.cs_site_header.cs_sticky_header.is-sticky .cs_main_header {
     width: 100%;
     text-align: center;
   }
-  
   .cs_language_toggle {
     width: 100%;
     padding: 12px;
   }
 }
+*/
 
-/* Aquí queremos que se parezca al desktop grande, pero con elementos más pequeños */
+
+/* Tablet Landscape / Pantallas Medianas (992px a 1199.98px) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   header.cs_site_header .cs_main_header_in {
-    padding: 8px 15px; /* Reducir padding horizontal del header */
+    padding: 8px 15px; 
   }
-
   .cs_site_branding .site-brand-text {
-    font-size: 17px; /* Reducir tamaño del texto del logo - AJUSTA SEGÚN NECESIDAD */
+    font-size: 17px; 
   }
-  /* Podrías necesitar ajustar el tamaño de la imagen del logo también: */
-  /* .cs_site_branding img { max-height: 20px; width: auto; } */
-
-  /* Navegación Principal - DEBE ESTAR VISIBLE Y HORIZONTAL */
-  /* ul.cs_nav_list ya es display: flex !important por los estilos base, no necesita repetirse aquí
-     a menos que otra regla lo esté sobreescribiendo incorrectamente. */
-
+  .cs_site_branding img {
+     height: 30px; /* Ajusta según necesidad */
+     width: 30px;  /* Ajusta según necesidad */
+  }
   ul.cs_nav_list > li {
-    margin-right: 8px; /* Reducir espacio entre ítems del menú - AJUSTA */
+    margin-right: 8px; 
   }
   ul.cs_nav_list > li > a {
-    font-size: 12.5px; /* Reducir fuente de ítems del menú - AJUSTA */
-    padding: 5px 4px !important;  /* Reducir padding de ítems del menú - AJUSTA */
+    font-size: 12.5px; 
+    padding: 5px 4px !important;  
   }
-
   .cs_main_header_center1,
   .cs_nav,
   ul.cs_nav_list {
-    background-color: transparent !important; /* Asegura que no haya un fondo de color diferente */
-    box-shadow: none !important;             /* Elimina cualquier sombra de caja */
-    border: none !important;                  /* Elimina cualquier borde */
+    background-color: transparent !important; 
+    box-shadow: none !important;             
+    border: none !important;                 
   }
-
-  /* Toggle Hamburguesa - DEBE ESTAR OCULTO (ya cubierto por la regla base) */
-  /* .cs-munu_toggle { display: none !important; } */
-
-  /* Elementos de la Derecha (Idioma, Contacto) - DEBEN ESTAR VISIBLES */
-  /* .cs_main_header_right.header_right_one ya debería ser visible por d-lg-flex en el JSX */
-  .cs_language_toggle.cs_language_text {
-    font-size: 11px; /* AJUSTA */
-    padding: 5px 7px !important; /* AJUSTA */
-    margin-left: 8px; /* AJUSTA */
+  .cs_main_header_right.header_right_one .cs_language_toggle.cs_language_text { /* Botón de idioma en este rango */
+    font-size: 11px; 
+    padding: 5px 7px !important; 
+    margin-left: 8px; 
   }
   .cs_main_header_right .contact-btn {
-    padding: 6px 10px; /* AJUSTA */
+    padding: 6px 10px; 
   }
   .cs_main_header_right .contact-btn .headding a {
-    font-size: 11.5px; /* AJUSTA */
+    font-size: 11.5px; 
   }
   .cs_main_header_right .contact-btn .icon img {
-    width: 15px; /* AJUSTA */
-    height: 15px;/* AJUSTA */
+    width: 15px; 
+    height: 15px;
   }
   .cs_main_header_right .contact-btn .icon {
-    margin-right: 5px; /* AJUSTA */
+    margin-right: 5px; 
   }
 }
 
-/* Breakpoint para el Menú Móvil (ej. pantallas de tableta para abajo) */
+/* Tablet Portrait y Móviles Grandes (hasta 991.98px) */
 @media screen and (max-width: 991.98px) {
-  /* 1. Ocultar la navegación de lista horizontal de desktop (Esto está bien) */
   .cs_nav ul.cs_nav_list {
-    display: none !important;
+    display: none !important; 
   }
-
-  /* 2. Mostrar el menú desplegable cuando el header tiene .cs_mobile_toggle_active (Esto debe funcionar) */
   header.cs_site_header.cs_mobile_toggle_active .cs_nav ul.cs_nav_list {
     display: block !important; 
     position: absolute;
@@ -11832,226 +11778,172 @@ header.cs_site_header.cs_sticky_header.is-sticky .cs_main_header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px; 
     padding: 10px 0;
-    z-index: 998; /* Asegúrate que este z-index sea suficiente para estar sobre el contenido de la página */
-                  /* pero debajo del header si es necesario (aunque aquí se posiciona debajo del header bar) */
+    z-index: 998; 
     max-height: calc(100vh - 100px - 40px); 
     overflow-y: auto;  
     height: auto;   
   }
-  /* Estilos para los items del menú desplegado (asumiendo que ya los tienes y están bien) */
   header.cs_site_header.cs_mobile_toggle_active .cs_nav ul.cs_nav_list > li {
     margin-right: 0;
     width: 100%;
-    display: block;
+    display: block; 
   }
   header.cs_site_header.cs_mobile_toggle_active .cs_nav ul.cs_nav_list > li > a {
     padding: 12px 20px;
-    display: block;
+    display: block; 
     color: #333333 !important;
   }
   header.cs_site_header.cs_mobile_toggle_active .cs_nav ul.cs_nav_list > li > a:hover {
     background-color: #f0f0f0 !important;
   }
 
-  /* 3. Mostrar el icono de hamburguesa y asegurar su clicabilidad */
-  .cs-munu_toggle {
-    display: inline-block !important;
-    width: 30px; 
-    height: 27px; 
-    cursor: pointer; /* Ya lo tiene */
-    position: relative; /* Para que z-index funcione correctamente */
-    z-index: 1002;      /* Más alto que el botón de idioma y el menú desplegable */
+  .cs-munu_toggle { /* Ya definido antes con z-index: 1002 */
+    display: inline-block !important; 
   }
-
-  /* 4. Ocultar los elementos de la derecha del header (desktop) (Esto está bien) */
   .cs_main_header_right.header_right_one {
     display: none !important;
   }
 
-  /* 5. Ajustar el layout del .cs_main_header_in para móvil */
   header.cs_site_header .cs_main_header_in {
-    padding: 8px 15px; /* Padding móvil (padding-right: 15px) */
-    /* Si .mobile-language-toggle se posiciona absoluto respecto a este, necesitaría position: relative.
-       Pero como se posiciona respecto al header.cs_site_header (fixed), no es estrictamente necesario aquí. */
+    padding: 8px 15px; 
+  }
+  .cs_main_header_left { 
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Permite que el logo tome espacio */
+    /* overflow: hidden; /* Para evitar que el texto largo del logo empuje al botón de idioma absoluto */
+    /* position: relative; /* Podría ser necesario si el texto del logo es muy largo y el botón de idioma se calcula desde este */
+  }
+  .cs_site_branding img { /* Tamaño del logo para este rango general móvil */
+     height: 30px; /* Ajusta según necesidad */
+     width: 30px;  /* Ajusta según necesidad */
+     margin-right: 8px; /* Espacio ajustado */
+  }
+  .cs_site_branding .site-brand-text { /* Tamaño de texto del logo para este rango */
+    font-size: var(--f-fs-font-fs18); /* Heredado de max-width:1199px, podría ser más pequeño si es necesario */
   }
 
-  .cs_main_header_left { /* Contenedor del logo */
+  .cs_main_header_center1 { 
+    margin-left: 10px; 
     display: flex;
     align-items: center;
-    /* Ocupa el espacio restante a la izquierda */
-    flex-grow: 1; 
-  }
-  
-  .cs_main_header_center1 { /* Contenedor del .cs_nav que tiene el .cs-munu_toggle */
-    margin-left: 10px; /* Un pequeño margen para separarlo del botón de idioma si el logo es corto */
-                       /* O podrías usar flex-grow en .cs_main_header_left para empujar esto */
-    display: flex;
-    align-items: center;
-    flex-shrink: 0; /* Para que no se encoja el contenedor del hamburguesa */
+    flex-shrink: 0; 
   }
   
   .cs_main_header_left .mobile-language-toggle {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    /* AJUSTE DEL GAP: Incrementamos el gap de 8px a 12px (o el valor que prefieras) */
-    /* CALCULO: (padding-right del .cs_main_header_in) + (ancho del .cs-munu_toggle) + (nuevo gap deseado) */
-    /* Asumiendo padding-right: 15px, .cs-munu_toggle width: 30px, gap: 12px */
-    right: 70px; /* Resultado: 60px */
+    /* padding-right-header: 15px, hamburguesa-width: 30px, gap: 12px */
+    right: calc(15px + 30px + 12px); /* = 57px */
     margin-left: 0 !important; 
-    z-index: 1001; /* Por encima de elementos base, pero debajo del hamburguesa si es necesario */
+    z-index: 1001; 
   }
-
-  .mobile-language-toggle .cs_language_toggle.cs_language_text {
+  .mobile-language-toggle .cs_language_toggle.cs_language_text { /* Botón de idioma específico para móvil */
     font-size: 12px; 
     padding: 5px 8px !important; 
     margin-left: 0; 
+    background-color: #F3F4F6 !important; /* Asegurar fondo claro si no lo hereda */
+    color: #4A5568 !important; /* Asegurar color de texto */
+    border: none !important;
+    border-radius: 20px;
+    text-shadow: none;
   }
 }
 
-/* Ajustes para pantallas MUY pequeñas si aún hay problemas (<~360px) */
-@media screen and (max-width: 359.98px) {
+/* Móviles Pequeños (hasta 419.98px) - Aquí aplicamos los estilos "buenos" */
+@media screen and (max-width: 419.98px) {
   header.cs_site_header .cs_main_header_in {
-    padding: 8px 10px; /* Reducir padding lateral si es necesario */
+    padding: 8px 10px; /* Padding lateral más reducido */
   }
   .cs_main_header_left .mobile-language-toggle {
-    /* Recalcular 'right' si el padding del header o el gap cambian para estas pantallas */
-    /* Ejemplo: padding-right 10px, hamburguesa 30px, gap 8px => 10+30+8 = 48px */
-    right: calc(10px + 30px + 8px); 
+    /* padding-right-header: 10px, hamburguesa-width: 30px, gap: 8px (gap más pequeño) */
+    right: calc(10px + 30px + 15px); /* = 55px */
   }
   .mobile-language-toggle .cs_language_toggle.cs_language_text {
     font-size: 11px;
     padding: 4px 6px !important;
   }
   .cs_site_branding .site-brand-text {
-    font-size: var(--f-fs-font-fs12) !important; /* Hacer texto del logo más pequeño */
+    font-size: var(--f-fs-font-fs12) !important; /* Texto del logo significativamente más pequeño */
+    /* Considera ocultarlo si es demasiado pequeño: display: none; */
   }
   .cs_site_branding img {
-    margin-right: 6px; /* Reducir espacio entre icono y texto del logo */
-    /* max-height: 20px; /* Reducir tamaño del icono del logo */
+    height: 28px; /* Logo ligeramente más pequeño */
+    width: 28px;
+    margin-right: 6px; 
   }
 }
 
-/* --- 5. Menú Móvil (max-width: 1199px o 991px según tu tema) --- */
-/* La lógica de ocultar .cs_nav_list y mostrarlo con el toggle sigue siendo válida.
-   Solo hay que asegurarse de los colores y fondos del menú desplegado. */
-
-@media screen and (max-width: 1199px) { /* O el breakpoint donde tu menú se vuelve hamburguesa */
+/* --- Estilos Generales para pantallas < 1200px (max-width: 1199.98px) --- */
+/* Esta media query es más general, los estilos específicos en rangos más pequeños la anularán */
+@media screen and (max-width: 1199.98px) { 
   header.cs_site_header.cs_style_1 {
-    /* En móvil, el header podría no estar centrado con transform, sino ancho completo */
-    /* top: 0; */ /* Si no quieres el espacio de 20px arriba en móvil */
-    /* width: 100%; */
-    /* left: 0; */
-    /* transform: none; */
-    /* max-width: none; */
+    /* Ajustes generales del header si son diferentes a desktop > 1200px */
   }
-
   .cs_site_branding .site-brand-text {
-    font-size: var(--f-fs-font-fs18);
-    font-weight: 600;
-    color: #002D56;
-    line-height: 1;
-    white-space: nowrap;
-}
-
+    font-size: var(--f-fs-font-fs18); /* Tamaño por defecto para < 1200px, será sobreescrito por queries más pequeñas */
+  }
   header.cs_site_header .cs_main_header {
-    margin-left: 0px;  /* Pequeños márgenes laterales para que no pegue a los bordes */
+    margin-left: 0px;  
     margin-right: 0px;
-    width: auto; /* Para que los márgenes funcionen */
-    /* Si en móvil también quieres que tenga un top:20px, ajusta el contenedor padre de la app o el body */
+    width: auto; 
   }
 
-  .cs_nav .cs_nav_list { /* El contenedor de la lista de navegación móvil */
-    display: none; /* Oculto por defecto, se muestra con JS */
-    /* position: absolute; */
-    width: calc(100% - 30px); /* Ancho del menú desplegable */
-    top: calc(100% + 5px); /* Posición debajo de la barra de nav */
-    left: 0; /* Alineado con el .cs_main_header que ahora tiene márgenes */
-    background-color: #ffffff; /* Fondo blanco también para el desplegable */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 12px 12px;
-    padding: 10px 0;
-    /* overflow-y: auto; */ /* Si el menú es muy largo */
-    /* max-height: calc(100vh - 100px); */ /* Limitar altura */
-  }
-  .cs_nav .cs_nav_list > li {
-    margin-right: 0; /* En móvil, los items van uno debajo del otro */
-    width: 100%;
-    display: block; /* Que ocupen todo el ancho */
-    height: auto;
-  }
-  .cs_nav .cs_nav_list > li > a {
-    padding: 12px 20px; /* Padding para items en móvil */
-    color: #333333 !important; /* Texto oscuro */
-    /* text-shadow: none; */
-    display: block;
-  }
-  .cs_nav .cs_nav_list > li > a:hover {
-    background-color: #f0f0f0 !important; /* Fondo de hover */
-  }
+  /* El .cs_nav .cs_nav_list ya se oculta en max-width: 991.98px.
+     Este bloque es para el menú desplegable en sí, pero la lógica de display
+     está en la query de 991.98px con .cs_mobile_toggle_active.
+     Los estilos de apariencia del desplegable pueden ir aquí si son generales para <1200px y cuando está activo.
+     Actualmente, tus estilos de desplegable están bien ubicados dentro de la media query de 991.98px.
+  */
+  /* .cs_nav .cs_nav_list { ... } */
+  /* .cs_nav .cs_nav_list > li { ... } */
+  /* .cs_nav .cs_nav_list > li > a { ... } */
 
-  /* Toggle del menú móvil */
   .cs-munu_toggle span,
   .cs-munu_toggle span:before,
   .cs-munu_toggle span:after {
-    background-color: #333333 !important; /* Líneas del hamburguer en color oscuro */
-  }
-  header.cs_site_header.cs_mobile_toggle_active {
-    /* El fondo del header no necesita cambiar si el menú desplegable ya es blanco */
+    background-color: #333333 !important; 
   }
 }
 
+/* --- Estilos para Desktop >= 992px (pero no extra grande) --- */
 @media (min-width: 992px) {
-  .hero1.hero-video-bg { /* Esto pertenece al HeroBanner, no al Header */
-    min-height: 90vh;
-  }
-  .hero-content-container { /* Esto pertenece al HeroBanner */
-    padding-top: 0;
-    padding-bottom: 0;
-    height: 100%;
-  }
-
-  /* Estilos del header para 992px+ (los que ya tienes pueden quedarse,
-     la media query 992-1199.98px los refinará para ese sub-rango) */
+  /* .hero1.hero-video-bg, .hero-content-container, .hero-text-content h1 (son del HeroBanner) */
+  /* Estilos base para desktop que no son >1200px */
   .cs_site_branding .site-brand-text {
-      /* font-size: var(--f-fs-font-fs24); /* Se restablece si no está en la media query más específica */
-  }
-  ul.cs_nav_list > li {
-    /* margin-right: 20px; /* Se restablece si no está en la media query más específica */
-  }
-  ul.cs_nav_list > li > a {
-    /* font-size: 14px; /* Se restablece si no está en la media query más específica */
-  }
-  .hero-text-content h1 { /* Pertenece al HeroBanner */
-    font-size: var(--f-fs-font-fs64);
-    line-height: 1.2;
+     /* El tamaño aquí sería var(--f-fs-font-fs24) por defecto, 
+        luego la query 992-1199.98 lo cambia a 17px, 
+        y la de <1199px lo cambia a var(--f-fs-font-fs18). Hay una jerarquía.
+        Para >991.98px (este bloque) y <1200px, el que gana es el de 992-1199.98 (17px).
+     */
   }
 }
 
-
-/* Desktop extra grande (xl - 1200px en adelante) */
+/* --- Desktop Extra Grande (>= 1200px) --- */
 @media (min-width: 1200px) {
-  .hero1.hero-video-bg { /* Pertenece al HeroBanner */
-    min-height: 90vh;
-  }
-
-  /* Para asegurar que los tamaños vuelvan a ser los "normales" de desktop grande */
+  /* ... (estilos del HeroBanner) ... */
   header.cs_site_header .cs_main_header_in {
-    padding: 8px 25px; /* Restablecer padding original */
+    padding: 8px 25px; 
   }
   .cs_site_branding .site-brand-text {
-    font-size: var(--f-fs-font-fs24); /* Restablecer tamaño */
+    font-size: var(--f-fs-font-fs24); 
+  }
+  .cs_site_branding img {
+     height: 35px; 
+     width: 35px;
+     margin-right: 10px;
   }
   ul.cs_nav_list > li {
-    margin-right: 20px; /* Restablecer margen */
+    margin-right: 20px; 
   }
   ul.cs_nav_list > li > a {
-    font-size: 14px; /* Restablecer tamaño de fuente del menú */
+    font-size: 14px; 
   }
-  .cs_language_toggle.cs_language_text {
+  .cs_main_header_right.header_right_one .cs_language_toggle.cs_language_text { /* Específico para desktop > 1200px */
     font-size: 13px;
     padding: 6px 10px !important;
-    margin-left: 15px;
+    margin-left: 15px; /* Este es el margen original para desktop */
   }
   .cs_main_header_right .contact-btn {
     padding: 8px 15px;
@@ -12065,56 +11957,31 @@ header.cs_site_header.cs_sticky_header.is-sticky .cs_main_header {
   }
 }
 
-/* Tu media query para 1200px a 1399px (que ajustaba tamaños de texto del HeroBanner) */
+/* Desktop Grande (1200px a 1399.98px) - Ajustes finos */
 @media (min-width: 1200px) and (max-width: 1399.98px) {
-  .hero1.hero-video-bg { /* Pertenece al HeroBanner */
-    min-height: 100vh;
-  }
-  .hero-text-content h1 { /* Pertenece al HeroBanner */
-    font-size: calc(var(--f-fs-font-fs64) * 0.9);
-    line-height: 1.2;
-  }
-  .hero-text-content p { /* Pertenece al HeroBanner */
-    font-size: calc(var(--f-fs-font-fs16) * 0.95);
-  }
-  /* Aquí también podrías refinar los tamaños de la navbar si es necesario
-     para este sub-rango específico si los de min-width: 1200px no son ideales. */
+  /* ... (estilos del HeroBanner) ... */
+  /* Aquí podrías refinar tamaños del header si los de min-width:1200px no son ideales.
+     Por ejemplo, si .site-brand-text debe ser un poco más pequeño que var(--f-fs-font-fs24)
+     en este sub-rango específico. */
 }
 
-
 /* ---- LIMPIEZA DE ESTILOS ANTERIORES Y CONSOLIDACIÓN ---- */
-
-/* Muchos estilos de .cs_nav .cs_nav_list > li > ul (submenús) de tu CSS original
-   pueden ser adaptados aquí si tu Nav.jsx genera submenús.
-   Por ahora, me he centrado en el menú principal horizontal. */
-
-/* Eliminar la transparencia del header para el estado "sticky" si la nueva apariencia es siempre con fondo blanco */
-/* header.cs_site_header.cs_sticky_header.is-sticky { ... } */
-/* Esto ya no es necesario si el header es position:fixed y siempre tiene el fondo blanco */
-
-/* Los estilos de .cs_site_header_spacing_130, .cs_site_header_spacing_140 no son necesarios
-   porque el header ahora es position:fixed y no ocupa espacio en el flujo del documento. */
 .cs_site_header_spacing_130,
 .cs_site_header_spacing_140 {
   display: none !important;
 }
-
-/* Anular cualquier borde inferior que pudiera tener el header o el main_header de otros estilos */
 .header_style_2, .header_style_3,
 .cs_site_header.cs_style_1.cs_type_1 .cs_main_header {
-    border-bottom: none !important;
+  border-bottom: none !important;
 }
 
-
-/* OTRA SECCION */
+/* --- Estilos del Hero Banner (solo el .hero1) --- */
 .hero1{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-color: var(--ztc-bg-main-bg-5); */
 }
 
-
-.cs_main_header_center1{
-  height: 100%;
+.cs_main_header_center1{ /* Contenedor de la navegación principal en desktop */
+  height: 100%; /* Para que .cs_nav pueda tener height: 100% */
 }

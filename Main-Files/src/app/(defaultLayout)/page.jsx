@@ -33,23 +33,32 @@ const Home = () => {
         supCon={t('home.heroBanner.subTitle')}
         subTitle={t('home.about.subTitle')}
         Title={t('home.about.title')}
-        featurelist={t('home.about.featureList').map((section, index) => ({
-          ...section,
-          items: section.items.map((item, itemIndex) => ({
-            text: item.text,
-            image: `/assets/img/icons/${index === 0 ? 
-              [
-                // 'Cableado_estructurado_op1.svg',
-                'Control_de_acceso.webp',
-                'Centro_de_monitoreo.webp',
-                'Automation_2.webp'][itemIndex] : 
-              [
-                'Desarrollo_de_software.webp',
-                // 'Automatizacion_procesos.svg',
-                // 'Almacenamiento_nube.svg',
-                'Digital_transformation.webp'][itemIndex]}`
-          }))
-        }))}
+        featurelist={t('home.about.featureList').map((section, index) => {
+          // Define las imágenes específicas para cada categoría aquí
+          // Esta lista de imágenes será fija para la categoría, sin importar cuántos textos haya.
+          let imagesForThisCategory = [];
+          if (index === 0) { // Para tu primera categoría (Seguridad Electrónica y automatización)
+            imagesForThisCategory = [
+              '/assets/img/icons/Control_de_acceso.webp',
+              '/assets/img/icons/Centro_de_monitoreo.webp',
+              '/assets/img/icons/Automation_2.webp'
+              // Puedes añadir más rutas de imágenes fijas para esta categoría aquí si lo deseas
+            ];
+          } else if (index === 1) { // Para tu segunda categoría (Desarrollo de Software y Transformación Digital)
+            imagesForThisCategory = [
+              '/assets/img/icons/Desarrollo_de_software.webp',
+              '/assets/img/icons/Digital_transformation.webp'
+              // Añade más imágenes fijas para esta categoría si es necesario
+            ];
+          }
+          // Puedes añadir más condiciones else if para otras categorías
+
+          return {
+            title: section.title, // Mantenemos el título de la categoría
+            items: section.items.map(item => ({ text: item.text })), // 'items' ahora solo contendrá los textos
+            galleryImages: imagesForThisCategory // Nueva propiedad con la lista de imágenes fijas
+          };
+        })}
         btnName={t('home.about.btnName')}
         btnUrl={t('home.about.btnUrl')}
       />

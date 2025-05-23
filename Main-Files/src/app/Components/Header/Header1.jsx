@@ -41,8 +41,8 @@ export default function Header1({ variant }) {
                   <Image
                   src={Logo}
                   alt="5-0 Technology"
-                  width={50}
-                  height={10}
+                  width={45}
+                  height={45}
                   priority />
                   <span className="site-brand-text">5.0 Technology</span>
                 </Link>

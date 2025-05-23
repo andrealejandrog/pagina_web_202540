@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SectionTitle from "../Common/SectionTitle"; // Asumo que este es tu componente para el título principal de la sección
+import SectionTitle from "../Common/SectionTitle";
 
 const About1 = ({ subTitle, Title, featurelist }) => {
   return (
@@ -8,7 +8,7 @@ const About1 = ({ subTitle, Title, featurelist }) => {
         {/* Título Principal de la Sección "About1" */}
         <div className="row justify-content-center">
           <div className="col-lg-12 m-auto text-center">
-            <div className="heading1"> {/* Usa tus estilos existentes para el título principal */}
+            <div className="heading1">
               <span className="span" data-aos="zoom-in">
                 <SectionTitle SubTitle={subTitle} Title={Title} />
               </span>
@@ -21,14 +21,12 @@ const About1 = ({ subTitle, Title, featurelist }) => {
           {featurelist?.map((category, index) => (
             <div 
               key={index} 
-              className="unified-category-card" // Nueva clase para la tarjeta de categoría
+              className="unified-category-card"
               data-aos="fade-up"
               data-aos-duration="800"
             >
               {/* Título de la Categoría */}
               <h3 className="category-card-title text-center">
-                {/* Puedes agregar un ícono si lo deseas, similar a tu clase .category-icon */}
-                {/* <span className="category-icon-main">●</span> */}
                 {category.title}
               </h3>
               
@@ -37,6 +35,7 @@ const About1 = ({ subTitle, Title, featurelist }) => {
                 {/* Columna de Textos */}
                 <div className="items-text-column">
                   <ul className="items-text-list">
+                    {/* Iteramos sobre category.items para los textos */}
                     {category.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="item-text-entry">
                         <span className="category-icon-main">●</span>
@@ -47,26 +46,22 @@ const About1 = ({ subTitle, Title, featurelist }) => {
                 </div>
                 
                 {/* Columna de Imágenes */}
-                {/* Solo renderizar la galería si hay al menos una imagen en la categoría */}
-                {category.items.some(item => item.image) && (
+                {/* Iteramos sobre la nueva propiedad category.galleryImages */}
+                {category.galleryImages && category.galleryImages.length > 0 && (
                   <div className="images-gallery-column">
-                    {category.items.map((item, itemIndex) => (
-                      item.image && (
-                        <div key={itemIndex} className="gallery-image-wrapper">
-                          <Image
-                            src={item.image}
-                            alt={item.text || `Imagen de ${category.title} ${itemIndex + 1}`}
-                            // Ajusta width/height para el tamaño base deseado en la galería.
-                            // Next/Image usa esto para la relación de aspecto y optimización.
-                            // El CSS controlará el tamaño final.
-                            width={800} 
-                            height={533}
-                            quality={100} // Buena calidad para galería
-                            className="gallery-image" // Clase para estilizar la imagen
-                            // style={{ objectFit: 'cover' }} // objectFit se puede aplicar vía CSS
-                          />
-                        </div>
-                      )
+                    {category.galleryImages.map((imageSrc, imgIndex) => (
+                      <div key={imgIndex} className="gallery-image-wrapper">
+                        <Image
+                          src={imageSrc}
+                          alt={category.title ? `Imagen de ${category.title} ${imgIndex + 1}` : `Imagen de galería ${imgIndex + 1}`}
+                          // Ajusta width y height para un tamaño de miniatura adecuado
+                          // Estos valores ayudan a Next.js con el aspect ratio y la optimización
+                          width={800} 
+                          height={533} // Ejemplo para un aspect ratio 4:3
+                          quality={90}  // Calidad para la galería
+                          className="gallery-image"
+                        />
+                      </div>
                     ))}
                   </div>
                 )}
