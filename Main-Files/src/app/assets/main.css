@@ -1651,6 +1651,9 @@ body.body {
   --f-fw-blod: 700;
   --f-fw-ex-bold: 800;
   --f-ff-font-1: var(--body-color-font);
+  --f-fs-font-fs10: 10px;
+  --f-fs-font-fs12: 12px;
+  --f-fs-font-fs14: 14px;
   --f-fs-font-fs16: 16px;
   --f-fs-font-fs18: 18px;
   --f-fs-font-fs20: 20px;
@@ -15313,7 +15316,7 @@ header.cs_site_header.cs_sticky_header.is-sticky .cs_main_header {
     padding: 4px 6px !important;
   }
   .cs_site_branding .site-brand-text {
-    font-size: calc(var(--f-fs-font-fs18) * 0.85); /* Hacer texto del logo más pequeño */
+    font-size: var(--f-fs-font-fs12) !important; /* Hacer texto del logo más pequeño */
   }
   .cs_site_branding img {
     margin-right: 6px; /* Reducir espacio entre icono y texto del logo */
