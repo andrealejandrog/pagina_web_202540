@@ -44,6 +44,8 @@
           "title": "Soluciones tecnológicas.",
           "items": [
             {"text": "Desarrollo de software para gestión operativa."},
+            {"text": "Almacenamiento en la nube seguro y escalable."},
+            {"text": "Automatización de procesos para eficiencia operativa."},
             {"text": "Transformación digital y digitalización de documentos."}
           ]
         }
