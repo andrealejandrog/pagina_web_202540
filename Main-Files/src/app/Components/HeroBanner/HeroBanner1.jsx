@@ -29,7 +29,6 @@ const HeroBanner1 = () => {
             src="/assets/videos/herobanner/Video_invertido.mp4"
             type="video/mp4"
           />
-          Tu navegador no soporta la etiqueta de video.
         </video>
 
         {/* 2. Opcional: Capa semi-transparente (Scrim) para mejorar legibilidad del texto */}

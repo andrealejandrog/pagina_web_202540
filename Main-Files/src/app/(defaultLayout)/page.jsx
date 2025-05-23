@@ -40,21 +40,21 @@ const Home = () => {
             image: `/assets/img/icons/${index === 0 ? 
               [
                 // 'Cableado_estructurado_op1.svg',
-                'Control_de_acceso.jpg',
-                'Centro_de_monitoreo.jpg',
-                'Automation_2.jpg'][itemIndex] : 
+                'Control_de_acceso.webp',
+                'Centro_de_monitoreo.webp',
+                'Automation_2.webp'][itemIndex] : 
               [
-                'Desarrollo_de_software.jpg',
+                'Desarrollo_de_software.webp',
                 // 'Automatizacion_procesos.svg',
                 // 'Almacenamiento_nube.svg',
-                'Digital_transformation.jpg'][itemIndex]}`
+                'Digital_transformation.webp'][itemIndex]}`
           }))
         }))}
         btnName={t('home.about.btnName')}
         btnUrl={t('home.about.btnUrl')}
       />
       <Services1
-      image1='/assets/img/icons/Impacto.jpg'
+      image1='/assets/img/icons/Impacto.webp'
       />
       <Choose1 />
       <Project1 />

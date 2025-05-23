@@ -79,7 +79,7 @@
   "choose": {
     "subTitle": "Paso a paso",
     "title": "Así creamos soluciones eficientes y seguras.",
-    "mainImage": "/assets/img/icons/Proceso.jpg",
+    "mainImage": "/assets/img/icons/Proceso.webp",
     "processes": [
       {
         "title": "Proyecto de seguridad electrónica y automatización.",
@@ -112,7 +112,7 @@
     "subTitle": "Nadie es como 5.0 Technology",
     "title": "Una palabra: Diferentes.",
     "propuesta" :"Somos más que un proveedor, somos tu aliado estratégico. Contamos con un equipo de expertos apasionados por la excelencia, comprometidos en ofrecer soluciones innovadoras y una experiencia única. Nos involucramos en cada proyecto con la misión de superar expectativas, garantizando resultados óptimos que realmente impulsen tu negocio.",
-    "mainImage":"/assets/img/icons/Diferenciador.jpeg"
+    "mainImage":"/assets/img/icons/Diferenciador.webp"
   },
   "contactinfo": {
     "subTitle": "Estamos listos para ofrecerte una asesoría personalizada. Contáctanos.",

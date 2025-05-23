@@ -7,7 +7,7 @@ const About1 = ({ subTitle, Title, featurelist }) => {
       <div className="container">
         {/* Título Principal de la Sección "About1" */}
         <div className="row justify-content-center">
-          <div className="col-lg-12">
+          <div className="col-lg-12 m-auto text-center">
             <div className="heading1"> {/* Usa tus estilos existentes para el título principal */}
               <span className="span" data-aos="zoom-in">
                 <SectionTitle SubTitle={subTitle} Title={Title} />
@@ -15,7 +15,7 @@ const About1 = ({ subTitle, Title, featurelist }) => {
             </div>
           </div>
         </div>
-
+        
         {/* Contenedor para las nuevas tarjetas de categoría */}
         <div className="category-cards-wrapper">
           {featurelist?.map((category, index) => (
