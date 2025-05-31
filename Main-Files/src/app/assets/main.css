@@ -2386,198 +2386,212 @@ a.header__search.header-search-btn p {
     BUTOTNS AREA CSS
 ::::::::::::::::::::::::::
 */
-/*
-::::::::::::::::::::::::::
- ABOUT AREA CSS
-::::::::::::::::::::::::::
-*/
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+   SECCIÓN ABOUT - NUEVO DISEÑO (CON CORRECCIONES RESPONSIVE)
+   :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
 
-/* === Estilos para la Sección About1 - Nuevas Tarjetas de Categoría === */
-
-/* Contenedor de todas las tarjetas de categoría (opcional, para espaciado o layout de tarjetas) */
-.category-cards-wrapper {
-  /* Si quieres que las tarjetas se muestren en una cuadrícula en pantallas grandes: */
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fit, minmax(min(100%, 500px), 1fr)); */
-  /* gap: var(--f-spacer-30, 30px); */
-  margin-top: var(--f-spacer-30, 30px);
+/* Estilos para el contenedor principal de la sección About1 */
+.about1.sp-new-layout {
+  padding-top: var(--f-spacer-60, 60px);
+  padding-bottom: var(--f-spacer-60, 60px);
 }
 
-/* Estilo para la tarjeta unificada de cada categoría */
-.unified-category-card {
-  background-color: var(--ztc-bg-color-w, #ffffff);
-  border-radius: 7px;
-  padding: 24px; /* Padding interno de la tarjeta */
-  margin-bottom: var(--f-spacer-30, 30px); /* Espacio entre tarjetas de categoría */
+/* Estilos para el título principal de la sección (ej. "Seguridad e innovación tecnológica.") */
+.about1 .heading1 {
+  text-align: center;
+  margin-bottom: var(--f-spacer-60, 60px);
+}
+.about1 .heading1 .span {
+  /* Tus estilos para el span que envuelve SectionTitle si los tienes */
+}
+
+/* Contenedor para todas las secciones de categoría (si lo usas para agrupar .category-section-new) */
+.categories-container-new { /* En tu JSX es el div que envuelve el map de featurelist */
+  /* No necesita muchos estilos si .category-section-new maneja sus márgenes */
+}
+
+/* Contenedor de cada sección de categoría individual */
+.category-section-new {
+  margin-bottom: var(--f-spacer-80, 80px);
+}
+.category-section-new:last-child {
+  margin-bottom: 0;
+}
+
+/* Título de la Categoría */
+.category-title-new {
+  font-size: var(--f-fs-font-fs28, 1.75rem);
+  font-weight: var(--f-fw-bold, 700);
+  color: var(--ztc-text-text-1, #212529);
+  margin-bottom: var(--f-spacer-30, 30px);
+  text-align: center;
+}
+
+/* Fila de la Galería de Imágenes de la Categoría */
+.category-image-gallery-row {
+  margin-bottom: var(--f-spacer-40, 40px);
+  /* justify-content-center ya está en el JSX vía Bootstrap */
+}
+
+.category-gallery-image-item { /* Bootstrap col-* */
+  padding-left: 8px;  /* Ajusta el gutter de Bootstrap si es necesario */
+  padding-right: 8px; /* Ajusta el gutter de Bootstrap si es necesario */
+  margin-bottom: 16px; /* Espacio si las imágenes se apilan en varias filas en desktop */
+  display: flex; /* Para que el frame se comporte bien */
+  justify-content: center; /* Centra el frame si la columna es más ancha */
+}
+
+.gallery-image-frame {
+  background-color: var(--ztc-bg-color-w, #fff);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  width: 100%; /* El frame ocupa el ancho de la columna Bootstrap */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Sombra sutil por defecto */
-  /* border: 1px solid rgba(0, 0, 0, 0.05); /* Opcional */
+}
+.gallery-image-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
-.unified-category-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--ztc-bg-main-bg-2, #007bff) 0px 10px 25px -8px, rgba(0, 0, 0, 0.15) 0px 8px 15px -10px;
+.gallery-img-new { /* El componente <Image> de Next.js */
+  display: block;
+  width: 100%;    
+  height: auto;   
+  aspect-ratio: 600 / 400; /* Mantiene la proporción de tus props width/height (3:2) */
+  object-fit: cover;   
+  background-color: #e9ecef; 
 }
 
-/* Título de la tarjeta de categoría */
-.category-card-title {
-  font-size: var(--f-fs-font-fs20, 1.25rem); /* Usa tu variable de tamaño */
-  font-weight: var(--f-fw-semibold, 600);
-  color: var(--ztc-text-text-1, #333);
-  margin-bottom: var(--f-spacer-20, 20px); /* Espacio debajo del título de categoría */
-  padding-top: var(--f-spacer-10, 10px);
-  /* text-align: center; /* Ya en JSX */
+/* Fila de Servicios/Items de la Categoría */
+.category-services-row {
+  /* justify-content-center ya está en el JSX vía Bootstrap */
 }
 
-/* Contenedor del contenido principal de la tarjeta (textos e imágenes) */
-.category-card-content-area {
+.service-item-new { /* Bootstrap col-* */
   display: flex;
-  flex-direction: row; /* Por defecto: textos a la izq, imágenes a la der */
-  gap: 24px; /* Espacio entre la columna de textos y la de imágenes */
-  align-items: stretch;
+  flex-direction: column; 
+  align-items: center;   
+  text-align: center;
+  margin-bottom: var(--f-spacer-30, 30px); 
+  padding: 0 10px; 
 }
 
-/* Columna para la lista de textos */
-.items-text-column {
-  flex: 1 1 55%; /* Darle un poco más de espacio a los textos si se desea */
-  min-width: 0; /* Para que flexbox maneje bien el encogimiento */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centra el contenido (la <ul>)*/
+.service-item-icon-wrapper { /* Nombre de clase que usaste en tu JSX para el wrapper del <i> */
+  margin-bottom: 12px; 
 }
 
-.items-text-list {
-  list-style: none; /* O puedes usar 'disc', 'circle', etc. */
-  padding-left: 0; /* Ajusta si usas bullets estándar que necesiten espacio */
+.service-item-icon-wrapper i { /* Estilos para el icono Bootstrap */
+  font-size: 40px; 
+  color: var(--ztc-bg-main-bg-1); /* Usando tu variable de color */
+  line-height: 1;
+}
+
+.service-item-text {
+  font-size: var(--f-fs-font-fs16, 1rem);
+  line-height: 1.5;
+  color: var(--ztc-text-pera-text-1, #555);
   margin: 0;
 }
 
-.item-text-entry {
-  font-size: var(--f-fs-font-fs18, 1rem); /* Usa tu variable de tamaño */
-  line-height: var(--f-fs-font-fs28, 1.6);
-  font-weight: var(--f-fw-regular, 400);
-  color: var(--ztc-text-pera-text-1, #454545);
-  margin-bottom: 12px;
-  /* Si quieres un bullet personalizado, similar al .item-icon original: */
-  /* position: relative; */
-  /* padding-left: 25px; */
+/* Divisor entre categorías */
+hr.category-divider-new {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+  margin-top: var(--f-spacer-40, 40px); 
+  margin-bottom: var(--f-spacer-60, 60px); 
+}
+.category-display-section:last-child hr.category-divider-new {
+  display: none; 
 }
 
-.category-icon-main{
-  position: relative;
-  left: -10px;
-  color: var(--ztc-bg-main-bg-1);
-}
-/*
-.item-text-entry::before {
-  content: "•"; // O cualquier otro ícono/unicode
-  color: var(--ztc-bg-main-bg-2, #007bff); // Color del bullet
-  position: absolute;
-  left: 0;
-  font-weight: bold;
-}
-*/
+/* --- Responsive para el Nuevo Layout --- */
 
-/* Columna para la galería de imágenes */
-.images-gallery-column {
-  flex: 1 1 45%; /* Proporción de espacio */
-  min-width: 0;
-  display: flex;
-  /* === CAMBIO: Apilar imágenes verticalmente dentro de esta columna === */
-  flex-direction: column; 
-  gap: 15px; /* Espacio vertical entre cada imagen */
+@media (max-width: 991.98px) { /* Tablets */
+  .category-title-new {
+    font-size: var(--f-fs-font-fs24, 1.5rem);
+    margin-bottom: var(--f-spacer-20, 20px);
+  }
+  .category-image-gallery-row {
+    margin-bottom: var(--f-spacer-30, 30px);
+  }
+  /* En tablets, las clases col-md-* (ej. col-md-4 para imágenes, col-md-3 para servicios)
+     definidas en tu JSX determinarán cuántos items caben por fila.
+     Bootstrap se encarga del apilamiento si no caben. */
 }
 
-.gallery-image-wrapper {
-  width: 100%; /* Cada imagen ocupa el ancho completo de la columna de galería */
-  border-radius: 7px; /* Bordes redondeados para el contenedor de la imagen */
-  overflow: hidden;   /* Asegura que la imagen respete el border-radius */
-  background-color: #f0f0f0; /* Color de fondo mientras carga la imagen */
-}
-
-.gallery-image { /* Estilos para el componente <Image> de Next.js */
-  display: block;
-  width: 100% !important; /* Hace que la imagen llene el wrapper */
-  height: 215px !important; /* Altura fija para uniformidad en la galería; ajusta según necesites */
-  object-fit: cover; /* Cubre el área manteniendo la relación de aspecto */
-}
-
-/* === Media Queries para Responsividad === */
-
-/* Tablets y pantallas medianas (cuando el contenido se apila) */
-@media (max-width: 991.98px) { /* Breakpoint lg de Bootstrap */
-  .category-card-content-area {
-    flex-direction: column; /* Apila la columna de textos sobre la de imágenes */
-    gap: var(--f-spacer-20, 20px);
+@media (max-width: 767.98px) { /* Móviles */
+  .about1.sp-new-layout {
+    padding-top: var(--f-spacer-40, 40px);
+    padding-bottom: var(--f-spacer-40, 40px);
+  }
+  .category-section-new {
+    margin-bottom: var(--f-spacer-50, 50px);
+  }
+  .category-title-new {
+    font-size: var(--f-fs-font-fs22, 1.375rem); /* Tamaño de título de categoría para móvil */
+    margin-bottom: var(--f-spacer-20, 20px);
   }
 
-  .items-text-column,
-  .images-gallery-column {
-    flex-basis: auto; /* Resetea la base para que ocupen el ancho completo */
-    width: 100%;
+  /* === IMÁGENES DE GALERÍA EN MÓVIL === */
+  .category-image-gallery-row {
+    margin-bottom: var(--f-spacer-30, 30px); 
+  }
+
+  .gallery-image-item-new { /* Contenedor de Bootstrap (ej. col-md-4) */
+    /* Forzar a que cada imagen ocupe todo el ancho para apilamiento vertical */
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px; /* Ajusta según el gutter de tu .row si es necesario */
+    padding-right: 15px;/* Ajusta según el gutter de tu .row si es necesario */
+    margin-bottom: var(--f-spacer-20, 20px); /* Espacio entre imágenes apiladas */
+  }
+  .gallery-image-item-new:last-child {
+    margin-bottom: 0;
+  }
+
+  .gallery-image-frame {
+    max-width: 400px; /* Ancho máximo para cada imagen apilada, para que no sean gigantes */
+    margin-left: auto; /* Centra el frame si es más angosto que la columna (100%) */
+    margin-right: auto;/* Centra el frame */
+  }
+
+  .gallery-img-new {
+    /* width: 100% y height: auto ya están por img-fluid y estilos base */
+    /* aspect-ratio: 600 / 400; /* Mantenemos la proporción */
+    /* object-fit: cover; /* Mantenemos el cover */
+    /* No es necesario redefinir si los estilos base ya aplican y son correctos */
+  }
+
+  /* === SERVICIOS (ICONO + TEXTO) EN MÓVIL === */
+  .services-list-row {
+    /* La clase justify-content-center en el JSX ayudará a centrar los pares si la fila no está llena */
   }
   
-  .gallery-image-wrapper {
-    flex-basis: calc(33.333% - 7px); /* Podrías tener 3 imágenes por fila en tablet */
-  }
-  /* .gallery-image {
-    height: 120px !important; Ajusta altura para tablet
-  } */
-}
-
-/* Móviles pequeños (ajustes adicionales) */
-@media (max-width: 767.98px) { /* Breakpoint md de Bootstrap */
-  .unified-category-card {
-    padding: 16px;
+  .service-item-container-new { /* Contenedor de Bootstrap (ej. col-md-3) */
+    /* Para que se muestren en pares (2 columnas): */
+    padding-left: 8px;  /* Ajusta este padding para el espacio entre los servicios */
+    padding-right: 8px; /* Ajusta este padding */
   }
 
-  .category-card-title {
-    font-size: calc(var(--f-fs-font-fs20, 1.25rem) * 0.9);
+  .service-item-content-new {
+    padding: var(--f-spacer-10, 10px) 5px; /* Menos padding interno en móvil */
   }
 
-  .item-text-entry {
-    font-size: calc(var(--f-fs-font-fs18, 1rem) * 0.95);
-    line-height: calc(var(--f-fs-font-fs28, 1.6) * 0.95);
+  .service-item-icon-wrapper i {
+    font-size: 20px; /* Iconos de servicio un poco más pequeños en móvil */
   }
 
-  .images-gallery-column {
-    align-items: center; /* Centra los wrappers de imagen si no son de ancho completo */
-    /* width: 100%; /* Ya heredado y correcto */
-    /* flex-direction: column; /* Ya heredado y correcto */
+  .service-text-new {
+    font-size: calc(var(--f-fs-font-fs16, 1rem) * 0.9); /* Texto de servicio un poco más pequeño */
   }
 
-  .gallery-image-wrapper {
-    /* flex-basis: auto; /* No es necesario si width está definido */
-    width: 100%; /* Que ocupe el ancho del contenedor padre (hasta max-width) */
-    max-width: 350px; /* Un máximo para que no sean demasiado anchas en móviles. AJUSTA si es necesario. 
-                         Originalmente tenías 320px, puedes probar cuál se ve mejor. */
-  }
-
-  /* === SECCIÓN CRÍTICA - DESCOMENTAR Y AJUSTAR === */
-  .gallery-image {
-    display: block; /* Asegurar display block */
-    width: 100% !important; /* Que la imagen llene su wrapper */
-    height: 150px !important; /* Altura automática para mantener relación de aspecto */
-    aspect-ratio: 800 / 533; /* MANTIENE LA RELACIÓN DE ASPECTO "ALARGADA" (4:3) */
-                              /* Si quieres otra relación aquí, ajústala. Pero para que sea "alargada", no debe ser 1/1. */
-    object-fit: cover; /* Heredado, pero puedes reconfirmar */
+  .category-spacer {
+    margin-top: var(--f-spacer-30, 30px);
+    margin-bottom: var(--f-spacer-50, 50px);
   }
 }
-
-/* Estilos para interacciones táctiles (adaptados de tu CSS original) */
-@media (hover: none) and (pointer: coarse) {
-  .unified-category-card {
-    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
-    -webkit-tap-highlight-color: transparent;
-    touch-action: manipulation;
-  }
-  
-  .unified-category-card:active {
-    transform: translateY(-5px) scale(0.99);
-    box-shadow: var(--ztc-bg-main-bg-2, #007bff) 0px 8px 20px -7px, rgba(0, 0, 0, 0.12) 0px 6px 12px -8px;
-  }
-}
-
 /* ============= SERVICE SECTION - VERSIÓN OPTIMIZADA ============= */
 .service {
   position: relative;

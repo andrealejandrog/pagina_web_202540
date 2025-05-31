@@ -27,36 +27,50 @@ const Home = () => {
         shapeiamge2="/assets/img/hero/hero1-image4.png"
       />
       <About1
-        image1="/assets/img/about/about1-img1.png"
-        image2="/assets/img/about/about1-img2.png"
-        supIcon="/assets/img/icons/about1-shape-icon.png"
         supCon={t('home.heroBanner.subTitle')}
         subTitle={t('home.about.subTitle')}
         Title={t('home.about.title')}
-        featurelist={t('home.about.featureList').map((section, index) => {
-          // Define las imágenes específicas para cada categoría aquí
-          // Esta lista de imágenes será fija para la categoría, sin importar cuántos textos haya.
-          let imagesForThisCategory = [];
-          if (index === 0) { // Para tu primera categoría (Seguridad Electrónica y automatización)
-            imagesForThisCategory = [
-              '/assets/img/icons/Control_de_acceso.webp',
+        // En tu page.jsx, al construir featurelist
+        featurelist={t('home.about.featureList').map((section, categoryIndex) => {
+          let galleryImagesForThisCategory = [];
+          // Define tus galleryImages como antes...
+          if (categoryIndex === 0) {
+            galleryImagesForThisCategory = [
+              '/assets/img/icons/Control_de_acceso.webp', // Reemplaza con tus imágenes de galería
               '/assets/img/icons/Centro_de_monitoreo.webp',
               '/assets/img/icons/Automation_2.webp'
-              // Puedes añadir más rutas de imágenes fijas para esta categoría aquí si lo deseas
             ];
-          } else if (index === 1) { // Para tu segunda categoría (Desarrollo de Software y Transformación Digital)
-            imagesForThisCategory = [
+          } else if (categoryIndex === 1) {
+            galleryImagesForThisCategory = [
               '/assets/img/icons/Desarrollo_de_software.webp',
               '/assets/img/icons/Digital_transformation.webp'
-              // Añade más imágenes fijas para esta categoría si es necesario
             ];
           }
-          // Puedes añadir más condiciones else if para otras categorías
+          // Define los iconos para cada item de texto específico de esta categoría
+          // Esto es un ejemplo, necesitas tus propias rutas de iconos
+          const itemIconsForCategory0 = [
+            'bi bi-camera-video',    // Icono para "Sistemas de CCTV..."
+            'bi bi-display', // Icono para "Centros de monitoreo..."
+            'bi bi-house-gear',// Icono para "Automatización de casas..."
+            'bi bi-ethernet'    // Icono para "Instalación de cableado..."
+          ];
+          const itemIconsForCategory1 = [
+            'bi bi-terminal', // Icono para "Desarrollo de software..."
+            'bi bi-cloud',    // Icono para "Almacenamiento en la nube..."
+            'bi bi-diagram-3',  // Icono para "Automatización de procesos..."
+            'bi bi-file-earmark-arrow-up'   // Icono para "Transformación digital..."
+          ];
+
+          const currentItemIcons = categoryIndex === 0 ? itemIconsForCategory0 : itemIconsForCategory1;
 
           return {
-            title: section.title, // Mantenemos el título de la categoría
-            items: section.items.map(item => ({ text: item.text })), // 'items' ahora solo contendrá los textos
-            galleryImages: imagesForThisCategory // Nueva propiedad con la lista de imágenes fijas
+            title: section.title,
+            items: section.items.map((item, itemIndex) => ({
+              text: item.text,
+              // NUEVO: Asignar un icono a cada item de texto
+              icon: currentItemIcons[itemIndex] || '/assets/img/icons/default_service_icon.svg' // Un icono por defecto si no hay suficientes
+            })),
+            galleryImages: galleryImagesForThisCategory
           };
         })}
         btnName={t('home.about.btnName')}
